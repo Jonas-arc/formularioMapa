@@ -2,7 +2,11 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./css/plano.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="../angular-1.6.2/angular.min.js"></script>
 	<script src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.rwdImageMaps.js" ></script>
 	<script>
 		$(document).ready(function(e) {
@@ -18,17 +22,164 @@
 
 <body>
 
-<img name="plano" id="plano" src="./img/plano.jpg" width="1235" height="604" usemap="#planoMap" alt>
+<img name="plano" id="plano" src="./img/plano.jpg" width="1235" height="604" usemap="#planoMap">
 
 <map name="planoMap">
-  <area shape="poly" coords="12,445,405,445,405,505,12,505" alt="areaA" href="areaA.html">
-  <area shape="poly" coords="12,185,405,185,405,235,12,235" alt="areaB" href="areaB.html">
-  <area shape="poly" coords="12,110,405,110,405,160,12,160" alt="areaC" href="areaC.html">
-  <area shape="poly" coords="830,110,1220,110,1220,160,830,160" alt="areaD" href="areaD.html">
-  <area shape="poly" coords="830,185,1220,185,1220,235,830,235" alt="areaE" href="areaE.html">
-  <area shape="poly" coords="840,345,965,345,965,390,1220,390,1220,500,840,500" alt="areaF" href="areaF.html">
-  <area shape="poly" coords="440,500,855,500,855,604,440,604" alt="areaG" href="areaG.html">
+  <area shape="poly" coords="12,445,405,445,405,505,12,505" data-toggle="modal" href="#areaA">
+  <area shape="poly" coords="12,185,405,185,405,235,12,235" data-toggle="modal" href="#areaB"">
+  <area shape="poly" coords="12,110,405,110,405,160,12,160" data-toggle="modal" href="#areaC"">
+  <area shape="poly" coords="830,110,1220,110,1220,160,830,160" data-toggle="modal" href="#areaD"">
+  <area shape="poly" coords="830,185,1220,185,1220,235,830,235" data-toggle="modal" href="#areaE"">
+  <area shape="poly" coords="840,345,965,345,965,390,1220,390,1220,500,840,500" data-toggle="modal" href="#areaF"">
+  <area shape="poly" coords="440,500,855,500,855,604,440,604" data-toggle="modal" href="#areaG"">
 </map>
 
+<!--Area A-->
+<div class="modal fade" id="areaA" tabindex="-1" role="dialog" aria-labelledby="areaA" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaALabel">Área "A"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaAPlano" id="areaAPlano" src="./img/areaA.jpg" width="390" height="66" usemap="#areaAMapa"/>
+            <map name="areaAMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Area B-->
+<div class="modal fade" id="areaB" tabindex="-1" role="dialog" aria-labelledby="areaB" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaBLabel">Área "B"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaBPlano" id="areaBPlano" src="./img/areaB.jpg" width="390" height="66" usemap="#areaBMapa"/>
+            <map name="areaBMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Area C-->
+<div class="modal fade" id="areaC" tabindex="-1" role="dialog" aria-labelledby="areaC" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaCLabel">Área "C"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaCPlano" id="areaCPlano" src="./img/areaC.jpg" width="390" height="66" usemap="#areaCMapa"/>
+            <map name="areaCMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Area D-->
+<div class="modal fade" id="areaD" tabindex="-1" role="dialog" aria-labelledby="areaD" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaDLabel">Área "D"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaDPlano" id="areaDPlano" src="./img/areaD.jpg" width="390" height="66" usemap="#areaDMapa"/>
+            <map name="areaDMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Area E-->
+<div class="modal fade" id="areaE" tabindex="-1" role="dialog" aria-labelledby="areaE" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaELabel">Área "E"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaEPlano" id="areaEPlano" src="./img/areaE.jpg" width="390" height="66" usemap="#areaEMapa"/>
+            <map name="areaEMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Area F-->
+<div class="modal fade" id="areaF" tabindex="-1" role="dialog" aria-labelledby="areaF" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaFLabel">Área "F"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaFPlano" id="areaFPlano" src="./img/areaF.jpg" width="390" height="66" usemap="#areaFMapa"/>
+            <map name="areaFMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Area G-->
+<div class="modal fade" id="areaG" tabindex="-1" role="dialog" aria-labelledby="areaG" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="areaGLabel">Área "G"</h4>
+      </div>
+      <div class="modal-body">
+        <img name="areaGPlano" id="areaGPlano" src="./img/areaG.jpg" width="390" height="66" usemap="#areaGMapa"/>
+            <map name="areaGMapa">
+                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
+            </map>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
