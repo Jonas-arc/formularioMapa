@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="Milo">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-4"></div>
+		<div class="col-md-4" ng-controller="formulario">
+			<form name="userForm" novalidate>
+				<label for="name">Nombre</label><br />
+      			<input name="name" type="text" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
+			    	<span ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="appaterno">Apeido Paterno</label><br />
+      			<input name="appaterno" type="text" ng-model="user.appaterno" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
+			    <span ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="apmaterno">Apeido Materno</label><br />
+      			<input name="apmaterno" type="text" ng-model="user.apmaterno" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
+			    	<span ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="telefono">Telefono</label><br />
+			    <input name="telefono" type="number" ng-model="user.telefono" ng-model-options="{ updateOn: 'blur' }" required min="11111111"  />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
+			    	<span ng-show="userForm.telefono.$error.min">El numero telefonico debe tener al menos 8 digito</span>
+			    	<span ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="email">Email</label><br />
+			    <input name="email" type="email" ng-model="user.email" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
+			    	<span ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
+			    	<span ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
+			    </span>
+			    <br />
+
+			    <label for="categoria">Categoria</label><br />
+			    <select name="categoria" ng-model="user.categoria" ng-model-options="{ updateOn: 'blur' }" required>
+			    	<option value="Gastronomo">Gastronomo</option>
+			    	<option value="Artesano">Artesano</option>
+			    </select>
+			    <span class="messages" ng-show="userForm.$submitted || userForm.categoria.$touched">
+			    	<span ng-show="userForm.categoria.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="lugar">Lugar</label><br />
+      			<input name="lugar" type="text" ng-model="user.lugar" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.lugar.$touched">
+			    	<span ng-show="userForm.lugar.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="estado">Estado</label><br />
+      			<input name="estado" type="text" ng-model="user.estado" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.estado.$touched">
+			    	<span ng-show="userForm.estado.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+
+			    <label for="otro">Otro</label><br />
+      			<input name="otro" type="text" ng-model="user.otro" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.otro.$touched">
+			    	<span ng-show="userForm.otro.$error.required">El campo es obligatorio.</span>
+			    </span>
+			    <br />
+			     
+			    <br /><br />
+			    <input type="reset" ng-click="reset(userForm)" value="Limpiar" />
+			    <input type="submit" ng-click="update()" value="Guardar" ng-disabled="userForm.$invalid" />
+			</form>
+			<pre>user = {{user | json}}</pre>
+		</div>
+		<div class="col-md-4"></div>
+	</div>
+	<script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./angular-1.6.2/angular.min.js"></script>
+	<script type="text/javascript" src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/controler/form.js"></script>
+</body>
+</html>
