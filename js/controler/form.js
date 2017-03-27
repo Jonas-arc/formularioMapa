@@ -4,9 +4,9 @@ app.controller("formulario",['$scope','$http',function($scope,$http){
         $scope.user = {};
  
         $scope.update = function() {
-          $scope.user.accion = "consulta";
+          $scope.user.accion = "alta";
           console.log($scope.user);
-          $http.post('./php/pruebasConcepto.php',$scope.user)
+          $http.post('./php/alta.php',$scope.user)
                .then(function(respuesta){
             console.log(respuesta);
           });
