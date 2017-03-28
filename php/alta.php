@@ -12,21 +12,22 @@ if ($objDatos->accion == 'alta') {
 		if (!is_null($conex)) {
 			$query = "select id from participantes 
 					where id like '".$datos["id"]."' or 
-					(nombre like '".$datos["name"]."' and appaterno like'".$datos["appaterno"]."' and apmaterno like '".$datos["apmaterno"]."') or
-					telefono like '".$datos["telefono"]."' or correo like '".$datos["email"]."'";
+					(nombre like '".$datos["name"]."' and appaterno like'".$datos["appaterno"]."' and apmaterno like '".$datos["apmaterno"]."') or correo like '".$datos["email"]."'";
 			$res = QueryMysql($query, $conex);
 			//print_r($res->num_rows);
 			if ($res->num_rows <= 0) {
-				$query = "select id from lugares where id in ('".preg_replace("/,/", "','", $datos['lugar'])."') and participante is not null ";
+				$lugares = "'".preg_replace("/,/", "','", $datos['lugar'])."'";
+				unset($datos['lugar']);
+				$query = "select id from lugares where id in (".$lugares.") and participante is not null ";
 				//print_r($query);
 				$res = QueryMysql($query, $conex);
 				if ($res->num_rows <= 0) {
 					$query = "LOCK TABLES lugares WRITE, participantes WRITE";
 					$conex->query($query);
-					$query ="Insert into Participantes (id,nombre,appaterno,apmaterno,telefono,correo,categoria,lugar,estado)
+					$query ="Insert into Participantes (id,nombre,appaterno,apmaterno,telefono,correo,categoria,estado)
 							value('".implode("','", $datos)."')";
 					$conex->query($query);
-					$query = "Update lugares set participante = '".$datos["id"]."' where id in ('".preg_replace("/,/", "','", $datos['lugar'])."')";
+					$query = "Update lugares set participante = '".$datos["id"]."' where id in (".$lugares.")";
 					$conex->query($query);
 					$query = "UNLOCK TABLES";
 					$conex->query($query);

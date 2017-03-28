@@ -13,32 +13,33 @@
 <body ng-app='DemoPagineo' ng-cloack>
   <br>
   <div class="container" ng-controller='tablaUsuarios'>
-    <h1>Pagineo con Angular y Bootstrap</h1>
+    <h1>Lista de participantes por confirmar</h1>
     <br>
     <div class="busqueda">
-      <input ng-model="searchText" type="text"/>
+      <input ng-model="searchText" type="text" class="form-control" placeholder="Busqueda"/>
     </div>
+    <hr>
     <div class="panel panel-default">
       <div class="panel-body">
         <table ng-init='configPages()' class='table'>
           <thead>
             <tr>
-              <th>Id</th>
-              <th>Primer Nombre</th>
-              <th>Segundo Nombre</th>
-              <th>Primer Apellido</th>
-              <th>Segundo Apellido</th>
-              <th>Fecha Nacimiento</th>
+              <th>Folio</th>
+              <th>Nombre</th>
+              <th>Telefono</th>
+              <th>Correo electronico</th>
+              <th>Lugar(es)</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
             <tr ng-repeat='usuario in usuarios | filter:searchText | startFromGrid: currentPage * pageSize | limitTo: pageSize' , ng-click='seleccionarUsuario(usuario.id)'>
               <td>{{usuario.id}}</td>
-              <td>{{usuario.primernombre}}</td>
-              <td>{{usuario.segundonombre}}</td>
-              <td>{{usuario.primerapellido}}</td>
-              <td>{{usuario.segundoapellido}}</td>
-              <td>{{usuario.fechanacimiento}}</td>
+              <td>{{usuario.nombreComp}}</td>
+              <td>{{usuario.telefono}}</td>
+              <td>{{usuario.correo}}</td>
+              <td>{{usuario.lugares}}</td>
+              <td><button ng-click="confirmar(usuario.id)" class="btn btn-primary" type="submit">Confirmar</button></td>
             </tr>
           </tbody>
         </table>
