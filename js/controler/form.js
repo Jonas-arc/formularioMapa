@@ -27,6 +27,14 @@ app.controller("formulario",['$scope','$http',function($scope,$http){
  
         $scope.reset();
 
+        $scope.limpiarSel = function() {
+          for (var i = 0; i < 31; i++) {
+            $scope.asiento[i] = false;
+          }
+          $scope.lugar = [];
+          $scope.user.lugar = "";
+        }
+
         $scope.seleccionaBoton = function(lug) {
           a = 0;
           b = 0;
