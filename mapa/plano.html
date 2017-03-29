@@ -11,10 +11,6 @@
 	<script>
 		$(document).ready(function(e) {
 			$('img[usemap]').rwdImageMaps();
-			
-			$('area').on('click', function() {
-				alert($(this).attr('alt') + ' clicked');
-			});
 		});
 	</script>
 
@@ -26,11 +22,11 @@
 
 <map name="planoMap">
   <area shape="poly" coords="12,445,405,445,405,505,12,505" data-toggle="modal" href="#areaA">
-  <area shape="poly" coords="12,185,405,185,405,235,12,235" data-toggle="modal" href="#areaB"">
-  <area shape="poly" coords="12,110,405,110,405,160,12,160" data-toggle="modal" href="#areaC"">
-  <area shape="poly" coords="830,110,1220,110,1220,160,830,160" data-toggle="modal" href="#areaD"">
-  <area shape="poly" coords="830,185,1220,185,1220,235,830,235" data-toggle="modal" href="#areaE"">
-  <area shape="poly" coords="840,345,965,345,965,390,1220,390,1220,500,840,500" data-toggle="modal" href="#areaF"">
+  <area shape="poly" coords="12,185,405,185,405,235,12,235" data-toggle="modal" href="#areaB">
+  <area shape="poly" coords="12,110,405,110,405,160,12,160" data-toggle="modal" href="#areaC">
+  <area shape="poly" coords="830,110,1220,110,1220,160,830,160" data-toggle="modal" href="#areaD">
+  <area shape="poly" coords="830,185,1220,185,1220,235,830,235" data-toggle="modal" href="#areaE">
+  <area shape="poly" coords="840,345,965,345,965,390,1220,390,1220,500,840,500" data-toggle="modal" href="#areaF">
   <area shape="poly" coords="440,500,855,500,855,604,440,604" data-toggle="modal" href="#areaG"">
 </map>
 
@@ -43,10 +39,64 @@
         <h4 class="modal-title" id="areaALabel">Área "A"</h4>
       </div>
       <div class="modal-body">
-        <img name="areaAPlano" id="areaAPlano" src="./img/areaA.jpg" width="390" height="66" usemap="#areaAMapa"/>
-            <map name="areaAMapa">
-                <area shape="poly" coords="0,0,0,150,45,150,45,0" >
-            </map>
+  		<div class="row">
+  			<div class="col-md-2"></div>
+  			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-5">
+						<button type="button" class="btn btn-primary btn-xs">A1</button>
+						<button type="button" class="btn btn-primary btn-xs">A2</button>
+						<button type="button" class="btn btn-primary btn-xs">A3</button>
+						<button type="button" class="btn btn-primary btn-xs">A4</button>
+						<button type="button" class="btn btn-primary btn-xs">A5</button>
+						<button type="button" class="btn btn-primary btn-xs">A6</button>
+					</div>
+					<div class="col-md-7">
+						<button type="button" class="btn btn-primary btn-xs">A7</button>
+						<button type="button" class="btn btn-primary btn-xs">A8</button>
+						<button type="button" class="btn btn-primary btn-xs">A9</button>
+						<button type="button" class="btn btn-primary btn-xs">A10</button>
+						<button type="button" class="btn btn-primary btn-xs">A11</button>
+						<button type="button" class="btn btn-primary btn-xs">A12</button>
+						<button type="button" class="btn btn-primary btn-xs">A13</button>
+						<button type="button" class="btn btn-primary btn-xs">A14</button>
+						<button type="button" class="btn btn-primary btn-xs">A15</button>
+					</div>
+				</div>
+  			</div>
+  		</div>
+ 		<div class="row">
+  			<div class="col-md-2"></div>
+  			<div class="col-md-8">
+  				<hr class="areaAhr">
+  			</div>
+  		</div>
+  		<div class="row">
+  			<div class="col-md-2"></div>
+  			<div class="col-md-8">
+				<div class="row">
+					<div class="col-md-6">
+						<button type="button" class="btn btn-primary btn-xs">A16</button>
+						<button type="button" class="btn btn-primary btn-xs">A17</button>
+						<button type="button" class="btn btn-primary btn-xs">A18</button>
+						<button type="button" class="btn btn-primary btn-xs">A19</button>
+						<button type="button" class="btn btn-primary btn-xs">A20</button>
+						<button type="button" class="btn btn-primary btn-xs">A21</button>
+						<button type="button" class="btn btn-primary btn-xs">A22</button>
+					</div>
+					<div class="col-md-6">
+						<button type="button" class="btn btn-primary btn-xs">A23</button>
+						<button type="button" class="btn btn-primary btn-xs">A24</button>
+						<button type="button" class="btn btn-primary btn-xs">A25</button>
+						<button type="button" class="btn btn-primary btn-xs">A26</button>
+						<button type="button" class="btn btn-primary btn-xs">A27</button>
+						<button type="button" class="btn btn-primary btn-xs">A28</button>
+						<button type="button" class="btn btn-primary btn-xs">A29</button>
+						<button type="button" class="btn btn-primary btn-xs">A30</button>
+					</div>
+				</div>
+  			</div>
+  		</div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
