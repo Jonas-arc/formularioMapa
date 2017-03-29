@@ -2,7 +2,7 @@
 <html ng-app="Milo">
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="./mapa/css/plano.css">
+	<link rel="stylesheet" type="text/css" href="./css/plano.css">
 	<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
 </head>
@@ -57,14 +57,14 @@
 			    	<span ng-show="userForm.categoria.$error.required">El campo es obligatorio.</span>
 			    </span>
 			    <br />
-
+			    <!-- 
 			    <label for="lugar">Lugar</label><br />
       			<input name="lugar" type="text" ng-model="user.lugar" ng-model-options="{ updateOn: 'blur' }" required />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.lugar.$touched">
 			    	<span ng-show="userForm.lugar.$error.required">El campo es obligatorio.</span>
 			    </span>
 			    <br />
-
+				-->
 			    <label for="estado">Estado</label><br />
       			<input name="estado" type="text" ng-model="user.estado" ng-model-options="{ updateOn: 'blur' }" required />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.estado.$touched">
@@ -107,23 +107,23 @@
 				  			<div class="col-md-8">
 								<div class="row">
 									<div class="col-md-5">
-										<button type="button" class="btn btn-primary btn-xs">A1</button>
-										<button type="button" class="btn btn-primary btn-xs">A2</button>
-										<button type="button" class="btn btn-primary btn-xs">A3</button>
-										<button type="button" class="btn btn-primary btn-xs">A4</button>
-										<button type="button" class="btn btn-primary btn-xs">A5</button>
-										<button type="button" class="btn btn-primary btn-xs">A6</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(1)">A1</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(2)">A2</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(3)">A3</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(4)">A4</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(5)">A5</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(6)">A6</button>
 									</div>
 									<div class="col-md-7">
-										<button type="button" class="btn btn-primary btn-xs">A7</button>
-										<button type="button" class="btn btn-primary btn-xs">A8</button>
-										<button type="button" class="btn btn-primary btn-xs">A9</button>
-										<button type="button" class="btn btn-primary btn-xs">A10</button>
-										<button type="button" class="btn btn-primary btn-xs">A11</button>
-										<button type="button" class="btn btn-primary btn-xs">A12</button>
-										<button type="button" class="btn btn-primary btn-xs">A13</button>
-										<button type="button" class="btn btn-primary btn-xs">A14</button>
-										<button type="button" class="btn btn-primary btn-xs">A15</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(7)">A7</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(8)">A8</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(9)">A9</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(10)">A10</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(11)">A11</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(12)">A12</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(13)">A13</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(14)">A14</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(15)">A15</button>
 									</div>
 								</div>
 				  			</div>
@@ -139,23 +139,23 @@
 				  			<div class="col-md-8">
 								<div class="row">
 									<div class="col-md-6">
-										<button type="button" class="btn btn-primary btn-xs">A16</button>
-										<button type="button" class="btn btn-primary btn-xs">A17</button>
-										<button type="button" class="btn btn-primary btn-xs">A18</button>
-										<button type="button" class="btn btn-primary btn-xs">A19</button>
-										<button type="button" class="btn btn-primary btn-xs">A20</button>
-										<button type="button" class="btn btn-primary btn-xs">A21</button>
-										<button type="button" class="btn btn-primary btn-xs">A22</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(16)">A16</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(17)">A17</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(18)">A18</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(19)">A19</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(20)">A20</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(21)">A21</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(22)">A22</button>
 									</div>
 									<div class="col-md-6">
-										<button type="button" class="btn btn-primary btn-xs">A23</button>
-										<button type="button" class="btn btn-primary btn-xs">A24</button>
-										<button type="button" class="btn btn-primary btn-xs">A25</button>
-										<button type="button" class="btn btn-primary btn-xs">A26</button>
-										<button type="button" class="btn btn-primary btn-xs">A27</button>
-										<button type="button" class="btn btn-primary btn-xs">A28</button>
-										<button type="button" class="btn btn-primary btn-xs">A29</button>
-										<button type="button" class="btn btn-primary btn-xs">A30</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(23)">A23</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(24)">A24</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(25)">A25</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(26)">A26</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(27)">A27</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(28)">A28</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(29)">A29</button>
+										<button type="button" class="btn btn-primary btn-xs" ng-click="seleccionaBoton(30)">A30</button>
 									</div>
 								</div>
 				  			</div>
@@ -304,7 +304,8 @@
 	<script type="text/javascript" src="./angular-1.6.2/angular.min.js"></script>
 	<script type="text/javascript" src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="./js/controler/form.js"></script>
-	<script type="text/javascript" src="./mapa/js/jquery.rwdImageMaps.js" ></script>
+	<script type="text/javascript" src="./js/jquery.rwdImageMaps.js" ></script>
+	<script src="./js/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(e) {
 			$('img[usemap]').rwdImageMaps();
