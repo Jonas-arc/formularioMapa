@@ -71,13 +71,6 @@
 			    	<span ng-show="userForm.estado.$error.required">El campo es obligatorio.</span>
 			    </span>
 			    <br />
-
-			    <label for="otro">Otro</label><br />
-      			<input name="otro" type="text" ng-model="user.otro" ng-model-options="{ updateOn: 'blur' }" required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.otro.$touched">
-			    	<span ng-show="userForm.otro.$error.required">El campo es obligatorio.</span>
-			    </span>
-			    <br />
 			     
 			    <br /><br />
 			    <input type="reset" ng-click="reset(userForm)" value="Limpiar" />
