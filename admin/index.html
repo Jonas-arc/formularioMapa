@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="BasicHttpAuthExample">
+<head>
+    <meta charset="utf-8" />
+    <title>Administracion "Son para milo"</title>
+    <link rel="stylesheet" href="../script/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="modules/confirmacion/css/list.css">
+
+</head>
+<body>
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-xs-offset-1 col-xs-10">
+                <div ng-view></div>
+            </div>
+        </div>
+    </div>
+    <div class="credits text-center">
+        <p>
+            <a href="http://jasonwatmore.com">JasonWatmore.com</a>
+        </p>
+    </div>
+    <script src="../script/jquery-3.1.1.min.js"></script>
+    <script src="../script/angular-1.6.2/angular.js"></script>
+    <script src="../script/angular-1.6.2/angular-route.js"></script>
+    <script src="../script/angular-1.6.2/angular-cookies.js"></script>
+    <script src="../script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="modules/authentication/services.js"></script>
+    <script src="modules/authentication/controllers.js"></script>
+    <script src="modules/home/controllers.js"></script>
+    <script src="modules/confirmacion/controllers.js"></script>
+</body>
+</html>
