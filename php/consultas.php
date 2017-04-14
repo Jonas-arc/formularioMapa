@@ -8,11 +8,11 @@ if ($objDatos->accion == 'consulta') {
 	$conex->set_charset("utf8");
 	if (!is_null($conex)){
 		switch ($datos['search']) {
-			case 'lugaresOcupados':
-				$query = "select id from lugares where participantes is not null";
+			case 'productos':
+				$query = "select * from producto";
 				break;
-			case 'lugaresAreaOcupados':
-				$query = "select id from lugares where participantes is not null and id like '".$datos['area']."%'";
+			case 'lugaresArea':
+				$query = "select l.id, group_concat(pro.nombre SEPARATOR ',') from participantes as p right join lugares as l on l.participante=p.id left join producto_participante as pp on p.id=pp.idParticipanteleft join producto as pro on pro.nombre=pp.idProducto where l.id like '".$datos['area']."%' group by l.id";
 				break;
 			case 'participantes':
 				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id group by p.id";

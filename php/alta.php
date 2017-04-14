@@ -4,6 +4,7 @@ $objDatos = json_decode(file_get_contents("php://input"));
 
 if ($objDatos->accion == 'alta') {
 	$datos = (array) $objDatos;
+	//print_r($datos);
 	if ( count($datos) == 12 ) {
 		unset($datos['accion']);
 		$datos['id'] = substr(sha1($datos["name"].$datos["telefono"].$datos["email"].$datos["appaterno"]), 0,8);
@@ -24,17 +25,19 @@ if ($objDatos->accion == 'alta') {
 				//print_r($query);
 				$res = QueryMysql($query, $conex);
 				if ($res->num_rows <= 0) {
-					$query = "LOCK TABLES lugares WRITE, participantes WRITE";
+					$query = "LOCK TABLES lugares WRITE, participantes WRITE, producto WRITE, producto_participante WRITE";
 					$conex->query($query);
-					$query ="Insert into Participantes (id,nombre,appaterno,apmaterno,telefono,correo,categoria,estado,comentario,productoDescrip)
+					$query ="Insert into participantes (id,nombre,appaterno,apmaterno,telefono,correo,categoria,estado,comentario,productoDescrip)
 							value('".implode("','", $datos)."')";
 					$conex->query($query);
 					$query = "Update lugares set participante = '".$datos["id"]."' where id in (".$lugares.")";
 					$conex->query($query);
 					foreach (explode(',',$productos) as $value) {
-						$query = "insert into producto (nombre) SELECT * FROM (SELECT ".$value.") AS tmp WHERE NOT EXISTS (SELECT nombre FROM producto WHERE nombre = ".$value.") LIMIT 1";
+						$query = "insert into producto (nombre) value (".$value.")";
+						print_r($query);
 						$conex->query($query);
 						$query = "insert into producto_participante (idProducto,idParticipante)value(".$value.",'".$datos["id"]."')";
+						print_r($query);
 						$conex->query($query);
 					}
 					$query = "UNLOCK TABLES";

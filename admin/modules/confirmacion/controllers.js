@@ -11,7 +11,7 @@ angular.module('DemoPagineo')
                         "Por confirmar":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Acciones"],
                         "Confirmados":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Productos"]};
       $scope.listar = function() {
-        console.log($scope.consulta);
+        //console.log($scope.consulta);
         var $consultas = {"accion":"consulta","search":$scope.consulta.consulta};
 
         function nombreCom(element, index, array){
