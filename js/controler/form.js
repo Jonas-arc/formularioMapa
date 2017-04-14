@@ -1,5 +1,4 @@
-var app = angular.module("Milo",[]);
-app.controller("formulario",['$scope','$http',function($scope,$http){
+app.controller("formulario",['$scope','$rootScope','$http',function($scope,$rootScope,$http){
         
         $scope.user = {};
         $scope.lugar = [];
@@ -7,6 +6,7 @@ app.controller("formulario",['$scope','$http',function($scope,$http){
         for (var i = 0; i < 31; i++) {
           $scope.asiento[i] = false;
         }
+        console.log($rootScope.area);
  
         $scope.update = function() {
           $scope.user.accion = "alta";
