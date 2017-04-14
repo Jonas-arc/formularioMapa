@@ -39,7 +39,7 @@ angular.module('BasicHttpAuthExample', [
         // keep user logged in after page refresh
         $rootScope.globals = $cookieStore.get('globals') || {};
         //$rootScope.urlServer = "www.sonparamilo.org.mx/registro";
-        $rootScope.urlServer = "http://localhost/formularioMapa/";
+        //$rootScope.urlServer = "http://localhost/formularioMapa/";
         if ($rootScope.globals.currentUser) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata; // jshint ignore:line
         }

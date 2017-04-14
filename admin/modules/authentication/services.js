@@ -12,7 +12,7 @@ angular.module('Authentication')
             /* Dummy authentication for testing, uses $timeout to simulate api call
              ----------------------------------------------*/
             $timeout(function () {
-                $http.post($rootScope.urlServer.concat('php/login.php'), {"accion":"login", username: username, password: password })
+                $http.post('../php/login.php', {"accion":"login", username: username, password: password })
                    .then(function (response) {
                         //console.log(response);
                         var aux = {};

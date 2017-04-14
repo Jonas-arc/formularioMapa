@@ -18,7 +18,7 @@ angular.module('DemoPagineo')
           element['nombreComp'] = "".concat(element['nombre']," ",element['appaterno']," ",element['apmaterno']);
         };
 
-        $http.post($rootScope.urlServer.concat('php/consultas.php'),$consultas)
+        $http.post('../php/consultas.php',$consultas)
              .then(function(respuesta){
           //console.log(respuesta);
           if (typeof respuesta.data.error !== 'undefined') {
@@ -33,7 +33,7 @@ angular.module('DemoPagineo')
       
       $scope.confirmar = function($idParticipante){
         $update = {"accion":"update","update":"confirmacion","id":$idParticipante};
-        $http.post($rootScope.urlServer.concat('php/update.php'),$update)
+        $http.post('../php/update.php',$update)
              .then(function(respuesta){
           console.log(respuesta);
           if (typeof respuesta.data.error !== 'undefined') {
