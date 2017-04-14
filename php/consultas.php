@@ -12,7 +12,8 @@ if ($objDatos->accion == 'consulta') {
 				$query = "select * from producto";
 				break;
 			case 'lugaresArea':
-				$query = "select l.id as id, group_concat(pro.nombre SEPARATOR ',') as productos from participantes as p right join lugares as l on l.participante=p.id left join producto_participante as pp on p.id=pp.idParticipanteleft join producto as pro on pro.nombre=pp.idProducto where l.id like '".$datos['area']."%' group by l.id";
+				$query = "select l.id as id, group_concat(pro.nombre SEPARATOR ',') as productos from participantes as p right join lugares as l on l.participante=p.id left join producto_participante as pp on p.id=pp.idParticipante left join producto as pro on pro.nombre=pp.idProducto where l.id like '".$datos['area']."%' group by l.id";
+				//print_r($query);
 				$res = QueryMysql($query,$conex);
 				if (!is_null($res)) {
 					$aux=array();
