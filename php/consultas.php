@@ -12,7 +12,19 @@ if ($objDatos->accion == 'consulta') {
 				$query = "select * from producto";
 				break;
 			case 'lugaresArea':
-				$query = "select l.id, group_concat(pro.nombre SEPARATOR ',') from participantes as p right join lugares as l on l.participante=p.id left join producto_participante as pp on p.id=pp.idParticipanteleft join producto as pro on pro.nombre=pp.idProducto where l.id like '".$datos['area']."%' group by l.id";
+				$query = "select l.id as id, group_concat(pro.nombre SEPARATOR ',') as productos from participantes as p right join lugares as l on l.participante=p.id left join producto_participante as pp on p.id=pp.idParticipanteleft join producto as pro on pro.nombre=pp.idProducto where l.id like '".$datos['area']."%' group by l.id";
+				$res = QueryMysql($query,$conex);
+				if (!is_null($res)) {
+					$aux=array();
+					while ($obj = $res->fetch_array(MYSQLI_ASSOC)) {
+						$aux[$obj['id']] = $obj['productos'];
+					}
+					print_r(json_encode($aux));
+					$res->close();
+				}else{
+					print_r(json_encode(array("error"=>"Consulta no valida")));
+				}
+				return;
 				break;
 			case 'participantes':
 				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id group by p.id";
