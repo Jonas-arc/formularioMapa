@@ -1,0 +1,915 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(../imagenes/fondo01.jpg);
+	background-repeat: repeat-x;
+}
+.formu{
+	width: 60%
+}
+#fondofb {
+	height: 900px;
+	width: 800px;
+}
+#todo {
+	width: 100%;
+}
+#grupo {
+	position: relative;
+	height: 900px;
+	width: 800px;
+	margin: auto;
+}
+#cabeza {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	left: 0px;
+	top: 0px;
+	background-color: #F00;
+	background-image: url(../imagenes/Cabeza.jpg);
+}
+#contene01 {
+	position: absolute;
+	height: 70px;
+	width: 800px;
+	left: 0px;
+	top: 50px;
+}
+#paso01 {
+	position: absolute;
+	height: 70px;
+	width: 75px;
+	left: 0px;
+	background-image: url(../imagenes/paso01A.jpg);
+}
+#paso01:hover { 
+	background-image: url(../imagenes/paso01B.jpg);
+}
+#paso02 {
+	position: absolute;
+	height: 70px;
+	width: 650px;
+	left: 75px;
+	background-image: url(../imagenes/paso02.jpg);
+}
+#paso03 {
+	position: absolute;
+	height: 70px;
+	width: 75px;
+	left: 725px;
+	background-image: url(../imagenes/paso03A.jpg);
+}
+#contene02 {
+	position: absolute;
+	height: 51px;
+	width: 800px;
+	top: 120px;
+	background-image: url(../imagenes/status.jpg);
+}
+#contene03 {
+	position: absolute;
+	height: 510px;
+	width: 340px;
+	top: 1100px;
+	left: 31.5%;
+	background-image: url(../imagenes/fondolugares.jpg);
+}
+#bot01 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 047px;
+}
+#bot01:hover { 
+	background-image: url(../imagenes/bot01B.jpg);
+}
+#bot02 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 087px;
+}
+#bot02:hover { 
+	background-image: url(../imagenes/bot02B.jpg);
+}
+#bot03 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 145px;
+}
+#bot03:hover { 
+	background-image: url(../imagenes/bot03B.jpg);
+}
+#bot04 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 185px;
+}
+#bot04:hover { 
+	background-image: url(../imagenes/bot04B.jpg);
+}
+#bot05 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 243px;
+}
+#bot05:hover { 
+	background-image: url(../imagenes/bot05B.jpg);
+}
+#bot06 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 283px;
+}
+#bot06:hover { 
+	background-image: url(../imagenes/bot06B.jpg);
+}
+#bot07 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 341px;
+}
+#bot07:hover { 
+	background-image: url(../imagenes/bot07B.jpg);
+}
+#bot08 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 145px;
+	left: 381px;
+}
+#bot08:hover { 
+	background-image: url(../imagenes/bot08B.jpg);
+}
+#bot09 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 47px;
+}
+#bot09:hover { 
+	background-image: url(../imagenes/bot10B.jpg);
+}
+#bot10 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 87px;
+}
+#bot10:hover { 
+	background-image: url(../imagenes/bot10B.jpg);
+}
+#bot11 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 145px;
+}
+#bot11:hover { 
+	background-image: url(../imagenes/bot11B.jpg);
+}
+#bot12 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 185px;
+}
+#bot12:hover { 
+	background-image: url(../imagenes/bot12B.jpg);
+}
+#bot13 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 243px;
+}
+#bot13:hover { 
+	background-image: url(../imagenes/bot13B.jpg);
+}
+#bot14 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 283px;
+}
+#bot14:hover { 
+	background-image: url(../imagenes/bot14B.jpg);
+}
+#bot15 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 341px;
+}
+#bot15:hover { 
+	background-image: url(../imagenes/bot15B.jpg);
+}
+#bot16 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 174px;
+	left: 381px;
+}
+#bot16:hover { 
+	background-image: url(../imagenes/bot16B.jpg);
+}
+#bot17 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 47px;
+}
+#bot17:hover { 
+	background-image: url(../imagenes/bot17B.jpg);
+}
+#bot18 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 87px;
+}
+#bot18:hover { 
+	background-image: url(../imagenes/bot18B.jpg);
+}
+#bot19 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 145px;
+}
+#bot19:hover { 
+	background-image: url(../imagenes/bot19B.jpg);
+}
+#bot20 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 185px;
+}
+#bot20:hover { 
+	background-image: url(../imagenes/bot20B.jpg);
+}
+#bot21 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 243px;
+}
+#bot21:hover { 
+	background-image: url(../imagenes/bot21B.jpg);
+}
+#bot22 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 283px;
+}
+#bot22:hover { 
+	background-image: url(../imagenes/bot22B.jpg);
+}
+#bot23 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 341px;
+}
+#bot23:hover { 
+	background-image: url(../imagenes/bot23B.jpg);
+}
+#bot24 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 204px;
+	left: 381px;
+}
+#bot24:hover { 
+	background-image: url(../imagenes/bot24B.jpg);
+}
+#bot25 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 47px;
+}
+#bot25:hover { 
+	background-image: url(../imagenes/bot25B.jpg);
+}
+#bot26 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 87px;
+}
+#bot26:hover { 
+	background-image: url(../imagenes/bot26B.jpg);
+}
+#bot27 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 145px;
+}
+#bot27:hover { 
+	background-image: url(../imagenes/bot27B.jpg);
+}
+#bot28 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 185px;
+}
+#bot28:hover { 
+	background-image: url(../imagenes/bot28B.jpg);
+}
+#bot29 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 243px;
+}
+#bot29:hover { 
+	background-image: url(../imagenes/bot29B.jpg);
+}
+#bot30 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 283px;
+}
+#bot30:hover { 
+	background-image: url(../imagenes/bot30B.jpg);
+}
+#bot31 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 341px;
+}
+#bot31:hover { 
+	background-image: url(../imagenes/bot31B.jpg);
+}
+#bot32 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 255px;
+	left: 381px;
+}
+#bot32:hover { 
+	background-image: url(../imagenes/bot32B.jpg);
+}
+#bot33 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 47px;
+}
+#bot33:hover { 
+	background-image: url(../imagenes/bot33B.jpg);
+}
+#bot34 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 87px;
+}
+#bot34:hover { 
+	background-image: url(../imagenes/bot34B.jpg);
+}
+#bot35 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 145px;
+}
+#bot35:hover { 
+	background-image: url(../imagenes/bot35B.jpg);
+}
+#bot36 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 185px;
+}
+#bot36:hover { 
+	background-image: url(../imagenes/bot36B.jpg);
+}
+#bot37 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 243px;
+}
+#bot37:hover { 
+	background-image: url(../imagenes/bot37B.jpg);
+}
+#bot38 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 283px;
+}
+#bot38:hover { 
+	background-image: url(../imagenes/bot38B.jpg);
+}
+#bot39 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 341px;
+}
+#bot39:hover { 
+	background-image: url(../imagenes/bot39B.jpg);
+}
+#bot40 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 283px;
+	left: 381px;
+}
+#bot40:hover { 
+	background-image: url(../imagenes/bot40B.jpg);
+}
+#bot41 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 47px;
+}
+#bot41:hover { 
+	background-image: url(../imagenes/bot41B.jpg);
+}
+#bot42 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 87px;
+}
+#bot42:hover { 
+	background-image: url(../imagenes/bot42B.jpg);
+}
+#bot43 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 145px;
+}
+#bot43:hover { 
+	background-image: url(../imagenes/bot43B.jpg);
+}
+#bot44 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 185px;
+}
+#bot44:hover { 
+	background-image: url(../imagenes/bot44B.jpg);
+}
+#bot45 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 243px;
+}
+#bot45:hover { 
+	background-image: url(../imagenes/bot45B.jpg);
+}
+#bot46 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 283px;
+}
+#bot46:hover { 
+	background-image: url(../imagenes/bot46B.jpg);
+}
+#bot47 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 341px;
+}
+#bot47:hover { 
+	background-image: url(../imagenes/bot47B.jpg);
+}
+#bot48 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 311px;
+	left: 381px;
+}
+#bot48:hover { 
+	background-image: url(../imagenes/bot48B.jpg);
+}
+#bot49 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 47px;
+}
+#bot49:hover { 
+	background-image: url(../imagenes/bot50B.jpg);
+}
+#bot50 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 87px;
+}
+#bot50:hover { 
+	background-image: url(../imagenes/bot50B.jpg);
+}
+#bot51 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 145px;
+}
+#bot51:hover { 
+	background-image: url(../imagenes/bot51B.jpg);
+}
+#bot52 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 185px;
+}
+#bot52:hover { 
+	background-image: url(../imagenes/bot52B.jpg);
+}
+#bot53 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 243px;
+}
+#bot53:hover { 
+	background-image: url(../imagenes/bot53B.jpg);
+}
+#bot54 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 283px;
+}
+#bot54:hover { 
+	background-image: url(../imagenes/bot54B.jpg);
+}
+#bot55 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 341px;
+}
+#bot55:hover { 
+	background-image: url(../imagenes/bot55B.jpg);
+}
+#bot56 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 355px;
+	left: 381px;
+}
+#bot56:hover { 
+	background-image: url(../imagenes/bot56B.jpg);
+}
+#bot57 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 47px;
+}
+#bot57:hover { 
+	background-image: url(../imagenes/bot57B.jpg);
+}
+#bot58 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 87px;
+}
+#bot58:hover { 
+	background-image: url(../imagenes/bot58B.jpg);
+}
+#bot59 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 145px;
+}
+#bot59:hover { 
+	background-image: url(../imagenes/bot59B.jpg);
+}
+#bot60 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 185px;
+}
+#bot60:hover { 
+	background-image: url(../imagenes/bot60B.jpg);
+}
+#bot61 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 243px;
+}
+#bot61:hover { 
+	background-image: url(../imagenes/bot61B.jpg);
+}
+#bot62 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 283px;
+}
+#bot62:hover { 
+	background-image: url(../imagenes/bot62B.jpg);
+}
+#bot63 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 341px;
+}
+#bot63:hover { 
+	background-image: url(../imagenes/bot63B.jpg);
+}
+#bot64 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 383px;
+	left: 381px;
+}
+#bot64:hover { 
+	background-image: url(../imagenes/bot64B.jpg);
+}
+#bot65 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 47px;
+}
+#bot65:hover { 
+	background-image: url(../imagenes/bot65B.jpg);
+}
+#bot66 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 87px;
+}
+#bot66:hover { 
+	background-image: url(../imagenes/bot66B.jpg);
+}
+#bot67 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 145px;
+}
+#bot67:hover { 
+	background-image: url(../imagenes/bot67B.jpg);
+}
+#bot68 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 185px;
+}
+#bot68:hover { 
+	background-image: url(../imagenes/bot68B.jpg);
+}
+#bot69 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 243px;
+}
+#bot69:hover { 
+	background-image: url(../imagenes/bot69B.jpg);
+}
+#bot70 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 283px;
+}
+#bot70:hover { 
+	background-image: url(../imagenes/bot70B.jpg);
+}
+#bot71 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 341px;
+}
+#bot71:hover { 
+	background-image: url(../imagenes/bot71B.jpg);
+}
+#bot72 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 410px;
+	left: 381px;
+}
+#bot72:hover { 
+	background-image: url(../imagenes/bot72B.jpg);
+}
+#bot73 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 47px;
+}
+#bot73:hover { 
+	background-image: url(../imagenes/bot73B.jpg);
+}
+#bot74 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 87px;
+}
+#bot74:hover { 
+	background-image: url(../imagenes/bot74B.jpg);
+}
+#bot75 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 145px;
+}
+#bot75:hover { 
+	background-image: url(../imagenes/bot75B.jpg);
+}
+#bot76 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 185px;
+}
+#bot76:hover { 
+	background-image: url(../imagenes/bot76B.jpg);
+}
+#bot77 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 243px;
+}
+#bot77:hover { 
+	background-image: url(../imagenes/bot77B.jpg);
+}
+#bot78 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 283px;
+}
+#bot78:hover { 
+	background-image: url(../imagenes/bot78B.jpg);
+}
+#bot79 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 341px;
+}
+#bot79:hover { 
+	background-image: url(../imagenes/bot79B.jpg);
+}
+#bot80 {
+	position: absolute;
+	height: 29px;
+	width: 25px;
+	top: 438px;
+	left: 381px;
+}
+#bot80:hover { 
+	background-image: url(../imagenes/bot80B.jpg);
+}
+#formulario {
+	position: absolute;
+	height: 511px;
+	width: 451px;
+	top: 170px;
+	left: 31.5%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #666;
+}
+.naranja {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 18px;
+	font-style: normal;
+	color: #F90;
+}
+#contene04 {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	top: 1650px;
+}
+#textfield7 {
+	resize: none;
+}
+#salir {
+	position: absolute;
+	height: 49px;
+	width: 247px;
+	top: 1px;
+	left: 300px;
+	background-image: url(../imagenes/salir01.jpg);
+}
+#salir:hover { 
+	background-image: url(../imagenes/salir02.jpg);
+}
