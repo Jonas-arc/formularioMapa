@@ -1,9 +1,13 @@
 <br>
 <div class="container" ng-controller='tablaUsuarios'>
-  <h1>Lista de participantes por confirmar</h1>
+  <h1>Lista de participantes</h1>
   <br>
-  <div class="busqueda">
-    <input ng-model="searchText" type="text" class="form-control" placeholder="Busqueda"/>
+  <div class="container">
+    <div class="row">
+      <select class="selectpicker col-1" ng-model="consulta" ng-options="rm.name for rm in consultasSelect" ng-init="consulta=consultasSelect[0]" ng-change="listar()">
+      </select>
+      <input class="col-2" ng-model="searchText" type="text" class="form-control" placeholder="Busqueda"/>
+    </div>
   </div>
   <hr>
   <div class="panel panel-default">
@@ -11,12 +15,7 @@
       <table ng-init='configPages()' class='table'>
         <thead>
           <tr>
-            <th>Folio</th>
-            <th>Nombre</th>
-            <th>Telefono</th>
-            <th>Correo electronico</th>
-            <th>Lugar(es)</th>
-            <th>Acciones</th>
+            <th ng-repeat="i in titulos[consulta.name]">{{i}}</th>
           </tr>
         </thead>
         <tbody>
@@ -26,7 +25,18 @@
             <td>{{usuario.telefono}}</td>
             <td>{{usuario.correo}}</td>
             <td>{{usuario.lugares}}</td>
-            <td><button ng-click="confirmar(usuario.id)" class="btn btn-primary" type="submit">Confirmar</button></td>
+            <td><div ng-switch="consulta.name">
+                  <div ng-switch-when="Todos">
+                    {{usuario.productos}}
+                  </div>
+                  <div ng-switch-when="Por confirmar">
+                    <button ng-click="confirmar(usuario.id)" class="btn btn-primary" type="submit">Confirmar</button>
+                  </div>
+                  <div ng-switch-when="Confirmados">
+                    {{usuario.productos}}
+                  </div>
+                </div>
+            </td>
           </tr>
         </tbody>
       </table>

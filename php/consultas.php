@@ -5,6 +5,7 @@ $objDatos = json_decode(file_get_contents("php://input"));
 if ($objDatos->accion == 'consulta') {
 	$datos = (array) $objDatos;
 	$conex = ConexionMysql();
+	$conex->set_charset("utf8");
 	if (!is_null($conex)){
 		switch ($datos['search']) {
 			case 'lugaresOcupados':
@@ -15,6 +16,26 @@ if ($objDatos->accion == 'consulta') {
 				break;
 			case 'participantes':
 				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id group by p.id";
+				$res = QueryMysql($query,$conex);
+				if (!is_null($res)) {
+					$aux=array();
+					$aux2=array();
+					while ($obj = $res->fetch_array(MYSQLI_ASSOC)) {
+						$aux[$obj['id']] = $obj;
+					}
+					$query = "select p.id as id, group_concat(pro.nombre SEPARATOR ',') as productos from participantes as p inner join producto_participante as pp on p.id=pp.idParticipante inner join producto as pro on pro.nombre=pp.idProducto group by p.id";
+					$res = QueryMysql($query,$conex);
+					while ($obj = $res->fetch_array(MYSQLI_ASSOC)) {
+						$aux2[$obj['id']] = $obj;
+						unset($aux2[$obj['id']]['id']);
+					}
+					$aux = array_merge_recursive($aux,$aux2);
+					print_r(json_encode(array_reverse(array_values($aux))));
+					$res->close();
+				}else{
+					print_r(json_encode(array("error"=>"Consulta no valida")));
+				}
+				return;
 				break;
 			case 'participantesConfirmados':
 				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion is true group by p.id";

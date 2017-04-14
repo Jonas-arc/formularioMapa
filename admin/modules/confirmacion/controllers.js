@@ -2,8 +2,17 @@
 angular.module('DemoPagineo')
   .controller('tablaUsuarios', ['$rootScope','$scope','$http',
     function($rootScope,$scope,$http) {
-      $scope.listar = function() { 
-        var $consultas = {"accion":"consulta","search":"participantesReservados"};
+      $scope.consultasSelect = [{"name":"Todos","consulta":"participantes"},
+                          {"name":"Por confirmar","consulta":"participantesReservados"},
+                          {"name":"Confirmados","consulta":"participantesConfirmados"}];
+      $scope.consulta = $scope.consultasSelect[0];
+
+      $scope.titulos = {"Todos":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Productos"],
+                        "Por confirmar":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Acciones"],
+                        "Confirmados":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Productos"]};
+      $scope.listar = function() {
+        console.log($scope.consulta);
+        var $consultas = {"accion":"consulta","search":$scope.consulta.consulta};
 
         function nombreCom(element, index, array){
           element['nombreComp'] = "".concat(element['nombre']," ",element['appaterno']," ",element['apmaterno']);

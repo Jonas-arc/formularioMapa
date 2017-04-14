@@ -33,12 +33,14 @@ function ordenInsert($a){
 			return 5;
 		case 'categoria':
 			return 6;
-		case 'lugar':
-			return 7;
 		case 'estado':
+			return 7;
+		case 'comentario':
 			return 8;
-		default:
+		case 'productoDescrip':
 			return 9;
+		default:
+			return 10;
 	}
 }
 
