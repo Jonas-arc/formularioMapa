@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="Milo">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="./css/plano.css">
+	<link rel="stylesheet" type="text/css" href="./script/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./script/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="./script/ng-tags-input/ng-tags-input.css">
+	<link rel="stylesheet" type="text/css" href="./script/ng-tags-input/ng-tags-input.bootstrap.css">
+</head>
+<body ng-controller="formulario">
+	<div class="container">
+		<div class="col-md-4"></div>
+		<div class="col-md-4" >
+			<form name="userForm" novalidate>
+				<label for="name">Nombre</label><br />
+			    <tags-input ng-model="user.tags" max-tags="3" enforce-max-tags>
+			      <auto-complete source="loadTags($query)"></auto-complete>
+			    </tags-input>
+			    <br />
+			     
+			    <br /><br />
+			    <input type="reset" ng-click="reset(userForm)" value="Limpiar" />
+			    <input type="submit" ng-click="update()" value="Guardar" ng-disabled="userForm.$invalid" />
+			</form>
+			<pre>user = {{user | json}}</pre>
+		</div>
+	</div>
+	<script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="./script/angular-1.6.2/angular.min.js"></script>
+	<script type="text/javascript" src="./script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./script/ng-tags-input/ng-tags-input.js"></script>
+	<script type="text/javascript" src="./js/controler/form2.js"></script>
+	<script src="./script/jquery.min.js"></script>
+</body>
+</html>
