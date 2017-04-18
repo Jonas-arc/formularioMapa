@@ -1,4 +1,4 @@
-app.controller("mapa",['$scope','$rootScope','$http','$window',function($scope,$rootScope,$http,$window){
+app.controller("mapa",['$scope','$rootScope','$http','$window','serveData',function($scope,$rootScope,$http,$window,serveData){
 
 	redirect = function(){
 		$window.location.href = './ArtesanosA/ArtesaSeccA.html'
@@ -7,17 +7,29 @@ app.controller("mapa",['$scope','$rootScope','$http','$window',function($scope,$
 	$scope.asigna = function(lugar){
 		console.log(lugar);
 		$rootScope.area = lugar;
-		console.log($rootScope.area);
-		
-
+		console.log(serveData.qty);
+		serveData.qty = lugar;
+		console.log(serveData.qty);
+		if (serveData.qty == "") {
+			console.log("redireccion");
+			
+		}
+		else
+		{
+			console.log("no re direccion");
+			redirect();
+		}
 
 		$scope.data = {
 			accion : 'consulta',
 			search : 'productos'
 		};
-		$http.post('http://sonparamilo.org.mx/formulario/php/consulta.php',$scope.data)
+		$http.post('./php/consulta.php',$scope.data)
                .then(function(respuesta){
             console.log(respuesta);
+            
          });
+
+
 	};
 }]);

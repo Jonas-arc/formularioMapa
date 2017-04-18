@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html ng-app="Milo" xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Son para Milo 2017</title>
@@ -253,6 +253,7 @@ body {
 	height: 50px;
 	width: 800px;
 	top: 620px;
+	visibility: visible;
 }
 #salir {
 	position: absolute;
@@ -265,11 +266,21 @@ body {
 #salir:hover { 
 	background-image: url(imagenes/salir02.jpg);
 }
+#contene05 {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	top: 680px;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #390;
+}
 </style>
 </script>
 </head>
 
-<body ng-controller="mapa">
+<body>
 <div id="todo">
 <div id="grupo">
   <div id="fondofb">
@@ -283,36 +294,32 @@ body {
     <div id="contene02bis"></div>
 	<div id="contene03">
     	<div id="mapa01"></div>
-        <a ng-click="asigna('AA')" target="_self">
-        	<div id="mapa02" ></div>
-        </a>
+        <a href="ArtesanosA/ArtesaSeccA.html" target="_self"><div id="mapa02"></div></a>
         <a href="ArtesanosB/ArtesaSeccB.html" target="_self"><div id="mapa03"></div></a>
         <div id="mapa04"></div>
         <div id="mapa05"></div>
         <a href="GastronomosA/GastroSeccA.html" target="_self"><div id="mapa06"></div></a>
-        <div id="mapa07"></div>
+        <a href="GastronomosD/GastroSeccD.html" target="_self"><div id="mapa07"></div></a>
         <div id="mapa08"></div>
         <div id="mapa09"></div>
         <div id="mapa12"></div>
-        <div id="mapa11"></div>
-        <div id="mapa14"></div>
+        <a href="GastronomosC/GastroSeccC.html" target="_self"><div id="mapa11"></div></a>
+        <a href="GastronomosB/GastroSeccB.html" target="_self"><div id="mapa14"></div></a>
         <div id="mapa10"></div>
         <div id="mapa15"></div>
         <div id="mapa16"></div>
         <div id="mapa17"></div>
-        <div id="mapa13"></div>
+        <a href="GastronomosE/GastroSeccE.html" target="_self"><div id="mapa13"></div></a>
         <div id="mapa18"></div>
 	</div>
     <div id="contene04">
     <a href="../index.html"><div id="salir"></div></a>
     </div>
+    <div id="contene05">
+    Son para Milo 2017 / <a href="mailto:festivalsonparamilo@gmail.com">festivalsonparamilo@gmail.com</a> / Informes: 55 21 79 03 83
+    </div>
   </div>
 </div>
 </div>
-	<script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="./script/angular-1.6.2/angular.min.js"></script>
-	<script type="text/javascript" src="./script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="./js/app.js"></script>
-	<script type="text/javascript" src="./js/controler/mapa.js"></script>
 </body>
 </html>
