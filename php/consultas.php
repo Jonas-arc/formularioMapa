@@ -56,6 +56,16 @@ if ($objDatos->accion == 'consulta') {
 			case 'participantesReservados':
 				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion is false group by p.id";
 				break;
+			case 'validaLugares':
+				$query = "select * from validarLugar where lugarSelect in ("."'".preg_replace("/,/", "','", $datos['asignados'])."'".") and lugarPosible like '".$datos['buscado']."'";
+				$res = QueryMysql($query,$conex);
+				if ($res->num_rows <= 0) {
+					print_r(json_encode(array("asignar"=>true)));
+				}else{
+					print_r(json_encode(array("asignar"=>false)));
+				}
+				return;
+				break;
 		}
 		//print_r(json_encode(array($query)));
 		$res = QueryMysql($query,$conex);
