@@ -10,7 +10,7 @@
 </head>
 
 <body ng-controller="formulario">
-<div id="todo" class="container">
+<div ng-mousemove = "user.seccion='GA'" id="todo" class="container">
 <div id="grupo">
   <div id="fondofb">
   <div id="cabeza"></div>
@@ -26,28 +26,137 @@
 <div id="apDiv3" style="position: absolute; left: 26px; top: 131px; width: 800px; height: 51px; z-index: 3"><img src="../imagenes/status.jpg" width="800" height="51" /></div>
 <div id="apDiv4" style="position: absolute; left: 26px; top: 183px; width: 800px; height: 100px; z-index: 5"><img src="../imagenes/cabezlugaresGA.jpg" width="800" height="100" /></div>
 <div id="apDiv5" style="position: absolute; left: 26px; top: 281px; width: 10px; height: 173px; z-index: 6"><img src="../imagenes/azulderch.jpg" width="10" height="173" /></div>
-<div id="apDiv6"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','../imagenes/bot01B.jpg',1)"><img src="../imagenes/bot01AG.jpg" width="27" height="23" id="Image8" /></button>
-<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','../imagenes/bot15B.jpg',1)"><img src="../imagenes/bot15AG.jpg" width="27" height="23" id="Image10" /></button>
-<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','../imagenes/bot29B.jpg',1)"><img src="../imagenes/bot29AG.jpg" width="27" height="23" id="Image11" /></button>
-<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','../imagenes/bot43B.jpg',1)"><img src="../imagenes/bot43AG.jpg" width="27" height="23" id="Image13" /></button></div>
-<div id="apDiv7"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','../imagenes/bot02B.jpg',1)"><img src="../imagenes/bot02AG.jpg" width="27" height="23" id="Image14" /></button>
-<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','../imagenes/bot16B.jpg',1)"><img src="../imagenes/bot16AG.jpg" width="27" height="23" id="Image15" /></button>
-<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','../imagenes/bot30B.jpg',1)"><img src="../imagenes/bot30AG.jpg" width="27" height="23" id="Image16" /></button>
-<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot44AG.jpg" width="27" height="23" id="Image18" /></button></div>
-<div id="apDiv8"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','../imagenes/bot03B.jpg',1)"><img src="../imagenes/bot03AG.jpg" width="27" height="23" id="Image19" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','../imagenes/bot17B.jpg',1)"><img src="../imagenes/bot17AG.jpg" width="27" height="23" id="Image21" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','../imagenes/bot31B.jpg',1)"><img src="../imagenes/bot31AG.jpg" width="27" height="23" id="Image22" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot45AG.jpg" width="27" height="23" id="Image24" /></button></div>
-<div id="apDiv9"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','../imagenes/bot04B.jpg',1)"><img src="../imagenes/bot04AG.jpg" width="27" height="23" id="Image25" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','../imagenes/bot18B.jpg',1)"><img src="../imagenes/bot18AG.jpg" width="27" height="23" id="Image27" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','../imagenes/bot32B.jpg',1)"><img src="../imagenes/bot32AG.jpg" width="27" height="23" id="Image28" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','../imagenes/bot46B.jpg',1)"><img src="../imagenes/bot46AG.jpg" width="27" height="23" id="Image30" /></button></div>
+
+<div id="apDiv6">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','../imagenes/bot01B.jpg',1)"><img src="../imagenes/bot01AG.jpg" width="27" height="23" id="Image8" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(15)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','../imagenes/bot15B.jpg',1)"><img src="../imagenes/bot15AG.jpg" width="27" height="23" id="Image10" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(29)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','../imagenes/bot29B.jpg',1)"><img src="../imagenes/bot29AG.jpg" width="27" height="23" id="Image11" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(43)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','../imagenes/bot43B.jpg',1)"><img src="../imagenes/bot43AG.jpg" width="27" height="23" id="Image13" /></button>
+</div>
+
+<div id="apDiv7">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(2)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','../imagenes/bot02B.jpg',1)"><img src="../imagenes/bot02AG.jpg" width="27" height="23" id="Image14" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(16)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','../imagenes/bot16B.jpg',1)"><img src="../imagenes/bot16AG.jpg" width="27" height="23" id="Image15" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(30)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','../imagenes/bot30B.jpg',1)"><img src="../imagenes/bot30AG.jpg" width="27" height="23" id="Image16" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(44)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot44AG.jpg" width="27" height="23" id="Image18" /></button>
+</div>
+
+<div id="apDiv8">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(3)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','../imagenes/bot03B.jpg',1)"><img src="../imagenes/bot03AG.jpg" width="27" height="23" id="Image19" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(17)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','../imagenes/bot17B.jpg',1)"><img src="../imagenes/bot17AG.jpg" width="27" height="23" id="Image21" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(31)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','../imagenes/bot31B.jpg',1)"><img src="../imagenes/bot31AG.jpg" width="27" height="23" id="Image22" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(45)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot45AG.jpg" width="27" height="23" id="Image24" /></button>
+</div>
+
+<div id="apDiv9">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(4)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','../imagenes/bot04B.jpg',1)"><img src="../imagenes/bot04AG.jpg" width="27" height="23" id="Image25" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(18)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','../imagenes/bot18B.jpg',1)"><img src="../imagenes/bot18AG.jpg" width="27" height="23" id="Image27" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(32)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','../imagenes/bot32B.jpg',1)"><img src="../imagenes/bot32AG.jpg" width="27" height="23" id="Image28" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(46)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','../imagenes/bot46B.jpg',1)"><img src="../imagenes/bot46AG.jpg" width="27" height="23" id="Image30" /></button>
+</div>
+
 <div id="apDiv10"><img src="../imagenes/barra02G.jpg" width="25" height="173" /></div>
-<div id="apDiv11"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image33','','../imagenes/bot05B.jpg',1)"><img src="../imagenes/bot05AG.jpg" width="27" height="23" id="Image33" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','../imagenes/bot19B.jpg',1)"><img src="../imagenes/bot19AG.jpg" width="27" height="23" id="Image35" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image36','','../imagenes/bot33B.jpg',1)"><img src="../imagenes/bot33AG.jpg" width="27" height="23" id="Image36" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image38','','../imagenes/bot47B.jpg',1)"><img src="../imagenes/bot47AG.jpg" width="27" height="23" id="Image38" /></button></div>
-<div id="apDiv12"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image39','','../imagenes/bot06B.jpg',1)"><img src="../imagenes/bot06AG.jpg" width="27" height="23" id="Image39" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image41','','../imagenes/bot20B.jpg',1)"><img src="../imagenes/bot20AG.jpg" width="27" height="23" id="Image41" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image42','','../imagenes/bot34B.jpg',1)"><img src="../imagenes/bot34AG.jpg" width="27" height="23" id="Image42" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image44','','../imagenes/bot48B.jpg',1)"><img src="../imagenes/bot48AG.jpg" width="27" height="23" id="Image44" /></button></div>
-<div id="apDiv13"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image45','','../imagenes/bot07B.jpg',1)"><img src="../imagenes/bot07AG.jpg" width="27" height="23" id="Image45" /></button><img src="../imagenes/barra01bis.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image47','','../imagenes/bot21B.jpg',1)"><img src="../imagenes/bot21AG.jpg" width="27" height="23" id="Image47" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image48','','../imagenes/bot35B.jpg',1)"><img src="../imagenes/bot35AG.jpg" width="27" height="23" id="Image48" /></button><img src="../imagenes/barra01bis.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','../imagenes/bot49B.jpg',1)"><img src="../imagenes/bot49AG.jpg" width="27" height="23" id="Image50" /></button></div>
-<div id="apDiv14"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','../imagenes/bot08B.jpg',1)"><img src="../imagenes/bot08AG.jpg" width="27" height="23" id="Image51" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image53','','../imagenes/bot22B.jpg',1)"><img src="../imagenes/bot22AG.jpg" width="27" height="23" id="Image53" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image54','','../imagenes/bot36B.jpg',1)"><img src="../imagenes/bot36AG.jpg" width="27" height="23" id="Image54" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image56','','../imagenes/bot50B.jpg',1)"><img src="../imagenes/bot50AG.jpg" width="27" height="23" id="Image56" /></button></div>
-<div id="apDiv15"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image58','','../imagenes/bot09B.jpg',1)"><img src="../imagenes/bot09AG.jpg" width="27" height="23" id="Image58" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image59','','../imagenes/bot23B.jpg',1)"><img src="../imagenes/bot23AG.jpg" width="27" height="23" id="Image59" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image60','','../imagenes/bot37B.jpg',1)"><img src="../imagenes/bot37AG.jpg" width="27" height="23" id="Image60" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image62','','../imagenes/bot51B.jpg',1)"><img src="../imagenes/bot51AG.jpg" width="27" height="23" id="Image62" /></button></div>
+
+<div id="apDiv11">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(5)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image33','','../imagenes/bot05B.jpg',1)"><img src="../imagenes/bot05AG.jpg" width="27" height="23" id="Image33" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(19)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','../imagenes/bot19B.jpg',1)"><img src="../imagenes/bot19AG.jpg" width="27" height="23" id="Image35" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(33)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image36','','../imagenes/bot33B.jpg',1)"><img src="../imagenes/bot33AG.jpg" width="27" height="23" id="Image36" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(47)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image38','','../imagenes/bot47B.jpg',1)"><img src="../imagenes/bot47AG.jpg" width="27" height="23" id="Image38" /></button>
+</div>
+
+<div id="apDiv12">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(6)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image39','','../imagenes/bot06B.jpg',1)"><img src="../imagenes/bot06AG.jpg" width="27" height="23" id="Image39" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(20)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image41','','../imagenes/bot20B.jpg',1)"><img src="../imagenes/bot20AG.jpg" width="27" height="23" id="Image41" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(34)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image42','','../imagenes/bot34B.jpg',1)"><img src="../imagenes/bot34AG.jpg" width="27" height="23" id="Image42" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(48)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image44','','../imagenes/bot48B.jpg',1)"><img src="../imagenes/bot48AG.jpg" width="27" height="23" id="Image44" /></button>
+</div>
+
+<div id="apDiv13">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(7)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image45','','../imagenes/bot07B.jpg',1)"><img src="../imagenes/bot07AG.jpg" width="27" height="23" id="Image45" /></button>
+	<img src="../imagenes/barra01bis.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(21)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image47','','../imagenes/bot21B.jpg',1)"><img src="../imagenes/bot21AG.jpg" width="27" height="23" id="Image47" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(35)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image48','','../imagenes/bot35B.jpg',1)"><img src="../imagenes/bot35AG.jpg" width="27" height="23" id="Image48" /></button>
+	<img src="../imagenes/barra01bis.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(49)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','../imagenes/bot49B.jpg',1)"><img src="../imagenes/bot49AG.jpg" width="27" height="23" id="Image50" /></button>
+</div>
+
+<div id="apDiv14">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(8)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','../imagenes/bot08B.jpg',1)"><img src="../imagenes/bot08AG.jpg" width="27" height="23" id="Image51" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(22)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image53','','../imagenes/bot22B.jpg',1)"><img src="../imagenes/bot22AG.jpg" width="27" height="23" id="Image53" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(36)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image54','','../imagenes/bot36B.jpg',1)"><img src="../imagenes/bot36AG.jpg" width="27" height="23" id="Image54" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(50)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image56','','../imagenes/bot50B.jpg',1)"><img src="../imagenes/bot50AG.jpg" width="27" height="23" id="Image56" /></button>
+</div>
+
+<div id="apDiv15">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(9)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image58','','../imagenes/bot09B.jpg',1)"><img src="../imagenes/bot09AG.jpg" width="27" height="23" id="Image58" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(23)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image59','','../imagenes/bot23B.jpg',1)"><img src="../imagenes/bot23AG.jpg" width="27" height="23" id="Image59" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(37)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image60','','../imagenes/bot37B.jpg',1)"><img src="../imagenes/bot37AG.jpg" width="27" height="23" id="Image60" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(51)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image62','','../imagenes/bot51B.jpg',1)"><img src="../imagenes/bot51AG.jpg" width="27" height="23" id="Image62" /></button>
+</div>
+
 <div id="apDiv16"><img src="../imagenes/barra02G.jpg" width="25" height="173" /></div>
-<div id="apDiv17"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image63','','../imagenes/bot10B.jpg',1)"><img src="../imagenes/bot10AG.jpg" width="27" height="23" id="Image63" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image65','','../imagenes/bot24B.jpg',1)"><img src="../imagenes/bot24AG.jpg" width="27" height="23" id="Image65" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image66','','../imagenes/bot38B.jpg',1)"><img src="../imagenes/bot38AG.jpg" width="27" height="23" id="Image66" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image68','','../imagenes/bot52B.jpg',1)"><img src="../imagenes/bot52AG.jpg" width="27" height="23" id="Image68" /></button></div>
-<div id="apDiv18"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image69','','../imagenes/bot11B.jpg',1)"><img src="../imagenes/bot11AG.jpg" width="27" height="23" id="Image69" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image71','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot25AG.jpg" width="27" height="23" id="Image71" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image72','','../imagenes/bot39B.jpg',0)"><img src="../imagenes/bot39AG.jpg" width="27" height="23" id="Image72" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image74','','../imagenes/bot53B.jpg',1)"><img src="../imagenes/bot53AG.jpg" width="27" height="23" id="Image74" /></button></div>
-<div id="apDiv19"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image75','','../imagenes/bot12B.jpg',1)"><img src="../imagenes/bot12AG.jpg" width="27" height="23" id="Image75" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image77','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot25AG.jpg" width="27" height="23" id="Image77" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image78','','../imagenes/bot40B.jpg',1)"><img src="../imagenes/bot40AG.jpg" width="27" height="23" id="Image78" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image80','','../imagenes/bot54B.jpg',1)"><img src="../imagenes/bot54AG.jpg" width="27" height="23" id="Image80" /></button></div>
-<div id="apDiv20"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image81','','../imagenes/bot13B.jpg',1)"><img src="../imagenes/bot13AG.jpg" width="27" height="23" id="Image81" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image83','','../imagenes/bot26B.jpg',1)"><img src="../imagenes/bot26AG.jpg" width="27" height="23" id="Image83" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image84','','../imagenes/bot41B.jpg',1)"><img src="../imagenes/bot41AG.jpg" width="27" height="23" id="Image84" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image86','','../imagenes/bot55B.jpg',1)"><img src="../imagenes/bot55AG.jpg" width="27" height="23" id="Image86" /></button></div>
-<div id="apDiv21"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image87','','../imagenes/bot14B.jpg',1)"><img src="../imagenes/bot14AG.jpg" width="27" height="23" id="Image87" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image89','','../imagenes/bot27B.jpg',1)"><img src="../imagenes/bot27AG.jpg" width="27" height="23" id="Image89" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image90','','../imagenes/bot42B.jpg',1)"><img src="../imagenes/bot42AG.jpg" width="27" height="23" id="Image90" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image92','','../imagenes/bot56B.jpg',1)"><img src="../imagenes/bot56AG.jpg" width="27" height="23" id="Image92" /></button></div>
+
+<div id="apDiv17">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(10)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image63','','../imagenes/bot10B.jpg',1)"><img src="../imagenes/bot10AG.jpg" width="27" height="23" id="Image63" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(24)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image65','','../imagenes/bot24B.jpg',1)"><img src="../imagenes/bot24AG.jpg" width="27" height="23" id="Image65" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(38)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image66','','../imagenes/bot38B.jpg',1)"><img src="../imagenes/bot38AG.jpg" width="27" height="23" id="Image66" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(52)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image68','','../imagenes/bot52B.jpg',1)"><img src="../imagenes/bot52AG.jpg" width="27" height="23" id="Image68" /></button>
+</div>
+
+<div id="apDiv18">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(11)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image69','','../imagenes/bot11B.jpg',1)"><img src="../imagenes/bot11AG.jpg" width="27" height="23" id="Image69" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(25)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image71','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot25AG.jpg" width="27" height="23" id="Image71" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(39)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image72','','../imagenes/bot39B.jpg',0)"><img src="../imagenes/bot39AG.jpg" width="27" height="23" id="Image72" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(53)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image74','','../imagenes/bot53B.jpg',1)"><img src="../imagenes/bot53AG.jpg" width="27" height="23" id="Image74" /></button>
+</div>
+
+<div id="apDiv19">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(12)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image75','','../imagenes/bot12B.jpg',1)"><img src="../imagenes/bot12AG.jpg" width="27" height="23" id="Image75" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(26)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image77','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot26AG.jpg" width="27" height="23" id="Image77" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(40)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image78','','../imagenes/bot40B.jpg',1)"><img src="../imagenes/bot40AG.jpg" width="27" height="23" id="Image78" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(54)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image80','','../imagenes/bot54B.jpg',1)"><img src="../imagenes/bot54AG.jpg" width="27" height="23" id="Image80" /></button>
+</div>
+
+<div id="apDiv20">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(13)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image81','','../imagenes/bot13B.jpg',1)"><img src="../imagenes/bot13AG.jpg" width="27" height="23" id="Image81" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(27)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image83','','../imagenes/bot26B.jpg',1)"><img src="../imagenes/bot27AG.jpg" width="27" height="23" id="Image83" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(41)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image84','','../imagenes/bot41B.jpg',1)"><img src="../imagenes/bot41AG.jpg" width="27" height="23" id="Image84" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(55)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image86','','../imagenes/bot55B.jpg',1)"><img src="../imagenes/bot55AG.jpg" width="27" height="23" id="Image86" /></button>
+</div>
+
+<div id="apDiv21">
+	<button ng-disabled = "" ng-click="seleccionaaBoton(14)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image87','','../imagenes/bot14B.jpg',1)"><img src="../imagenes/bot14AG.jpg" width="27" height="23" id="Image87" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(28)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image89','','../imagenes/bot27B.jpg',1)"><img src="../imagenes/bot27AG.jpg" width="27" height="23" id="Image89" /></button>
+	<button ng-disabled = "" ng-click="seleccionaaBoton(42)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image90','','../imagenes/bot42B.jpg',1)"><img src="../imagenes/bot42AG.jpg" width="27" height="23" id="Image90" /></button>
+	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-disabled = "" ng-click="seleccionaaBoton(56)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image92','','../imagenes/bot56B.jpg',1)"><img src="../imagenes/bot56AG.jpg" width="27" height="23" id="Image92" /></button>
+</div>
+
 <div id="apDiv22"><img src="../imagenes/barra03G.jpg" width="43" height="174" /></div>
 <div id="apDiv23"><img src="../imagenes/cabezlugaresabajoG.jpg" width="800" height="31" /></div>
 </div>

@@ -9,6 +9,12 @@ app.controller("formulario",['$scope','$rootScope','$http','serveData',function(
         console.log(serveData.qty);
  
         $scope.update = function() {
+          if ($scope.user.seccion[0] == "A") {
+            $scope.user.categoria = "Artesano";
+          }
+          else if ($scope.user.seccion[0] == "G") {
+            $scope.user.categoria = "Gastronomo";
+          }
           $scope.user.accion = "alta";
           console.log($scope.user);
           $http.post('./php/alta.php',$scope.user)
@@ -35,10 +41,11 @@ app.controller("formulario",['$scope','$rootScope','$http','serveData',function(
           $scope.user.lugar = "";
         }
 
-        $scope.seleccionaaBoton = function(sec,lug) {
+        $scope.seleccionaaBoton = function(lug) {
           a = 0;
           b = 0;
-          console.log(lug);
+          console.log($scope.user.seccion);
+          console.log($scope.user.seccion[0]);
           /*if ($scope.lugar.length == 0) {
             if (lug == 1 || lug == 4 || lug == 7 || lug == 11 || lug == 14 || lug == 17 || lug == 21 || lug == 24 || lug == 27 || lug == 31 || lug == 34 || lug == 37 || lug == 41 || lug == 44 || lug == 47) {
               a = lug;
@@ -53,15 +60,19 @@ app.controller("formulario",['$scope','$rootScope','$http','serveData',function(
               b = lug + 2;
             }
             for (var j = 0; j < 31; j++) {
-              $scope.asiento[j] = true;
+              $scope.asiento[j] = true;s
             }
             for (var i = a; i < b; i++) {
               $scope.asiento[i] = false;
             }
           }*/
-          $scope.lugar.push(lug);
+          if ($scope.lugar.length >=1) {
+            console.log("hay que mandar algo");
+          }
+          $scope.lugar.push($scope.user.seccion + lug);
           $scope.asiento[lug] = true;
           $scope.user.lugar = $scope.lugar.join();
+          console.log($scope.lugar);
           console.log($scope.asiento);
         };
 
