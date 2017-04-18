@@ -1,12 +1,12 @@
-var app = angular.module("Milo",[]);
-app.controller("formulario",['$scope','$http',function($scope,$http){
+app.controller("formulario",['$scope','$rootScope','$http','serveData',function($scope,$rootScope,$http,serveData){
         
         $scope.user = {};
         $scope.lugar = [];
         $scope.asiento = [];
-        for (var i = 0; i < 31; i++) {
+        for (var i = 0; i < 81; i++) {
           $scope.asiento[i] = false;
         }
+        console.log(serveData.qty);
  
         $scope.update = function() {
           $scope.user.accion = "alta";
@@ -35,16 +35,17 @@ app.controller("formulario",['$scope','$http',function($scope,$http){
           $scope.user.lugar = "";
         }
 
-        $scope.seleccionaBoton = function(lug) {
+        $scope.seleccionaaBoton = function(sec,lug) {
           a = 0;
           b = 0;
-          if ($scope.lugar.length == 0) {
-            if (lug == 1 || lug == 7 || lug == 16 || lug == 23) {
+          console.log(lug);
+          /*if ($scope.lugar.length == 0) {
+            if (lug == 1 || lug == 4 || lug == 7 || lug == 11 || lug == 14 || lug == 17 || lug == 21 || lug == 24 || lug == 27 || lug == 31 || lug == 34 || lug == 37 || lug == 41 || lug == 44 || lug == 47) {
               a = lug;
-              b = lug + 3;
+              b = lug + 2;
             }
-            else if (lug == 6 || lug == 15 || lug == 22 || lug == 29) {
-              a = lug - 2;
+            else if (lug == 3 || lug == 6 || lug == 10 || lug == 13 || lug == 16 || lug == 20 || lug == 23 || lug == 26 || lug == 30 || lug == 33 || lug == 36 || lug == 40 || lug == 43 || lug == 46 || lug == 50) {
+              a = lug - 1;
               b = lug + 1;
             }
             else {
@@ -57,7 +58,7 @@ app.controller("formulario",['$scope','$http',function($scope,$http){
             for (var i = a; i < b; i++) {
               $scope.asiento[i] = false;
             }
-          }
+          }*/
           $scope.lugar.push(lug);
           $scope.asiento[lug] = true;
           $scope.user.lugar = $scope.lugar.join();

@@ -1,746 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html ng-app="Milo" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Son para Milo 2017 /Sistema Insccripciones 2017</title>
-<style type="text/css">
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-	background-image: url(../imagenes/fondo01.jpg);
-	background-repeat: repeat-x;
-}
-#fondofb {
-	height: 1150px;
-	width: 800px;
-}
-#todo {
-	width: 100%;
-}
-#grupo {
-	position: relative;
-	height: 1150px;
-	width: 800px;
-	margin: auto;
-}
-#cabeza {
-	position: absolute;
-	height: 50px;
-	width: 800px;
-	left: 0px;
-	top: 0px;
-	background-color: #F00;
-	background-image: url(ImagSeccA/Cabeza.jpg);
-}
-#contene01 {
-	position: absolute;
-	height: 70px;
-	width: 800px;
-	left: 0px;
-	top: 50px;
-}
-#paso01 {
-	position: absolute;
-	height: 70px;
-	width: 75px;
-	left: 0px;
-	background-image: url(ImagSeccA/paso01A.jpg);
-}
-#paso01:hover { 
-	background-image: url(ImagSeccA/paso01B.jpg);
-}
-#paso02 {
-	position: absolute;
-	height: 70px;
-	width: 650px;
-	left: 75px;
-	background-image: url(ImagSeccA/paso02.jpg);
-}
-#paso03 {
-	position: absolute;
-	height: 70px;
-	width: 75px;
-	left: 725px;
-	background-image: url(ImagSeccA/paso03A.jpg);
-}
-#contene02 {
-	position: absolute;
-	height: 51px;
-	width: 800px;
-	top: 120px;
-	background-image: url(ImagSeccA/status.jpg);
-}
-#contene03 {
-	position: absolute;
-	height: 321px;
-	width: 800px;
-	background-image: url(ImagSeccA/fondolugares.jpg);
-	top: 169px;
-}
-#bot01 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot01A.jpg);
-	top: 150px;
-	left: 77px;
-}
-#bot01:hover { 
-	background-image: url(ImagSeccA/bot01B.jpg);
-}
-#bot02 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot02A.jpg);
-	top: 150px;
-	left: 104px;
-}
-#bot02:hover { 
-	background-image: url(ImagSeccA/bot02B.jpg);
-}
-#bot03 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot03A.jpg);
-	top: 150px;
-	left: 132px;
-}
-#bot03:hover { 
-	background-image: url(ImagSeccA/bot03B.jpg);
-}
-#bot04 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot04A.jpg);
-	top: 150px;
-	left: 160px;
-}
-#bot04:hover { 
-	background-image: url(ImagSeccA/bot04B.jpg);
-}
-#bot05 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot05A.jpg);
-	top: 150px;
-	left: 206px;
-}
-#bot05:hover { 
-	background-image: url(ImagSeccA/bot05B.jpg);
-}
-#bot06 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	top: 150px;
-	left: 233px;
-	background-image: url(ImagSeccA/bot06A.jpg);
-}
-#bot06:hover { 
-	background-image: url(ImagSeccA/bot06B.jpg);
-}
-#bot07 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot07A.jpg);
-	top: 150px;
-	left: 261px;
-}
-#bot07:hover { 
-	background-image: url(ImagSeccA/bot07B.jpg);
-}
-#bot08 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot08A.jpg);
-	top: 150px;
-	left: 289px;
-}
-#bot08:hover { 
-	background-image: url(ImagSeccA/bot08B.jpg);
-}
-#bot09 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot09A.jpg);
-	top: 150px;
-	left: 317px;
-}
-#bot09:hover { 
-	background-image: url(ImagSeccA/bot10B.jpg);
-}
-#bot10 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot10A.jpg);
-	top: 150px;
-	left: 366px;
-}
-#bot10:hover { 
-	background-image: url(ImagSeccA/bot10B.jpg);
-}
-#bot11 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot11A.jpg);
-	top: 150px;
-	left: 394px;
-}
-#bot11:hover { 
-	background-image: url(ImagSeccA/bot11B.jpg);
-}
-#bot12 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot12A.jpg);
-	top: 150px;
-	left: 422px;
-}
-#bot12:hover { 
-	background-image: url(ImagSeccA/bot12B.jpg);
-}
-#bot13 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot13A.jpg);
-	top: 150px;
-	left: 450px;
-}
-#bot13:hover { 
-	background-image: url(ImagSeccA/bot13B.jpg);
-}
-#bot14 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot14A.jpg);
-	top: 150px;
-	left: 477px;
-}
-#bot14:hover { 
-	background-image: url(ImagSeccA/bot14B.jpg);
-}
-#bot15 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot15A.jpg);
-	top: 193px;
-	left: 77px;
-}
-#bot15:hover { 
-	background-image: url(ImagSeccA/bot15B.jpg);
-}
-#bot16 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot16A.jpg);
-	top: 193px;
-	left: 105px;
-}
-#bot16:hover { 
-	background-image: url(ImagSeccA/bot16B.jpg);
-}
-#bot17 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot17A.jpg);
-	top: 193px;
-	left: 132px;
-}
-#bot17:hover { 
-	background-image: url(ImagSeccA/bot17B.jpg);
-}
-#bot18 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot18A.jpg);
-	top: 193px;
-	left: 160px;
-}
-#bot18:hover { 
-	background-image: url(ImagSeccA/bot18B.jpg);
-}
-#bot19 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot19A.jpg);
-	top: 193px;
-	left: 206px;
-}
-#bot19:hover { 
-	background-image: url(ImagSeccA/bot19B.jpg);
-}
-#bot20 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot20A.jpg);
-	top: 193px;
-	left: 233px;
-}
-#bot20:hover { 
-	background-image: url(ImagSeccA/bot20B.jpg);
-}
-#bot21 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot21A.jpg);
-	top: 193px;
-	left: 261px;
-}
-#bot21:hover { 
-	background-image: url(ImagSeccA/bot21B.jpg);
-}
-#bot22 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot22A.jpg);
-	top: 193px;
-	left: 289px;
-}
-#bot22:hover { 
-	background-image: url(ImagSeccA/bot22B.jpg);
-}
-#bot23 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot23A.jpg);
-	top: 193px;
-	left: 317px;
-}
-#bot23:hover { 
-	background-image: url(ImagSeccA/bot23B.jpg);
-}
-#bot24 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot24A.jpg);
-	top: 193px;
-	left: 366px;
-}
-#bot24:hover { 
-	background-image: url(ImagSeccA/bot24B.jpg);
-}
-#bot25 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot25A.jpg);
-	top: 193px;
-	left: 394px;
-}
-#bot25:hover { 
-	background-image: url(ImagSeccA/bot25B.jpg);
-}
-#bot26 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot26A.jpg);
-	top: 193px;
-	left: 422px;
-}
-#bot26:hover { 
-	background-image: url(ImagSeccA/bot26B.jpg);
-}
-#bot27 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot27A.jpg);
-	top: 193px;
-	left: 450px;
-}
-#bot27:hover { 
-	background-image: url(ImagSeccA/bot27B.jpg);
-}
-#bot28 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot28A.jpg);
-	top: 193px;
-	left: 477px;
-}
-#bot28:hover { 
-	background-image: url(ImagSeccA/bot28B.jpg);
-}
-#bot29 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot29A.jpg);
-	top: 216px;
-	left: 77px;
-}
-#bot29:hover { 
-	background-image: url(ImagSeccA/bot29B.jpg);
-}
-#bot30 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot30A.jpg);
-	top: 216px;
-	left: 104px;
-}
-#bot30:hover { 
-	background-image: url(ImagSeccA/bot30B.jpg);
-}
-#bot31 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot31A.jpg);
-	top: 216px;
-	left: 132px;
-}
-#bot31:hover { 
-	background-image: url(ImagSeccA/bot31B.jpg);
-}
-#bot32 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot32A.jpg);
-	top: 216px;
-	left: 160px;
-}
-#bot32:hover { 
-	background-image: url(ImagSeccA/bot32B.jpg);
-}
-#bot33 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot33A.jpg);
-	top: 216px;
-	left: 206px;
-}
-#bot33:hover { 
-	background-image: url(ImagSeccA/bot33B.jpg);
-}
-#bot34 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot34A.jpg);
-	top: 216px;
-	left: 233px;
-}
-#bot34:hover { 
-	background-image: url(ImagSeccA/bot34B.jpg);
-}
-#bot35 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot35A.jpg);
-	top: 216px;
-	left: 261px;
-}
-#bot35:hover { 
-	background-image: url(ImagSeccA/bot35B.jpg);
-}
-#bot36 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot36A.jpg);
-	top: 216px;
-	left: 289px;
-}
-#bot36:hover { 
-	background-image: url(ImagSeccA/bot36B.jpg);
-}
-#bot37 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot37A.jpg);
-	top: 216px;
-	left: 317px;
-}
-#bot37:hover { 
-	background-image: url(ImagSeccA/bot37B.jpg);
-}
-#bot38 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot38A.jpg);
-	top: 216px;
-	left: 366px;
-}
-#bot38:hover { 
-	background-image: url(ImagSeccA/bot38B.jpg);
-}
-#bot39 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot39A.jpg);
-	top: 216px;
-	left: 394px;
-}
-#bot39:hover { 
-	background-image: url(ImagSeccA/bot39B.jpg);
-}
-#bot40 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot40A.jpg);
-	top: 216px;
-	left: 422px;
-}
-#bot40:hover { 
-	background-image: url(ImagSeccA/bot40B.jpg);
-}
-#bot41 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot41A.jpg);
-	top: 216px;
-	left: 450px;
-}
-#bot41:hover { 
-	background-image: url(ImagSeccA/bot41B.jpg);
-}
-#bot42 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot42A.jpg);
-	top: 216px;
-	left: 477px;
-}
-#bot42:hover { 
-	background-image: url(ImagSeccA/bot42B.jpg);
-}
-#bot43 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot43A.jpg);
-	top: 259px;
-	left: 77px;
-}
-#bot43:hover { 
-	background-image: url(ImagSeccA/bot43B.jpg);
-}
-#bot44 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot44A.jpg);
-	top: 259px;
-	left: 104px;
-}
-#bot44:hover { 
-	background-image: url(ImagSeccA/bot44B.jpg);
-}
-#bot45 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot45A.jpg);
-	top: 259px;
-	left: 132px;
-}
-#bot45:hover { 
-	background-image: url(ImagSeccA/bot45B.jpg);
-}
-#bot46 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot46A.jpg);
-	top: 259px;
-	left: 160px;
-}
-#bot46:hover { 
-	background-image: url(ImagSeccA/bot46B.jpg);
-}
-#bot47 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot47A.jpg);
-	top: 259px;
-	left: 206px;
-}
-#bot47:hover { 
-	background-image: url(ImagSeccA/bot47B.jpg);
-}
-#bot48 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot48A.jpg);
-	top: 259px;
-	left: 233px;
-}
-#bot48:hover { 
-	background-image: url(ImagSeccA/bot48B.jpg);
-}
-#bot49 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot49A.jpg);
-	top: 259px;
-	left: 261px;
-}
-#bot49:hover { 
-	background-image: url(ImagSeccA/bot50B.jpg);
-}
-#bot50 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot50A.jpg);
-	top: 259px;
-	left: 289px;
-}
-#bot50:hover { 
-	background-image: url(ImagSeccA/bot50B.jpg);
-}
-#bot51 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot51A.jpg);
-	top: 259px;
-	left: 317px;
-}
-#bot51:hover { 
-	background-image: url(ImagSeccA/bot51B.jpg);
-}
-#bot52 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot52A.jpg);
-	top: 259px;
-	left: 366px;
-}
-#bot52:hover { 
-	background-image: url(ImagSeccA/bot52B.jpg);
-}
-#bot53 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot53A.jpg);
-	top: 259px;
-	left: 394px;
-}
-#bot53:hover { 
-	background-image: url(ImagSeccA/bot53B.jpg);
-}
-#bot54 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot54A.jpg);
-	top: 259px;
-	left: 422px;
-}
-#bot54:hover { 
-	background-image: url(ImagSeccA/bot54B.jpg);
-}
-#bot55 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot55A.jpg);
-	top: 259px;
-	left: 450px;
-}
-#bot55:hover { 
-	background-image: url(ImagSeccA/bot55B.jpg);
-}
-#bot56 {
-	position: absolute;
-	height: 23px;
-	width: 28px;
-	background-image: url(ImagSeccA/bot56A.jpg);
-	top: 259px;
-	left: 477px;
-}
-#bot56:hover { 
-	background-image: url(ImagSeccA/bot56B.jpg);
-}
-#formulario {
-	position: absolute;
-	height: 511px;
-	width: 451px;
-	top: 490px;
-	left: 155px;
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 12px;
-	color: #666;
-}
-.naranja {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 18px;
-	font-style: normal;
-	color: #F90;
-}
-#contene04 {
-	position: absolute;
-	height: 50px;
-	width: 800px;
-	top: 1050px;
-}
-#salir {
-	position: absolute;
-	height: 49px;
-	width: 247px;
-	top: 1px;
-	left: 300px;
-	background-image: url(../imagenes/salir01.jpg);
-}
-#salir:hover { 
-	background-image: url(../imagenes/salir02.jpg);
-}
-</style>
-</script>
-<script src="../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
-<script type="text/javascript">
-function MM_openBrWindow(theURL,winName,features) { //v2.0
-  window.open(theURL,winName,features);
-}
-</script>
+<title>Expositores 2017 / Zona Gastrónomos A</title>
+<link rel="stylesheet" type="text/css" href="../css/GastronomoA.css">
+<link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
 
 </head>
 
-<body>
-<div id="todo">
+<body ng-controller="formulario">
+<div id="todo" class="container">
 <div id="grupo">
   <div id="fondofb">
   <div id="cabeza"></div>
@@ -750,140 +20,181 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
       	<div id="paso03"></div>
     </div>
     <div id="contene02"></div>
-    <div id="contene03">
-    	<div id="bot01"></div>
-        <div id="bot02"></div>
-        <div id="bot03"></div>
-        <div id="bot04"></div>
-        <div id="bot05"></div>
-        <div id="bot06"></div>
-        <div id="bot07"></div>
-        <div id="bot08"></div>
-        <div id="bot10"></div>
-        <div id="bot09"></div>
-        <div id="bot11"></div>
-        <div id="bot12"></div>
-        <div id="bot13"></div>
-        <div id="bot14"></div>
-        <div id="bot15"></div>
-        <div id="bot16"></div>
-        <div id="bot17"></div>
-        <div id="bot18"></div>
-        <div id="bot19"></div>
-        <div id="bot20"></div>
-        <div id="bot21"></div>
-        <div id="bot22"></div>
-        <div id="bot23"></div>
-        <div id="bot24"></div>
-        <div id="bot25"></div>
-        <div id="bot26"></div>
-        <div id="bot27"></div>
-        <div id="bot28"></div>
-        <div id="bot29"></div>
-        <div id="bot30"></div>
-        <div id="bot31"></div>
-        <div id="bot32"></div>
-        <div id="bot33"></div>
-        <div id="bot34"></div>
-        <div id="bot35"></div>
-        <div id="bot36"></div>
-        <div id="bot37"></div>
-        <div id="bot38"></div>
-        <div id="bot39"></div>
-        <div id="bot40"></div>
-        <div id="bot41"></div>
-        <div id="bot42"></div>
-        <div id="bot43"></div>
-        <div id="bot44"></div>
-        <div id="bot45"></div>
-        <div id="bot46"></div>
-        <div id="bot47"></div>
-        <div id="bot48"></div>
-        <div id="bot49"></div>
-        <div id="bot50"></div>
-        <div id="bot51"></div>
-        <div id="bot52"></div>
-        <div id="bot53"></div>
-        <div id="bot54"></div>
-        <div id="bot55"></div>
-        <div id="bot56"></div>
-    </div>
-    <div id="formulario">
-    <form id="form1" name="form1" method="post" action="">
-      <table width="456" border="0">
-        <tr>
-          <td colspan="2" class="naranja">Si el lugar que encogiste está libre,<br />
-            favor de llenar el formulario</td>
-        </tr>
-        <tr>
-          <td><label>
+    
+    <div id="contene03" onload="MM_preloadImages('../imagenes/paso01B.jpg','../imagenes/bot01B.jpg','../imagenes/bot15B.jpg','../imagenes/bot29B.jpg','../imagenes/bot43B.jpg','../imagenes/bot02B.jpg','../imagenes/bot16B.jpg','../imagenes/bot30B.jpg','../imagenes/bot45B.jpg','../imagenes/bot03B.jpg','../imagenes/bot17B.jpg','../imagenes/bot31B.jpg','../imagenes/bot04B.jpg','../imagenes/bot18B.jpg','../imagenes/bot32B.jpg','../imagenes/bot46B.jpg','../imagenes/bot05B.jpg','../imagenes/bot19B.jpg','../imagenes/bot33B.jpg','../imagenes/bot47B.jpg','../imagenes/bot06B.jpg','../imagenes/bot20B.jpg','../imagenes/bot34B.jpg','../imagenes/bot48B.jpg','../imagenes/bot07B.jpg','../imagenes/bot21B.jpg','../imagenes/bot35B.jpg','../imagenes/bot49B.jpg','../imagenes/bot08B.jpg','../imagenes/bot22B.jpg','../imagenes/bot36B.jpg','../imagenes/bot50B.jpg','../imagenes/bot09B.jpg','../imagenes/bot23B.jpg','../imagenes/bot37B.jpg','../imagenes/bot51B.jpg','../imagenes/bot10B.jpg','../imagenes/bot24B.jpg','../imagenes/bot38B.jpg','../imagenes/bot52B.jpg','../imagenes/bot11B.jpg','../imagenes/bot25B.jpg','../imagenes/bot53B.jpg','../imagenes/bot12B.jpg','../imagenes/bot40B.jpg','../imagenes/bot54B.jpg','../imagenes/bot13B.jpg','../imagenes/bot26B.jpg','../imagenes/bot41B.jpg','../imagenes/bot55B.jpg','../imagenes/bot14B.jpg','../imagenes/bot27B.jpg','../imagenes/bot42B.jpg','../imagenes/bot56B.jpg')">
+
+<div id="apDiv3" style="position: absolute; left: 26px; top: 131px; width: 800px; height: 51px; z-index: 3"><img src="../imagenes/status.jpg" width="800" height="51" /></div>
+<div id="apDiv4" style="position: absolute; left: 26px; top: 183px; width: 800px; height: 100px; z-index: 5"><img src="../imagenes/cabezlugaresGA.jpg" width="800" height="100" /></div>
+<div id="apDiv5" style="position: absolute; left: 26px; top: 281px; width: 10px; height: 173px; z-index: 6"><img src="../imagenes/azulderch.jpg" width="10" height="173" /></div>
+<div id="apDiv6"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','../imagenes/bot01B.jpg',1)"><img src="../imagenes/bot01AG.jpg" width="27" height="23" id="Image8" /></button>
+<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','../imagenes/bot15B.jpg',1)"><img src="../imagenes/bot15AG.jpg" width="27" height="23" id="Image10" /></button>
+<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','../imagenes/bot29B.jpg',1)"><img src="../imagenes/bot29AG.jpg" width="27" height="23" id="Image11" /></button>
+<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','../imagenes/bot43B.jpg',1)"><img src="../imagenes/bot43AG.jpg" width="27" height="23" id="Image13" /></button></div>
+<div id="apDiv7"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','../imagenes/bot02B.jpg',1)"><img src="../imagenes/bot02AG.jpg" width="27" height="23" id="Image14" /></button>
+<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','../imagenes/bot16B.jpg',1)"><img src="../imagenes/bot16AG.jpg" width="27" height="23" id="Image15" /></button>
+<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','../imagenes/bot30B.jpg',1)"><img src="../imagenes/bot30AG.jpg" width="27" height="23" id="Image16" /></button>
+<img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot44AG.jpg" width="27" height="23" id="Image18" /></button></div>
+<div id="apDiv8"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','../imagenes/bot03B.jpg',1)"><img src="../imagenes/bot03AG.jpg" width="27" height="23" id="Image19" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','../imagenes/bot17B.jpg',1)"><img src="../imagenes/bot17AG.jpg" width="27" height="23" id="Image21" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','../imagenes/bot31B.jpg',1)"><img src="../imagenes/bot31AG.jpg" width="27" height="23" id="Image22" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot45AG.jpg" width="27" height="23" id="Image24" /></button></div>
+<div id="apDiv9"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','../imagenes/bot04B.jpg',1)"><img src="../imagenes/bot04AG.jpg" width="27" height="23" id="Image25" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','../imagenes/bot18B.jpg',1)"><img src="../imagenes/bot18AG.jpg" width="27" height="23" id="Image27" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','../imagenes/bot32B.jpg',1)"><img src="../imagenes/bot32AG.jpg" width="27" height="23" id="Image28" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','../imagenes/bot46B.jpg',1)"><img src="../imagenes/bot46AG.jpg" width="27" height="23" id="Image30" /></button></div>
+<div id="apDiv10"><img src="../imagenes/barra02G.jpg" width="25" height="173" /></div>
+<div id="apDiv11"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image33','','../imagenes/bot05B.jpg',1)"><img src="../imagenes/bot05AG.jpg" width="27" height="23" id="Image33" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','../imagenes/bot19B.jpg',1)"><img src="../imagenes/bot19AG.jpg" width="27" height="23" id="Image35" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image36','','../imagenes/bot33B.jpg',1)"><img src="../imagenes/bot33AG.jpg" width="27" height="23" id="Image36" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image38','','../imagenes/bot47B.jpg',1)"><img src="../imagenes/bot47AG.jpg" width="27" height="23" id="Image38" /></button></div>
+<div id="apDiv12"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image39','','../imagenes/bot06B.jpg',1)"><img src="../imagenes/bot06AG.jpg" width="27" height="23" id="Image39" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image41','','../imagenes/bot20B.jpg',1)"><img src="../imagenes/bot20AG.jpg" width="27" height="23" id="Image41" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image42','','../imagenes/bot34B.jpg',1)"><img src="../imagenes/bot34AG.jpg" width="27" height="23" id="Image42" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image44','','../imagenes/bot48B.jpg',1)"><img src="../imagenes/bot48AG.jpg" width="27" height="23" id="Image44" /></button></div>
+<div id="apDiv13"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image45','','../imagenes/bot07B.jpg',1)"><img src="../imagenes/bot07AG.jpg" width="27" height="23" id="Image45" /></button><img src="../imagenes/barra01bis.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image47','','../imagenes/bot21B.jpg',1)"><img src="../imagenes/bot21AG.jpg" width="27" height="23" id="Image47" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image48','','../imagenes/bot35B.jpg',1)"><img src="../imagenes/bot35AG.jpg" width="27" height="23" id="Image48" /></button><img src="../imagenes/barra01bis.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','../imagenes/bot49B.jpg',1)"><img src="../imagenes/bot49AG.jpg" width="27" height="23" id="Image50" /></button></div>
+<div id="apDiv14"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','../imagenes/bot08B.jpg',1)"><img src="../imagenes/bot08AG.jpg" width="27" height="23" id="Image51" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image53','','../imagenes/bot22B.jpg',1)"><img src="../imagenes/bot22AG.jpg" width="27" height="23" id="Image53" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image54','','../imagenes/bot36B.jpg',1)"><img src="../imagenes/bot36AG.jpg" width="27" height="23" id="Image54" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image56','','../imagenes/bot50B.jpg',1)"><img src="../imagenes/bot50AG.jpg" width="27" height="23" id="Image56" /></button></div>
+<div id="apDiv15"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image58','','../imagenes/bot09B.jpg',1)"><img src="../imagenes/bot09AG.jpg" width="27" height="23" id="Image58" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image59','','../imagenes/bot23B.jpg',1)"><img src="../imagenes/bot23AG.jpg" width="27" height="23" id="Image59" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image60','','../imagenes/bot37B.jpg',1)"><img src="../imagenes/bot37AG.jpg" width="27" height="23" id="Image60" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image62','','../imagenes/bot51B.jpg',1)"><img src="../imagenes/bot51AG.jpg" width="27" height="23" id="Image62" /></button></div>
+<div id="apDiv16"><img src="../imagenes/barra02G.jpg" width="25" height="173" /></div>
+<div id="apDiv17"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image63','','../imagenes/bot10B.jpg',1)"><img src="../imagenes/bot10AG.jpg" width="27" height="23" id="Image63" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image65','','../imagenes/bot24B.jpg',1)"><img src="../imagenes/bot24AG.jpg" width="27" height="23" id="Image65" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image66','','../imagenes/bot38B.jpg',1)"><img src="../imagenes/bot38AG.jpg" width="27" height="23" id="Image66" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image68','','../imagenes/bot52B.jpg',1)"><img src="../imagenes/bot52AG.jpg" width="27" height="23" id="Image68" /></button></div>
+<div id="apDiv18"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image69','','../imagenes/bot11B.jpg',1)"><img src="../imagenes/bot11AG.jpg" width="27" height="23" id="Image69" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image71','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot25AG.jpg" width="27" height="23" id="Image71" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image72','','../imagenes/bot39B.jpg',0)"><img src="../imagenes/bot39AG.jpg" width="27" height="23" id="Image72" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image74','','../imagenes/bot53B.jpg',1)"><img src="../imagenes/bot53AG.jpg" width="27" height="23" id="Image74" /></button></div>
+<div id="apDiv19"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image75','','../imagenes/bot12B.jpg',1)"><img src="../imagenes/bot12AG.jpg" width="27" height="23" id="Image75" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image77','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot25AG.jpg" width="27" height="23" id="Image77" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image78','','../imagenes/bot40B.jpg',1)"><img src="../imagenes/bot40AG.jpg" width="27" height="23" id="Image78" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image80','','../imagenes/bot54B.jpg',1)"><img src="../imagenes/bot54AG.jpg" width="27" height="23" id="Image80" /></button></div>
+<div id="apDiv20"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image81','','../imagenes/bot13B.jpg',1)"><img src="../imagenes/bot13AG.jpg" width="27" height="23" id="Image81" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image83','','../imagenes/bot26B.jpg',1)"><img src="../imagenes/bot26AG.jpg" width="27" height="23" id="Image83" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image84','','../imagenes/bot41B.jpg',1)"><img src="../imagenes/bot41AG.jpg" width="27" height="23" id="Image84" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image86','','../imagenes/bot55B.jpg',1)"><img src="../imagenes/bot55AG.jpg" width="27" height="23" id="Image86" /></button></div>
+<div id="apDiv21"><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image87','','../imagenes/bot14B.jpg',1)"><img src="../imagenes/bot14AG.jpg" width="27" height="23" id="Image87" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image89','','../imagenes/bot27B.jpg',1)"><img src="../imagenes/bot27AG.jpg" width="27" height="23" id="Image89" /></button><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image90','','../imagenes/bot42B.jpg',1)"><img src="../imagenes/bot42AG.jpg" width="27" height="23" id="Image90" /></button><img src="../imagenes/barra01G.jpg" width="50" height="25" /><button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image92','','../imagenes/bot56B.jpg',1)"><img src="../imagenes/bot56AG.jpg" width="27" height="23" id="Image92" /></button></div>
+<div id="apDiv22"><img src="../imagenes/barra03G.jpg" width="43" height="174" /></div>
+<div id="apDiv23"><img src="../imagenes/cabezlugaresabajoG.jpg" width="800" height="31" /></div>
+</div>
+    <div id="formulario" class="container">
+    <form id="userForm" name="userForm" novalidate method="post" action="">
+      <div id="form1" class="col-md-6">
+        
+          <h3 colspan="2" class="naranja">Favor de llenar el formulario</h3>
+          <br>
+        <label for="name">
             <div align="right"><strong>Nombre</strong></div>
-          </label></td>
-          <td><input name="textfield" type="text" id="textfield" size="20" /></td>
-        </tr>
-        <tr>
-          <td><label>
+          	</label>
+          	<br>
+          	<input class="formu" name="name" type="text" id="name" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" required />
+          		<span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
+			    	<span ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
+				</span>
+        	<br>
+        
+        
+          <label for="appaterno">
             <div align="right"><strong>Apellido Paterno</strong></div>
-          </label></td>
-          <td><input name="textfield2" type="text" id="textfield2" size="20" /></td>
-        </tr>
-        <tr>
-          <td><label>
+          </label>
+          <br>
+          <input class="formu" name="appaterno" type="text" ng-model="user.appaterno" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
+			    <span ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+        <br>
+        
+          <label>
             <div align="right"><strong>Apellido Materno</strong></div>
-          </label></td>
-          <td><input name="textfield2" type="text" id="textfield2" size="20" /></td>
-        </tr>
-        <tr>
-          <td><label>
-            <div align="right"><strong>Ciudad y estado</strong></div>
-          </label></td>
-          <td><input name="textfield3" type="text" id="textfield3" size="50" /></td>
-        </tr>
-        <tr>
-          <td><label>
-            <div align="right"><strong>Número de celular</strong></div>
-          </label></td>
-          <td><textarea name="textfield4" cols="30" rows="2" id="textfield4"></textarea></td>
-        </tr>
-        <tr>
-          <td><label>
+          </label>
+          <br>
+          <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
+			    	<span ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+        <br>
+        
+          <label>
+            <div align="right"><strong>Estado</strong></div>
+          </label>
+          <br>
+          <input class="formu" ng-model="user.estado" name="textfield3" type="text" id="textfield3"  />
+        
+        <br>
+          <label>
+            <div align="right"><strong>Telefono celular</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="telefonoCel" type="number" ng-model="user.telefonoCel" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999" />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
+			    	<span ng-show="userForm.telefonoCel.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+			    	<span ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Telefono local</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="telefono" type="number" ng-model="user.telefono" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999"  />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
+			    	<span ng-show="userForm.telefono.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+			    	<span ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
+			    </span>
+        
+        <br>
+          <label>
             <div align="right"><strong>Correo electrónico</strong></div>
-          </label></td>
-          <td><input name="textfield5" type="text" id="textfield5" size="50" /></td>
-        </tr>
-        <tr>
-          <td colspan="2" class="naranja">Número del lugar que escojiste</td>
-        </tr>
-        <tr>
+          </label>
+          <br>
+          <input class="formu" name="email" type="email" ng-model="user.email" ng-model-options="{ updateOn: 'blur' }" required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
+			    	<span ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
+			    	<span ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
+			    </span>
+        
+        <br>
+     </div>
+     <div id="form2" class="col-md-6">
+          <h3 colspan="2" class="naranja">Número del lugar que escojiste</h3>
+        
+        <!--tr>
           <td colspan="2"><label>
             <div align="left"><strong>si esta en tu presupuesto puedes solicitar 2 lugares</strong></div>
-          </label></td>
-          </tr>
-        <tr>
-          <td><label>
+          </label>
+        </tr-->
+        <br>
+          <label>
             <div align="left"><strong>Puesto Núm: 1</strong></div>
-          </label></td>
-          <td><input name="textfield2" type="text" id="textfield2" size="5" /></td>
-        </tr>
-        <tr>
-          <td><label>
+          </label>
+          <br>
+          <input ng-disabled="true" class="formu" ng-model="user.lugar" name="textfield2" type="text" id="textfield2" />
+        
+        <br>
+          <label>
             <div align="left"><strong>Puesto Núm: 2</strong></div>
-          </label></td>
-          <td><input name="textfield2" type="text" id="textfield2" size="5" /></td>
-        </tr>
-        <tr>
-          <td><label>
+          </label>
+          <br>
+          <input ng-disabled="true" class="formu" ng-model="user.lugar" name="textfield2" type="text" id="textfield2" />
+        
+
+
+
+
+
+        <br>
+          <label>
+            <div align="left"><strong>Producto</strong></div>
+          </label>
+          <br>
+          <input class="formu" ng-model="user.tag" name="textfield2" type="text" id="textfield2" />
+        
+
+
+
+
+
+
+
+        
+        <br>
+          <label>
+            <div align="right">
+              <p><strong>Descripcion del producto</strong></p>
+            </div>
+          </label>
+          <br>
+          <textarea class="formu" ng-model="user.descipcion" name="textfield7" cols="40" rows="4" id="textfield7"></textarea>
+        
+        <br>
+          <label>
             <div align="right">
               <p><strong>Comentarios</strong></p>
             </div>
-          </label></td>
-          <td><textarea name="textfield7" cols="40" rows="4" id="textfield7"></textarea></td>
-        </tr>
-        <tr>
-          <td>&nbsp;</td>
-          <td><input type="submit" name="button2" id="button2" value="Enviar" /></td>
-        </tr>
-      </table>
+          </label>
+          <br>
+          <textarea class="formu" ng-model="user.comentario" name="textfield7" cols="40" rows="4" id="textfield7"></textarea>
+        
+        <br>
+        <br>
+          &nbsp;
+          <input type="submit" ng-click="update()"  ng-disabled="userForm.$invalid" value="Enviar" />
+        
+      </div>
     </form>
     </div>
     <div id="contene04">
@@ -892,5 +203,38 @@ function MM_openBrWindow(theURL,winName,features) { //v2.0
   </div>
 </div>
 </div>
+	<script src="../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+	<script type="text/javascript" src="../script/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../script/angular-1.6.2/angular.min.js"></script>
+	<script type="text/javascript" src="../script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<script type="text/javascript" src="../js/controler/form.js"></script>
+	<script type="text/javascript">
+			function MM_openBrWindow(theURL,winName,features) { //v2.0
+  			window.open(theURL,winName,features);
+		}
+	</script>
+	<script type="text/javascript">
+	function MM_preloadImages() { //v3.0
+	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+	    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+	    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+	}
+	function MM_swapImgRestore() { //v3.0
+	  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+	}
+	function MM_findObj(n, d) { //v4.01
+	  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+	    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+	  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+	  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+	  if(!x && d.getElementById) x=d.getElementById(n); return x;
+	}
+
+	function MM_swapImage() { //v3.0
+	  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+	   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+	}
+	</script>
 </body>
 </html>
