@@ -6,6 +6,14 @@ body {
 	
 	background-repeat: repeat-x;
 }
+tags-input{
+	width: 60%
+}
+#boton {
+	position: absolute;
+	left: 47.5%;
+	top: 1500px;
+}
 .formu{
 	width: 60%
 }
@@ -74,7 +82,7 @@ body {
 	height: 510px;
 	width: 340px;
 	top: 550px;
-	left: 10%;
+	left: 17.5%;
 }
 
 #apDiv3 {
@@ -417,7 +425,7 @@ body {
 	position: absolute;
 	height: 50px;
 	width: 800px;
-	top: 1450px;
+	top: 1550px;
 }
 #textfield7 {
 	resize: none;

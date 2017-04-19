@@ -6,6 +6,8 @@
 <link rel="stylesheet" type="text/css" href="../css/GastronomoC.css">
 <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../script/ng-tags-input/ng-tags-input.css">
+<link rel="stylesheet" type="text/css" href="../script/ng-tags-input/ng-tags-input.bootstrap.css">
 
 </head>
 
@@ -92,13 +94,13 @@
           <br>
         <label for="name">
             <div align="right"><strong>Nombre</strong></div>
-          	</label>
-          	<br>
-          	<input class="formu" name="name" type="text" id="name" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" required />
-          		<span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
-			    	<span ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
-				</span>
-        	<br>
+            </label>
+            <br>
+            <input class="formu" name="name" type="text" id="name" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" required />
+              <span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
+            <span ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
+        </span>
+          <br>
         
         
           <label for="appaterno">
@@ -106,9 +108,9 @@
           </label>
           <br>
           <input class="formu" name="appaterno" type="text" ng-model="user.appaterno" ng-model-options="{ updateOn: 'blur' }" required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
-			    <span ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
-			    </span>
+          <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
+          <span ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
+          </span>
         <br>
         
           <label>
@@ -116,38 +118,107 @@
           </label>
           <br>
           <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno" ng-model-options="{ updateOn: 'blur' }" required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
-			    	<span ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
-			    </span>
+          <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
+            <span ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
+          </span>
         <br>
         
           <label>
             <div align="right"><strong>Estado</strong></div>
           </label>
           <br>
-          <input class="formu" ng-model="user.estado" name="textfield3" type="text" id="textfield3"  />
+          
+          <select class="formu" ng-model="user.estado" id="estados" name="estados">
+
+        <option value="">Todo México</option>
+
+        <option value="Aguascalientes">Aguascalientes</option>
+
+        <option value="Baja California">Baja California</option>
+
+        <option value="Baja California Sur">Baja California Sur</option>
+
+        <option value="Campeche">Campeche</option>
+
+        <option value="Ciudad de México">Ciudad de México</option>
+
+        <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+
+        <option value="Colima">Colima</option>
+
+        <option value="Chiapas">Chiapas</option>
+
+        <option value="Chihuahua">Chihuahua</option>
+
+        <option value="Durango">Durango</option>
+
+        <option value="Estado de México">Estado de México</option>
+
+        <option value="Guanajuato">Guanajuato</option>
+
+        <option value="Guerrero">Guerrero</option>
+
+        <option value="Hidalgo">Hidalgo</option>
+
+        <option value="Jalisco">Jalisco</option>
+
+        <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+
+        <option value="Morelos">Morelos</option>
+
+        <option value="Nayarit">Nayarit</option>
+
+        <option value="Nuevo León">Nuevo León</option>
+
+        <option value="Oaxaca">Oaxaca</option>
+
+        <option value="Puebla">Puebla</option>
+
+        <option value="Querétaro">Querétaro</option>
+
+        <option value="Quintana Roo">Quintana Roo</option>
+
+        <option value="San Luis Potosí">San Luis Potosí</option>
+
+        <option value="Sinaloa">Sinaloa</option>
+
+        <option value="Sonora">Sonora</option>
+
+        <option value="Tabasco">Tabasco</option>
+
+        <option value="Tamaulipas">Tamaulipas</option>
+
+        <option value="Tlaxcala">Tlaxcala</option>
+
+        <option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+
+        <option value="Yucatán">Yucatán</option>
+
+        <option value="Zacatecas">Zacatecas</option>
+
+      </select>
         
         <br>
           <label>
             <div align="right"><strong>Telefono celular</strong></div>
           </label>
           <br>
-          <input class="formu" name="telefonoCel" type="number" ng-model="user.telefonoCel" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999" />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
-			    	<span ng-show="userForm.telefonoCel.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
-			    	<span ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
-			    </span>
+          <input class="formu" name="telefonoCel" type="number" ng-model="cel" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999" />
+          <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
+            <span ng-show="userForm.telefonoCel.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+            <span ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
+          </span>
         
         <br>
           <label>
             <div align="right"><strong>Telefono local</strong></div>
           </label>
           <br>
-          <input class="formu" name="telefono" type="number" ng-model="user.telefono" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999"  />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
-			    	<span ng-show="userForm.telefono.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
-			    	<span ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
-			    </span>
+          <input class="formu" name="telefono" type="number" ng-model="tel" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999"  />
+          <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
+            <span ng-show="userForm.telefono.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+            <span ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
+          </span>
         
         <br>
           <label>
@@ -155,10 +226,10 @@
           </label>
           <br>
           <input class="formu" name="email" type="email" ng-model="user.email" ng-model-options="{ updateOn: 'blur' }" required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
-			    	<span ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
-			    	<span ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
-			    </span>
+          <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
+            <span ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
+            <span ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
+          </span>
         
         <br>
      </div>
@@ -175,14 +246,14 @@
             <div align="left"><strong>Puesto Núm: 1</strong></div>
           </label>
           <br>
-          <input ng-disabled="true" class="formu" ng-model="user.lugar" name="textfield2" type="text" id="textfield2" />
+          <input ng-disabled="true" class="formu" ng-model="user.lugar[0]" name="textfield2" type="text" id="textfield2" />
         
         <br>
           <label>
             <div align="left"><strong>Puesto Núm: 2</strong></div>
           </label>
           <br>
-          <input ng-disabled="true" class="formu" ng-model="user.lugar" name="textfield2" type="text" id="textfield2" />
+          <input ng-disabled="true" class="formu" ng-model="user.lugar[1]" name="textfield2" type="text" id="textfield2" />
         
 
 
@@ -194,7 +265,9 @@
             <div align="left"><strong>Producto</strong></div>
           </label>
           <br>
-          <input class="formu" ng-model="user.tag" name="textfield2" type="text" id="textfield2" />
+          <tags-input class="formu" ng-model="user.tags" max-tags="3" enforce-max-tags>
+        <auto-complete source="loadTags($query)"></auto-complete>
+      </tags-input>
         
 
 
@@ -211,7 +284,7 @@
             </div>
           </label>
           <br>
-          <textarea class="formu" ng-model="user.descipcion" name="textfield7" cols="40" rows="4" id="textfield7"></textarea>
+          <textarea class="formu" ng-model="user.productoDescip" name="textfield7" cols="40" rows="4" id="textfield7"></textarea>
         
         <br>
           <label>
@@ -225,10 +298,13 @@
         <br>
         <br>
           &nbsp;
-          <input type="submit" ng-click="update()"  ng-disabled="userForm.$invalid" value="Enviar" />
+          
         
       </div>
     </form>
+    </div>
+    <div id="boton">
+      <button class="btn btn-primary btn-lg" ng-click="update()"  ng-disabled="userForm.$invalid">Enviar</button>
     </div>
     <div id="contene04">
     <a href="../../index.html"><div id="salir"></div></a>
@@ -236,38 +312,39 @@
   </div>
 </div>
 </div>
-	
-	<script type="text/javascript" src="../script/jquery-3.1.1.min.js"></script>
-	<script type="text/javascript" src="../script/angular-1.6.2/angular.min.js"></script>
-	<script type="text/javascript" src="../script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../js/app.js"></script>
-	<script type="text/javascript" src="../js/controler/form.js"></script>
-	<script type="text/javascript">
-			function MM_openBrWindow(theURL,winName,features) { //v2.0
-  			window.open(theURL,winName,features);
-		}
-	</script>
-	<script type="text/javascript">
-	function MM_preloadImages() { //v3.0
-	  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
-	    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
-	    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
-	}
-	function MM_swapImgRestore() { //v3.0
-	  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
-	}
-	function MM_findObj(n, d) { //v4.01
-	  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
-	    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
-	  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
-	  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
-	  if(!x && d.getElementById) x=d.getElementById(n); return x;
-	}
+  
+  <script type="text/javascript" src="../script/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="../script/angular-1.6.2/angular.min.js"></script>
+  <script type="text/javascript" src="../script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../script/ng-tags-input/ng-tags-input.js"></script>
+  <script type="text/javascript" src="../js/app.js"></script>
+  <script type="text/javascript" src="../js/controler/form.js"></script>
+  <script type="text/javascript">
+      function MM_openBrWindow(theURL,winName,features) { //v2.0
+        window.open(theURL,winName,features);
+    }
+  </script>
+  <script type="text/javascript">
+    function MM_preloadImages() { //v3.0
+      var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+        var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+        if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+    }
+    function MM_swapImgRestore() { //v3.0
+      var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+    }
+    function MM_findObj(n, d) { //v4.01
+      var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+        d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+      if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+      for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+      if(!x && d.getElementById) x=d.getElementById(n); return x;
+    }
 
-	function MM_swapImage() { //v3.0
-	  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
-	   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
-	}
-	</script>
+    function MM_swapImage() { //v3.0
+      var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+       if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+    }
+  </script>
 </body>
 </html>

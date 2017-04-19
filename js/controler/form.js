@@ -5,14 +5,16 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           delete element['nombre'];
           element['text'] = aux;
         };
-        
+         
         $http.post('http://localhost/formularioMapa/php/consultas.php','{"accion":"consulta","search":"productos"}')
              .then(function(respuesta){
             respuesta.data.forEach(textP);
             tags = respuesta.data;
         });
-
+        
         $scope.user = {};
+        $scope.cel = "";
+        $scope.tel = "";
         $scope.lugar = [];
         $scope.asiento = [];
         for (var i = 0; i < 81; i++) {
@@ -27,6 +29,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           else if ($scope.user.seccion[0] == "G") {
             $scope.user.categoria = "Gastronomo";
           }
+          $scope.user.telefono = $scope.cel + " / " + $scope.tel;
           $scope.user.accion = "alta";
           console.log($scope.user);
           $http.post('./php/alta.php',$scope.user)
@@ -52,7 +55,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $scope.lugar = [];
           $scope.user.lugar = "";
         }
-        
+
         $scope.loadTags = function(query) {
           /*return tagService.load(query);*/
           var deferred = $q.defer();
@@ -65,6 +68,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           b = 0;
           console.log($scope.user.seccion);
           console.log($scope.user.seccion[0]);
+          console.log($scope.user.estado);
           /*if ($scope.lugar.length == 0) {
             if (lug == 1 || lug == 4 || lug == 7 || lug == 11 || lug == 14 || lug == 17 || lug == 21 || lug == 24 || lug == 27 || lug == 31 || lug == 34 || lug == 37 || lug == 41 || lug == 44 || lug == 47) {
               a = lug;

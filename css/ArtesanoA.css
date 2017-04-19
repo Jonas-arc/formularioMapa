@@ -9,6 +9,12 @@ body {
 tags-input{
 	width: 60%
 }
+#boton {
+	position: absolute;
+	left: 47.5%;
+	top: 1500px;
+}
+
 .formu{
 	width: 60%
 }
@@ -399,7 +405,6 @@ tags-input{
 	top: 838px;
 }
 
-
 #formulario {
 	position: absolute;
 	height: 511px;
@@ -420,7 +425,7 @@ tags-input{
 	position: absolute;
 	height: 50px;
 	width: 800px;
-	top: 1450px;
+	top: 1550px;
 }
 #textfield7 {
 	resize: none;
