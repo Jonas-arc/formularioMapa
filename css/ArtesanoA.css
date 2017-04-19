@@ -6,6 +6,9 @@ body {
 	
 	background-repeat: repeat-x;
 }
+tags-input{
+	width: 60%
+}
 .formu{
 	width: 60%
 }

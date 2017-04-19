@@ -1,5 +1,17 @@
-app.controller("formulario",['$scope','$rootScope','$http','serveData',function($scope,$rootScope,$http,serveData){
+app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData',function($q,$scope,$rootScope,$http,$filter,serveData){
+        var tags = [];
+        function textP(element, index, array){
+          var aux = element['nombre'];
+          delete element['nombre'];
+          element['text'] = aux;
+        };
         
+        $http.post('http://localhost/formularioMapa/php/consultas.php','{"accion":"consulta","search":"productos"}')
+             .then(function(respuesta){
+            respuesta.data.forEach(textP);
+            tags = respuesta.data;
+        });
+
         $scope.user = {};
         $scope.lugar = [];
         $scope.asiento = [];
@@ -40,6 +52,13 @@ app.controller("formulario",['$scope','$rootScope','$http','serveData',function(
           $scope.lugar = [];
           $scope.user.lugar = "";
         }
+        
+        $scope.loadTags = function(query) {
+          /*return tagService.load(query);*/
+          var deferred = $q.defer();
+          deferred.resolve($filter('filter')(tags, {text: query }));
+          return deferred.promise;
+        };
 
         $scope.seleccionaaBoton = function(lug) {
           a = 0;
