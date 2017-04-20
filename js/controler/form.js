@@ -1,5 +1,6 @@
 app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData',function($q,$scope,$rootScope,$http,$filter,serveData){
         var tags = [];
+        var lugares = [];
         function textP(element, index, array){
           var aux = element['nombre'];
           delete element['nombre'];
@@ -11,8 +12,15 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
             respuesta.data.forEach(textP);
             tags = respuesta.data;
         });
-        
         $scope.user = {};
+        $scope.user.seccion=getUrlVars()["seccion"];
+        var auxL = {"accion":"consulta","search":"lugaresArea","area":$scope.user.seccion};
+        $http.post('../php/consultas.php',auxL)
+             .then(function(respuesta){
+            lugares = respuesta.data;
+            //console.log(lugares);
+        });
+
         $scope.cel = "";
         $scope.tel = "";
         $scope.lugar = [];
@@ -41,7 +49,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $scope.user['producto'] = aux;
           $scope.user.accion = "alta";
           delete $scope.user.tags;
-          delete $scope.user.categoria;
+          delete $scope.user.seccion;
           console.log($scope.user);
           $http.post('../php/alta.php',$scope.user)
                .then(function(respuesta){
@@ -75,39 +83,40 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         };
 
         $scope.seleccionaaBoton = function(lug) {
-          a = 0;
-          b = 0;
-          console.log($scope.user.seccion);
-          console.log($scope.user.seccion[0]);
-          console.log($scope.user.estado);
-          /*if ($scope.lugar.length == 0) {
-            if (lug == 1 || lug == 4 || lug == 7 || lug == 11 || lug == 14 || lug == 17 || lug == 21 || lug == 24 || lug == 27 || lug == 31 || lug == 34 || lug == 37 || lug == 41 || lug == 44 || lug == 47) {
-              a = lug;
-              b = lug + 2;
+          if (lugares[lug][$scope.user.seccion + lug] == null ) {
+            console.log("Lugar vacio");
+            if ($scope.lugar.length >=1) {
+              console.log("validar lugar");
+              var auxVal = {"accion":"consulta",
+                            "search":"validaLugares",
+                            "buscado":$scope.user.seccion+lug,
+                            "asignados":$scope.lugar.join()};
+              $http.post('../php/consultas.php',auxVal)
+                   .then(function(respuesta){
+                  console.log(respuesta.data);
+                  if (respuesta.data.asignar) {
+                    alert("Lugares no contigüos");
+                  }else{
+                    $scope.lugar.push($scope.user.seccion+lug);
+                    $scope.user.lugar = $scope.lugar.join();
+                  }
+              });
+            }else{
+              console.log("asignacion");
+              $scope.lugar.push($scope.user.seccion+lug);
+              $scope.user.lugar = $scope.lugar.join();
             }
-            else if (lug == 3 || lug == 6 || lug == 10 || lug == 13 || lug == 16 || lug == 20 || lug == 23 || lug == 26 || lug == 30 || lug == 33 || lug == 36 || lug == 40 || lug == 43 || lug == 46 || lug == 50) {
-              a = lug - 1;
-              b = lug + 1;
-            }
-            else {
-              a = lug - 1;
-              b = lug + 2;
-            }
-            for (var j = 0; j < 31; j++) {
-              $scope.asiento[j] = true;s
-            }
-            for (var i = a; i < b; i++) {
-              $scope.asiento[i] = false;
-            }
-          }*/
-          if ($scope.lugar.length >=1) {
-            console.log("hay que mandar algo");
+          }else{
+            console.log("Lugar ocupado");
           }
-          $scope.lugar.push($scope.user.seccion + lug);
-          $scope.asiento[lug] = true;
-          $scope.user.lugar = $scope.lugar.join();
-          console.log($scope.lugar);
-          console.log($scope.asiento);
         };
 
 }]);
+
+function getUrlVars() {
+var vars = {};
+var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+vars[key] = value;
+});
+return vars;
+}
