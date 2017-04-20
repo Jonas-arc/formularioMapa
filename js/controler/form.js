@@ -6,7 +6,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           element['text'] = aux;
         };
          
-        $http.post('http://localhost/formularioMapa/php/consultas.php','{"accion":"consulta","search":"productos"}')
+        $http.post('../php/consultas.php','{"accion":"consulta","search":"productos"}')
              .then(function(respuesta){
             respuesta.data.forEach(textP);
             tags = respuesta.data;
@@ -30,9 +30,20 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
             $scope.user.categoria = "Gastronomo";
           }
           $scope.user.telefono = $scope.cel + " / " + $scope.tel;
+          var aux = ""
+          for (var i in $scope.user.tags) {
+            console.log(i);
+            if (i != 0) {
+              aux = aux.concat(",");
+            }
+            aux = aux.concat($scope.user.tags[i]['text']);
+          }
+          $scope.user['producto'] = aux;
           $scope.user.accion = "alta";
+          delete $scope.user.tags;
+          delete $scope.user.categoria;
           console.log($scope.user);
-          $http.post('./php/alta.php',$scope.user)
+          $http.post('../php/alta.php',$scope.user)
                .then(function(respuesta){
             console.log(respuesta);
           });

@@ -34,10 +34,10 @@ if ($objDatos->accion == 'alta') {
 					$conex->query($query);
 					foreach (explode(',',$productos) as $value) {
 						$query = "insert into producto (nombre) value (".$value.")";
-						print_r($query);
+						//print_r($query);
 						$conex->query($query);
 						$query = "insert into producto_participante (idProducto,idParticipante)value(".$value.",'".$datos["id"]."')";
-						print_r($query);
+						//print_r($query);
 						$conex->query($query);
 					}
 					$query = "UNLOCK TABLES";
