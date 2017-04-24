@@ -1,4 +1,4 @@
-app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData',function($q,$scope,$rootScope,$http,$filter,serveData){
+app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData','$window',function($q,$scope,$rootScope,$http,$filter,serveData,$window){
         var tags = [];
         var lugares = [];
         $scope.botonesLugar = {};
@@ -82,6 +82,13 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $http.post('../php/alta.php',$scope.user)
                .then(function(respuesta){
             console.log(respuesta);
+            if(response.error){
+              bootbox.alert(respuesta.error);
+            }
+            else{
+              bootbox.alert("Inscripcion Completa!");
+              $window.location.href = '../finA.html?fo=' + respuesta.folio;
+            }
           });
         };
  
