@@ -1,7 +1,7 @@
 app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData',function($q,$scope,$rootScope,$http,$filter,serveData){
         var tags = [];
         var lugares = [];
-        var botonesLugar = true;
+        $scope.botonesLugar = {};
         function textP(element, index, array){
           var aux = element['nombre'];
           delete element['nombre'];
@@ -18,8 +18,6 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         var auxL = {"accion":"consulta","search":"lugaresArea","area":$scope.user.seccion};
 
         $scope.botonesOcupados = function(lug) {
-          console.log(lug);
-          console.log($.grep(lugares, function(e){ return e.index == lug; }));
           if ($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug] == null ) {
             return 0;
           }else{
@@ -27,12 +25,20 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           }
         };
 
+        $scope.pruebabotoenes = function(lug) {
+          console.log($scope.botonesLugar[lug]);
+        };
+
+        function lugaresVal(element, index, array) {
+          $scope.botonesLugar[element.index]= element[getUrlVars()["seccion"] + element.index] == null?true:false;
+        }
+
         $http.post('../php/consultas.php',auxL)
              .then(function(respuesta){
             lugares = respuesta.data;
-            //lugares.forEach(botonesOcupados);
-            //console.log(lugares);
-            //console.log(botonesLugar);
+            lugares.forEach(lugaresVal);
+            console.log(lugares);
+            console.log($scope.botonesLugar);
         });
 
         $scope.cel = "";
