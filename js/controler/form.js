@@ -82,12 +82,12 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $http.post('../php/alta.php',$scope.user)
                .then(function(respuesta){
             console.log(respuesta);
-            if(respuesta.error){
-              bootbox.alert(respuesta.error);
+            if(respuesta.data.error){
+              bootbox.alert(respuesta.data.error);
             }
             else{
               bootbox.alert("Inscripcion Completa!");
-              $window.location.href = './finA.html?fo=' + respuesta.folio;
+              $window.location.href = '../finA.html?fo=' + respuesta.data.folio;
             }
           });
         };

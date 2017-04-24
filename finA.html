@@ -95,6 +95,7 @@ body {
 	z-index: 1;
 }
 </style>
+
 </head>
 
 <body ng-controller="folio">
@@ -107,7 +108,7 @@ body {
       	<div id="paso02">
       		<div id="folio">
   				<h2>Su folio es:</h2>
-  				<h2>folio</h2>
+  				<h2 id="folio">folio</h2>
   			</div>
       	</div>
       	<div id="paso03"></div>
@@ -120,6 +121,16 @@ body {
 </div>
 </div>
 	
-	<script type="text/javascript" src="./js/controler/folio.js"></script>
+	<script type="text/javascript" src="./script/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		function getUrlVars() {
+			var vars = {};
+			var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+			});
+			return vars;
+		}
+		$( "#folio" ).append("<h2>"+getUrlVars()["fo"]+"</h2>");
+	</script>
 </body>
 </html>
