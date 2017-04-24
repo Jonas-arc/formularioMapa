@@ -13,6 +13,12 @@ app.directive('enforceMaxTags', function() {
         }
    };
 });
+app.filter('startFromGrid', function() {
+  return function(input, start) {
+    start = +start;
+    return input.slice(start);
+  }
+});
 app.service('serveData', [function () 
 {
 	return {

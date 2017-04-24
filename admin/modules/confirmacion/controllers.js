@@ -32,8 +32,8 @@ angular.module('DemoPagineo')
       }
       
       $scope.confirmar = function($idParticipante){
-        $update = {"accion":"update","update":"confirmacion","id":$idParticipante};
-        $http.post('../php/update.php',$update)
+        var update = {"accion":"update","update":"confirmacion","id":$idParticipante};
+        $http.post('../php/update.php',update)
              .then(function(respuesta){
           console.log(respuesta);
           if (typeof respuesta.data.error !== 'undefined') {
