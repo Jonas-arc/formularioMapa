@@ -34,7 +34,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $scope.botonesLugar[element.index]= element[getUrlVars()["seccion"] + element.index] == null?true:false;
           if (element[getUrlVars()["seccion"] + element.index] !== null) {
             var x = {};
-            x.lugar=getUrlVars()["seccion"] + element.index
+            x.lugar=element.index;
             x.producto=element[getUrlVars()["seccion"] + element.index];
             $scope.listaLugare.push(x);
           }
@@ -46,7 +46,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
             lugares.forEach(lugaresVal);
             //console.log(lugares);
             //console.log($scope.botonesLugar);
-            console.log($scope.listaLugare);
+            //console.log($scope.listaLugare);
         });
 
         $scope.cel = "";
@@ -82,7 +82,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $http.post('../php/alta.php',$scope.user)
                .then(function(respuesta){
             console.log(respuesta);
-            if(response.error){
+            if(respuesta.error){
               bootbox.alert(respuesta.error);
             }
             else{
@@ -126,7 +126,12 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
             }else{
               var limite = 3;
             }
-            if ($scope.lugar.length >=1 && $scope.lugar.length <=limite) {
+            console.log(limite);
+            if ($scope.lugar.length == 0 ) {
+              $scope.lugar.push($scope.user.seccion+lug);
+              $scope.user.lugar = $scope.lugar.join();
+              $scope.botonesLugar[lug]=false;
+            } else if ($scope.lugar.length >=1 && $scope.lugar.length < limite) {
               //console.log("validar lugar");
               var auxVal = {"accion":"consulta",
                             "search":"validaLugares",
@@ -134,7 +139,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
                             "asignados":$scope.lugar.join()};
               $http.post('../php/consultas.php',auxVal)
                    .then(function(respuesta){
-                  console.log(respuesta.data);
+                  //console.log(respuesta.data);
                   if (respuesta.data.asignar) {
                     $( "#lugarCont" ).append( '<div class="alert alert-warning" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>  <strong>Error!</strong> Los lugares tienen que ser contigüos!</div><script>window.setTimeout(function() {    $(".alert").fadeTo(500, 0).slideUp(500, function(){        $(this).remove();     });}, 4000);</script>' );
                     //alert("Lugares no contigüos");<span id="lugarCont"></span>
@@ -145,10 +150,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
                   }
               });
             }else{
-              //console.log("asignacion");
-              $scope.lugar.push($scope.user.seccion+lug);
-              $scope.user.lugar = $scope.lugar.join();
-              $scope.botonesLugar[lug]=false;
+              $( "#lugarCont" ).append( '<div class="alert alert-info" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>  <strong>Solo es posible seleccionar '+limite+' lugares máximo por participante</strong></div><script>window.setTimeout(function() {    $(".alert").fadeTo(500, 0).slideUp(500, function(){        $(this).remove();     });}, 4000);</script>' );
             }
           }else{
             //console.log("Lugar ocupado");
