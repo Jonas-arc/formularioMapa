@@ -347,6 +347,36 @@
 
 	<div id="apDiv41"><img src="../imagenes/cabezlugaresabajo.jpg" width="526" height="71" /></div>
 </div>
+	<div id="lista" class="container">
+		<div class="col-md-12">
+			<div class="panel panel-default">
+			    <div class="panel-body">
+			      <table ng-init='configPages()' class='table'>
+			        <thead>
+			          <tr>
+			            
+			            <th>Numero</th>
+			            <th>Producto</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <!--tr ng-repeat='usuario in usuarios | filter:searchText | startFromGrid: currentPage * pageSize | limitTo: pageSize' , ng-click='seleccionarUsuario(usuario.id)'-->
+			          <tr>
+			            <td>1</td>
+			            <td>quecas</td>
+			          </tr>
+			        </tbody>
+			      </table>
+			      <div class='btn-group'>
+			        <button type='button' class='btn btn-default' ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'>&laquo;</button>
+			        <button type='button' class='btn btn-default' ng-disabled='currentPage == page.no - 1' ng-click='setPage(page.no)' ng-repeat='page in pages'>{{page.no}}</button>
+			        <button type='button' class='btn btn-default' ng-disabled='currentPage >= usuarios.length/pageSize - 1' , ng-click='currentPage = currentPage + 1'>&raquo;</button>
+			      </div>
+			    </div>
+			  </div>
+		</div>
+		
+	</div>
     <div id="formulario" class="container">
     <form id="userForm" name="userForm" novalidate method="post" action="">
       <div id="form1" class="col-md-6">

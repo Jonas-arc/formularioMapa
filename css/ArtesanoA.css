@@ -83,7 +83,14 @@ tags-input{
 	height: 510px;
 	width: 340px;
 	top: 550px;
-	left: 17.5%;
+	left: -15%;
+}
+#lista {
+	position: absolute;
+	top: 700px;
+	width: 440px;
+	height: 510px;
+	left: 55%;
 }
 
 #apDiv3 {
