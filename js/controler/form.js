@@ -79,7 +79,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
             }
             else{
               bootbox.alert("Inscripcion Completa!");
-              $window.location.href = '../finA.html?fo=' + respuesta.folio;
+              $window.location.href = './finA.html?fo=' + respuesta.folio;
             }
           });
         };
