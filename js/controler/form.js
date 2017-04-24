@@ -2,6 +2,11 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         var tags = [];
         var lugares = [];
         $scope.botonesLugar = {};
+        $scope.listaLugare = [];
+        $scope.currentPage = 0;
+        $scope.pageSize = 5;
+        $scope.pages = [];
+
         function textP(element, index, array){
           var aux = element['nombre'];
           delete element['nombre'];
@@ -25,20 +30,23 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           }
         };
 
-        $scope.pruebabotoenes = function(lug) {
-          console.log($scope.botonesLugar[lug]);
-        };
-
         function lugaresVal(element, index, array) {
           $scope.botonesLugar[element.index]= element[getUrlVars()["seccion"] + element.index] == null?true:false;
+          if (element[getUrlVars()["seccion"] + element.index] !== null) {
+            var x = {};
+            x.lugar=getUrlVars()["seccion"] + element.index
+            x.producto=element[getUrlVars()["seccion"] + element.index];
+            $scope.listaLugare.push(x);
+          }
         }
 
         $http.post('../php/consultas.php',auxL)
              .then(function(respuesta){
             lugares = respuesta.data;
             lugares.forEach(lugaresVal);
-            console.log(lugares);
-            console.log($scope.botonesLugar);
+            //console.log(lugares);
+            //console.log($scope.botonesLugar);
+            console.log($scope.listaLugare);
         });
 
         $scope.cel = "";
@@ -104,10 +112,15 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
 
         $scope.seleccionaaBoton = function(lug) {
           //console.log($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug]);
-          if ($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug] == null ) {
-            console.log("Lugar vacio");
-            if ($scope.lugar.length >=1) {
-              console.log("validar lugar");
+          if ($scope.botonesLugar[lug] ) {
+            //console.log("Lugar vacio");
+            if (/^A.*$/.test($scope.user.seccion)) {
+              var limite = 2;
+            }else{
+              var limite = 3;
+            }
+            if ($scope.lugar.length >=1 && $scope.lugar.length <=limite) {
+              //console.log("validar lugar");
               var auxVal = {"accion":"consulta",
                             "search":"validaLugares",
                             "buscado":$scope.user.seccion+lug,
@@ -116,22 +129,57 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
                    .then(function(respuesta){
                   console.log(respuesta.data);
                   if (respuesta.data.asignar) {
-                    alert("Lugares no contigüos");
+                    $( "#lugarCont" ).append( '<div class="alert alert-warning" role="alert">  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>  <strong>Error!</strong> Los lugares tienen que ser contigüos!</div><script>window.setTimeout(function() {    $(".alert").fadeTo(500, 0).slideUp(500, function(){        $(this).remove();     });}, 4000);</script>' );
+                    //alert("Lugares no contigüos");<span id="lugarCont"></span>
                   }else{
                     $scope.lugar.push($scope.user.seccion+lug);
                     $scope.user.lugar = $scope.lugar.join();
+                    $scope.botonesLugar[lug]=false;
                   }
               });
             }else{
-              console.log("asignacion");
+              //console.log("asignacion");
               $scope.lugar.push($scope.user.seccion+lug);
               $scope.user.lugar = $scope.lugar.join();
+              $scope.botonesLugar[lug]=false;
             }
           }else{
-            console.log("Lugar ocupado");
+            //console.log("Lugar ocupado");
           }
+          //console.log($scope.user);
+          //console.log($scope.lugar);
         };
 
+      $scope.configPages = function() {
+        $scope.pages.length = 0;
+        var ini = $scope.currentPage - 4;
+        var fin = $scope.currentPage + 5;
+        if (ini < 1) {
+          ini = 1;
+          if (Math.ceil($scope.listaLugare.length / $scope.pageSize) > 10)
+            fin = 10;
+          else
+            fin = Math.ceil($scope.listaLugare.length / $scope.pageSize);
+        } else {
+          if (ini >= Math.ceil($scope.listaLugare.length / $scope.pageSize) - 10) {
+            ini = Math.ceil($scope.listaLugare.length / $scope.pageSize) - 10;
+            fin = Math.ceil($scope.listaLugare.length / $scope.pageSize);
+          }
+        }
+        if (ini < 1) ini = 1;
+        for (var i = ini; i <= fin; i++) {
+          $scope.pages.push({
+            no: i
+          });
+        }
+
+        if ($scope.currentPage >= $scope.pages.length)
+          $scope.currentPage = $scope.pages.length - 1;
+      };
+
+      $scope.setPage = function(index) {
+        $scope.currentPage = index - 1;
+      };
 }]);
 
 function getUrlVars() {
