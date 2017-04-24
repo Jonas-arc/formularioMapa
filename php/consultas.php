@@ -18,7 +18,8 @@ if ($objDatos->accion == 'consulta') {
 				if (!is_null($res)) {
 					$aux=array();
 					while ($obj = $res->fetch_array(MYSQLI_ASSOC)) {
-						$aux[] =array($obj['id']=> $obj['productos']);
+						$aux[] =array($obj['id']=> $obj['productos'],
+									"index"=>substr($obj['id'], 2));
 					}
 					print_r(json_encode($aux));
 					$res->close();

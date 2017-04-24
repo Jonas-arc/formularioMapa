@@ -1,6 +1,7 @@
 app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData',function($q,$scope,$rootScope,$http,$filter,serveData){
         var tags = [];
         var lugares = [];
+        $scope.botonesLugar = {};
         function textP(element, index, array){
           var aux = element['nombre'];
           delete element['nombre'];
@@ -15,10 +16,29 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         $scope.user = {};
         $scope.user.seccion=getUrlVars()["seccion"];
         var auxL = {"accion":"consulta","search":"lugaresArea","area":$scope.user.seccion};
+
+        $scope.botonesOcupados = function(lug) {
+          if ($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug] == null ) {
+            return 0;
+          }else{
+            return 1;
+          }
+        };
+
+        $scope.pruebabotoenes = function(lug) {
+          console.log($scope.botonesLugar[lug]);
+        };
+
+        function lugaresVal(element, index, array) {
+          $scope.botonesLugar[element.index]= element[getUrlVars()["seccion"] + element.index] == null?true:false;
+        }
+
         $http.post('../php/consultas.php',auxL)
              .then(function(respuesta){
             lugares = respuesta.data;
-            //console.log(lugares);
+            lugares.forEach(lugaresVal);
+            console.log(lugares);
+            console.log($scope.botonesLugar);
         });
 
         $scope.cel = "";
@@ -29,7 +49,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $scope.asiento[i] = false;
         }
         console.log(serveData.qty);
- 
+
         $scope.update = function() {
           if ($scope.user.seccion[0] == "A") {
             $scope.user.categoria = "Artesano";
@@ -83,7 +103,8 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         };
 
         $scope.seleccionaaBoton = function(lug) {
-          if (lugares[lug][$scope.user.seccion + lug] == null ) {
+          //console.log($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug]);
+          if ($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug] == null ) {
             console.log("Lugar vacio");
             if ($scope.lugar.length >=1) {
               console.log("validar lugar");
