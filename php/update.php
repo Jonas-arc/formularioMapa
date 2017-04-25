@@ -9,7 +9,7 @@ if ($objDatos->accion == 'update') {
 		//print_r($datos);
 		switch ($datos['update']) {
 			case 'confirmacion':
-				$query = "update participantes set confirmacion=true where id like '".$datos['id']."'";
+				$query = "update participantes set confirmacion=".$datos['dato']." where id like '".$datos['id']."'";
 				break;
 		}
 		//print_r(json_encode(array($query)));

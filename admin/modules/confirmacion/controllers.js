@@ -4,12 +4,14 @@ angular.module('DemoPagineo')
     function($rootScope,$scope,$http) {
       $scope.consultasSelect = [{"name":"Todos","consulta":"participantes"},
                           {"name":"Por confirmar","consulta":"participantesReservados"},
-                          {"name":"Confirmados","consulta":"participantesConfirmados"}];
+                          {"name":"Confirmados","consulta":"participantesConfirmados"},
+                          {"name":"Pagado","consulta":"participantesPagado"}];
       $scope.consulta = $scope.consultasSelect[0];
 
-      $scope.titulos = {"Todos":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Productos"],
-                        "Por confirmar":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Acciones"],
-                        "Confirmados":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Productos"]};
+      $scope.titulos = {"Todos":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio","Productos"],
+                        "Por confirmar":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio","Acciones"],
+                        "Confirmados":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio","Acciones"],
+                        "Pagado":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio"]};
       $scope.listar = function() {
         //console.log($scope.consulta);
         var $consultas = {"accion":"consulta","search":$scope.consulta.consulta};
@@ -31,8 +33,8 @@ angular.module('DemoPagineo')
         });
       }
       
-      $scope.confirmar = function($idParticipante){
-        var update = {"accion":"update","update":"confirmacion","id":$idParticipante};
+      $scope.confirmar = function($idParticipante,$estado){
+        var update = {"accion":"update","update":"confirmacion","id":$idParticipante,"dato":$estado};
         $http.post('../php/update.php',update)
              .then(function(respuesta){
           console.log(respuesta);

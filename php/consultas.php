@@ -29,7 +29,7 @@ if ($objDatos->accion == 'consulta') {
 				return;
 				break;
 			case 'participantes':
-				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id group by p.id";
+				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares, sum(l.precio) as precio from participantes as p inner join lugares as l on l.participante=p.id group by p.id";
 				$res = QueryMysql($query,$conex);
 				if (!is_null($res)) {
 					$aux=array();
@@ -52,10 +52,13 @@ if ($objDatos->accion == 'consulta') {
 				return;
 				break;
 			case 'participantesConfirmados':
-				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion is true group by p.id";
+				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares, sum(l.precio) as precio from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion = 1 group by p.id";
 				break;
 			case 'participantesReservados':
-				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion is false group by p.id";
+				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares, sum(l.precio) as precio from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion = 0 group by p.id";
+				break;
+			case 'participantesPagado':
+				$query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares, sum(l.precio) as precio from participantes as p inner join lugares as l on l.participante=p.id where p.confirmacion = 2 group by p.id";
 				break;
 			case 'validaLugares':
 				$query = "select * from validarLugar where lugarSelect in ("."'".preg_replace("/,/", "','", $datos['asignados'])."'".") and lugarPosible like '".$datos['buscado']."'";

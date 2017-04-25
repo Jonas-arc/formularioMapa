@@ -25,15 +25,17 @@
             <td>{{usuario.telefono}}</td>
             <td>{{usuario.correo}}</td>
             <td>{{usuario.lugares}}</td>
+            <td>{{usuario.precio}}</td>
             <td><div ng-switch="consulta.name">
                   <div ng-switch-when="Todos">
                     {{usuario.productos}}
                   </div>
                   <div ng-switch-when="Por confirmar">
-                    <button ng-click="confirmar(usuario.id)" class="btn btn-primary" type="submit">Confirmar</button>
+                    <button ng-click="confirmar(usuario.id,1)" class="btn btn-primary" type="submit">Confirmar</button>
+                    <button ng-click="confirmar(usuario.id,2)" class="btn btn-primary" type="submit">Precio</button>
                   </div>
                   <div ng-switch-when="Confirmados">
-                    {{usuario.productos}}
+                    <button ng-click="confirmar(usuario.id,2)" class="btn btn-primary" type="submit">Precio</button>
                   </div>
                 </div>
             </td>
