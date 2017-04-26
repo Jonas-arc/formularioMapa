@@ -86,19 +86,19 @@ tags-input{
 }
 #lista {
 	position: absolute;
-	top: 950px;
+	top: 830px;
 	width: 440px;
 	height: 510px;
 	left: 75%;
 }
 #pago {
 	position: absolute;
-	top: 680px;
+	top: 600px;
 	left: 75%;
 }
 #lugar {
 	position: absolute;
-	top: 760px;
+	top: 660px;
 	left: 75%;
 }
 #comentario {

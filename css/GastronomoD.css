@@ -81,8 +81,31 @@ tags-input{
 	position: absolute;
 	height: 510px;
 	width: 340px;
-	top: 550px;
-	left: 17.5%;
+	top: 470px;
+	left: -30%;
+}
+#lista {
+	position: absolute;
+	top: 830px;
+	width: 440px;
+	height: 510px;
+	left: 75%;
+}
+#pago {
+	position: absolute;
+	top: 600px;
+	left: 75%;
+}
+#lugar {
+	position: absolute;
+	top: 660px;
+	left: 75%;
+}
+#comentario {
+	resize: none;
+}
+#producto {
+	resize: none;
 }
 #apDiv3 {
 	position: absolute;
