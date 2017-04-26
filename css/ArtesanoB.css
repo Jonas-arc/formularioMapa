@@ -14,6 +14,7 @@ tags-input{
 	left: 47.5%;
 	top: 1500px;
 }
+
 .formu{
 	width: 60%
 }
@@ -82,9 +83,25 @@ tags-input{
 	height: 510px;
 	width: 340px;
 	top: 550px;
-	left: 17.5%;
+	left: -15%;
 }
-
+#lista {
+	position: absolute;
+	top: 950px;
+	width: 440px;
+	height: 510px;
+	left: 55%;
+}
+#pago {
+	position: absolute;
+	top: 680px;
+	left: 60%;
+}
+#lugar {
+	position: absolute;
+	top: 760px;
+	left: 60%;
+}
 #apDiv3 {
 	position: absolute;
 	left: 26px; 
@@ -404,7 +421,6 @@ tags-input{
 	top: 838px;
 }
 
-
 #formulario {
 	position: absolute;
 	height: 511px;
@@ -427,7 +443,10 @@ tags-input{
 	width: 800px;
 	top: 1550px;
 }
-#textfield7 {
+#comentario {
+	resize: none;
+}
+#producto {
 	resize: none;
 }
 #salir {
