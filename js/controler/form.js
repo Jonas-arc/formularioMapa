@@ -1,11 +1,13 @@
 app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serveData','$window',function($q,$scope,$rootScope,$http,$filter,serveData,$window){
         var tags = [];
         var lugares = [];
+        var lugaresPrecio = {};
         $scope.botonesLugar = {};
         $scope.listaLugare = [];
         $scope.currentPage = 0;
         $scope.pageSize = 5;
         $scope.pages = [];
+        $scope.precio = "$";
 
         function textP(element, index, array){
           var aux = element['nombre'];
@@ -32,6 +34,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
 
         function lugaresVal(element, index, array) {
           $scope.botonesLugar[element.index]= element[getUrlVars()["seccion"] + element.index] == null?true:false;
+          lugaresPrecio[getUrlVars()["seccion"] + element.index] = element.precio;
           if (element[getUrlVars()["seccion"] + element.index] !== null) {
             var x = {};
             x.lugar=element.index;
@@ -44,7 +47,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
              .then(function(respuesta){
             lugares = respuesta.data;
             lugares.forEach(lugaresVal);
-            //console.log(lugares);
+            console.log(lugaresPrecio);
             //console.log($scope.botonesLugar);
             //console.log($scope.listaLugare);
         });
@@ -110,6 +113,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           }
           $scope.lugar = [];
           $scope.user.lugar = "";
+          $scope.precio = "$";
         }
 
         $scope.loadTags = function(query) {
@@ -133,6 +137,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
               $scope.lugar.push($scope.user.seccion+lug);
               $scope.user.lugar = $scope.lugar.join();
               $scope.botonesLugar[lug]=false;
+              $scope.precio = "$"+lugaresPrecio[$scope.user.seccion+lug];
             } else if ($scope.lugar.length >=1 && $scope.lugar.length < limite) {
               //console.log("validar lugar");
               var auxVal = {"accion":"consulta",
@@ -147,8 +152,13 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
                     //alert("Lugares no contigüos");<span id="lugarCont"></span>
                   }else{
                     $scope.lugar.push($scope.user.seccion+lug);
+                    var auxTotal =0;
+                    for (var i = 0; i < $scope.lugar.length; i++) {
+                      auxTotal += parseInt(lugaresPrecio[$scope.lugar[i]]);
+                    }
                     $scope.user.lugar = $scope.lugar.join();
                     $scope.botonesLugar[lug]=false;
+                    $scope.precio = "$"+auxTotal;
                   }
               });
             }else{

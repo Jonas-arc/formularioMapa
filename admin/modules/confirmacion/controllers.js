@@ -8,10 +8,10 @@ angular.module('DemoPagineo')
                           {"name":"Pagado","consulta":"participantesPagado"}];
       $scope.consulta = $scope.consultasSelect[0];
 
-      $scope.titulos = {"Todos":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio","Productos"],
-                        "Por confirmar":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio","Acciones"],
-                        "Confirmados":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio","Acciones"],
-                        "Pagado":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Precio"]};
+      $scope.titulos = {"Todos":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Por pagar","Productos"],
+                        "Por confirmar":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Por pagar","Acciones"],
+                        "Confirmados":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Por pagar","Acciones"],
+                        "Pagado":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Por pagar"]};
       $scope.listar = function() {
         //console.log($scope.consulta);
         var $consultas = {"accion":"consulta","search":$scope.consulta.consulta};
