@@ -52,10 +52,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         $scope.cel = "";
         $scope.tel = "";
         $scope.lugar = [];
-        $scope.asiento = [];
-        for (var i = 0; i < 81; i++) {
-          $scope.asiento[i] = false;
-        }
+        
         console.log(serveData.qty);
 
         $scope.update = function() {
@@ -103,8 +100,13 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         $scope.reset();
 
         $scope.limpiarSel = function() {
-          for (var i = 0; i < 31; i++) {
-            $scope.asiento[i] = false;
+          var aux = "";
+          for (var j = 0; j < $scope.lugar.length; j++) {
+            for (var i = 2; i < $scope.lugar[j].length; i++) {
+              aux = aux + $scope.lugar[j][i];
+            }
+            $scope.botonesLugar[aux] = true;
+            aux = "";
           }
           $scope.lugar = [];
           $scope.user.lugar = "";

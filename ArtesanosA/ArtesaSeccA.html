@@ -362,7 +362,7 @@
 			      <table ng-init='configPages()' class='table'>
 			        <thead>
 			          <tr>
-			            <th>Numero</th>
+			            <th>Lugar</th>
 			            <th>Producto</th>
 			          </tr>
 			        </thead>
@@ -385,6 +385,22 @@
 		</div>
 		
 	</div>
+
+	<div id="pago">
+		<label for="precio">
+			Cantidad a Pagar
+		</label>
+		<br>
+		<input ng-model="user.name" ng-disabled="true" type="text" name="precio">
+	</div>
+	<div id="lugar">
+		<label for="lugar">
+			Los lugares que escojiste son:
+		</label>
+		<br>
+		<input ng-model="" ng-disabled="true" type="text" name="lugar"> <button class="btn btn-success" ng-click="limpiarSel()">Limpiar</button>
+	</div>
+
     <div id="formulario" class="container">
     <form id="userForm" name="userForm" novalidate method="post" action="">
       <div id="form1" class="col-md-6">
@@ -395,7 +411,7 @@
             <div align="right"><strong>Nombre</strong></div>
           	</label>
           	<br>
-          	<input class="formu" name="name" type="text" id="name" ng-model="user.name" ng-model-options="{ updateOn: 'blur' }" required />
+          	<input class="formu" name="name" type="text" id="name" ng-model="user.name"  required />
           		<span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
 			    	<span ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
 				</span>
@@ -406,7 +422,7 @@
             <div align="right"><strong>Apellido Paterno</strong></div>
           </label>
           <br>
-          <input class="formu" name="appaterno" type="text" ng-model="user.appaterno" ng-model-options="{ updateOn: 'blur' }" required />
+          <input class="formu" name="appaterno" type="text" ng-model="user.appaterno"  required />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
 			    <span ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
 			    </span>
@@ -416,7 +432,7 @@
             <div align="right"><strong>Apellido Materno</strong></div>
           </label>
           <br>
-          <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno" ng-model-options="{ updateOn: 'blur' }" required />
+          <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno"  required />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
 			    	<span ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
 			    </span>
@@ -502,7 +518,7 @@
             <div align="right"><strong>Telefono celular</strong></div>
           </label>
           <br>
-          <input class="formu" name="telefonoCel" type="number" ng-model="cel" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999" />
+          <input class="formu" name="telefonoCel" type="number" ng-model="cel"  required min="1111111111" max="99999999999999" />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
 			    	<span ng-show="userForm.telefonoCel.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
 			    	<span ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
@@ -513,7 +529,7 @@
             <div align="right"><strong>Telefono local</strong></div>
           </label>
           <br>
-          <input class="formu" name="telefono" type="number" ng-model="tel" ng-model-options="{ updateOn: 'blur' }" required min="1111111111" max="99999999999999"  />
+          <input class="formu" name="telefono" type="number" ng-model="tel"  required min="1111111111" max="99999999999999"  />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
 			    	<span ng-show="userForm.telefono.$error.min">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
 			    	<span ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
@@ -524,7 +540,7 @@
             <div align="right"><strong>Correo electrónico</strong></div>
           </label>
           <br>
-          <input class="formu" name="email" type="email" ng-model="user.email" ng-model-options="{ updateOn: 'blur' }" required />
+          <input class="formu" name="email" type="email" ng-model="user.email"  required />
 			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
 			    	<span ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
 			    	<span ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
@@ -539,10 +555,13 @@
             <div align="left"><strong>Producto</strong></div>
           </label>
           <br>
-          <tags-input class="formu" ng-model="user.tags" max-tags="3" enforce-max-tags>
+          <tags-input name="tag" id="tag" class="formu" ng-model="user.tags" max-tags="3" enforce-max-tags required>
 		    <auto-complete source="loadTags($query)"></auto-complete>
 		  </tags-input>
-        
+        	<span class="messages" ng-show="userForm.$submitted || userForm.tag.$touched">
+			    	<span ng-show="userForm.tag.$error.required">El campo es obligatorio.</span>
+			    	
+			    </span>
 
         
         <br>
@@ -552,16 +571,21 @@
             </div>
           </label>
           <br>
-          <textarea class="formu" ng-model="user.productoDescip" name="textfield7" cols="40" rows="4" id="textfield7"></textarea>
+          <textarea class="formu" ng-model="user.productoDescip" name="producto" cols="40" rows="4" id="producto" required></textarea>
+
+          	<span class="messages" ng-show="userForm.$submitted || userForm.producto.$touched">
+			    	<span ng-show="userForm.producto.$error.required">El campo es obligatorio.</span>
+			    	
+			    </span>
         
         <br>
           <label>
             <div align="right">
-              <p><strong>Comentarios</strong></p>
+              <p><strong>Comentarios (opcional)</strong></p>
             </div>
           </label>
           <br>
-          <textarea class="formu" ng-model="user.comentario" name="textfield7" cols="40" rows="4" id="textfield7"></textarea>
+          <textarea class="formu" ng-model="user.comentario" name="comentario" cols="40" rows="4" id="comentario"></textarea>
         
         <br>
         <br>

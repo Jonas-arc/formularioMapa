@@ -92,7 +92,16 @@ tags-input{
 	height: 510px;
 	left: 55%;
 }
-
+#pago {
+	position: absolute;
+	top: 680px;
+	left: 60%;
+}
+#lugar {
+	position: absolute;
+	top: 760px;
+	left: 60%;
+}
 #apDiv3 {
 	position: absolute;
 	left: 26px; 
@@ -434,7 +443,10 @@ tags-input{
 	width: 800px;
 	top: 1550px;
 }
-#textfield7 {
+#comentario {
+	resize: none;
+}
+#producto {
 	resize: none;
 }
 #salir {
