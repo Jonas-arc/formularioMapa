@@ -62,6 +62,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
 
         $scope.errores = function() {
           console.log($rootScope.tel);
+          $scope.tel = $rootScope.tel;
           if ($rootScope.tel.length < 10 || $rootScope.tel.length > 14) {
             $scope.tt = true;
           }
@@ -73,7 +74,7 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
 
         $scope.errore = function() {
           console.log($rootScope.cel);
-          
+          $scope.cel = $rootScope.cel;
           if ($rootScope.cel.length < 10 || $rootScope.cel.length > 14) {
             $scope.tc = true;
           }
