@@ -55,8 +55,32 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
         $scope.cel = "";
         $scope.tel = "";
         $scope.lugar = [];
+        $scope.tt = false;
+        $scope.tc = false;
         
         console.log(serveData.qty);
+
+        $scope.errores = function() {
+          console.log($rootScope.tel);
+          if ($rootScope.tel.length < 10 || $rootScope.tel.length > 14) {
+            $scope.tt = true;
+          }
+          else{
+            $scope.tt = false;
+          }
+          
+        };
+
+        $scope.errore = function() {
+          console.log($rootScope.cel);
+          
+          if ($rootScope.cel.length < 10 || $rootScope.cel.length > 14) {
+            $scope.tc = true;
+          }
+          else{
+            $scope.tc = false;
+          }
+        };
 
         $scope.update = function() {
           if ($scope.user.seccion[0] == "A") {
@@ -114,6 +138,8 @@ app.controller("formulario",['$q','$scope','$rootScope','$http','$filter','serve
           $scope.lugar = [];
           $scope.user.lugar = "";
           $scope.precio = "$";
+          //console.log($rootScope.tel);
+          //console.log($rootScope.cel);
         }
 
         $scope.loadTags = function(query) {
