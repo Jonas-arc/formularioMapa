@@ -317,17 +317,17 @@
 
 	<div id="pago">
 		<label for="precio">
-			Cantidad a Pagar
+			Monto:
 		</label>
 		<br>
 		<input ng-model="precio" ng-disabled="true" type="text" name="precio">
 	</div>
 	<div id="lugar">
 		<label for="lugar">
-			Los lugares que escojiste son:
+			Lugar:
 		</label>
 		<br>
-		<input ng-model="user.lugar" ng-disabled="true" type="text" name="lugar"> <button class="btn btn-success" ng-click="limpiarSel()">Limpiar seleccion actual de lugares</button>
+		<input ng-model="user.lugar" ng-disabled="true" type="text" name="lugar"> <button class="btn btn-success" ng-click="limpiarSel()">Limpiar</button>
 	</div>
 
     <div id="formulario" class="container">
@@ -444,7 +444,7 @@
         
         <br>
           <label>
-            <div align="right"><strong>Telefono celular</strong></div>
+            <div align="right"><strong>Número de celular a 10 digitos</strong></div>
           </label>
           <br>
           <!-- input class="formu" name="telefonoCel" type="number" ng-model="cel"  required min="1111111111" max="99999999999999" / -->
@@ -457,7 +457,7 @@
         
         <br>
           <label>
-            <div align="right"><strong>Telefono local</strong></div>
+            <div align="right"><strong>Telefono local (incluyendo clave LADA)</strong></div>
           </label>
           <br>
           <!-- input class="formu" name="telefono" type="number" ng-model="cel"  required min="1111111111" max="99999999999999"  /-->
