@@ -6,6 +6,16 @@ angular.module('DemoPagineo')
                           {"name":"Por confirmar","consulta":"participantesReservados"},
                           {"name":"Confirmados","consulta":"participantesConfirmados"},
                           {"name":"Pagado","consulta":"participantesPagado"}];
+      $scope.secciones = [{"name":"Todos","seccion":""},
+                          {"name":"Artesanos A","seccion":"AA"},
+                          {"name":"Artesanos B","seccion":"BB"},
+                          {"name":"Gastrónomos A","seccion":"GA"},
+                          {"name":"Gastrónomos B","seccion":"GB"},
+                          {"name":"Gastrónomos C","seccion":"GC"},
+                          {"name":"Gastrónomos D","seccion":"GD"},
+                          {"name":"Gastrónomos E","seccion":"GE"},
+                          ];
+      $scope.seccion = $scope.secciones[0];
       $scope.consulta = $scope.consultasSelect[0];
 
       $scope.titulos = {"Todos":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Por pagar","Productos"],
@@ -14,7 +24,7 @@ angular.module('DemoPagineo')
                         "Pagado":["Folio","Nombre","Telefono","Correo electronico","Lugar(es)","Por pagar"]};
       $scope.listar = function() {
         //console.log($scope.consulta);
-        var $consultas = {"accion":"consulta","search":$scope.consulta.consulta};
+        var $consultas = {"accion":"consulta","search":$scope.consulta.consulta,"seccion":$scope.seccion.seccion};
 
         function nombreCom(element, index, array){
           element['nombreComp'] = "".concat(element['nombre']," ",element['appaterno']," ",element['apmaterno']);

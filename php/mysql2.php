@@ -1,6 +1,6 @@
 <?php
 function ConexionMysql(){
-	$mysqli = new mysqli("mysql.hostinger.mx", "u304639672_sonpm", "son;Para;Milo2017", "u304639672_parti", 3306);
+	$mysqli = new mysqli("127.0.0.1", "sonparam_regPart", "son;Para;Milo2017", "sonparam_pasticipantes", 3306);
 	if ($mysqli->connect_errno) {
 	    // "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
 	    return null;

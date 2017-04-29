@@ -6,6 +6,8 @@
     <div class="row">
       <select class="selectpicker col-1" ng-model="consulta" ng-options="rm.name for rm in consultasSelect" ng-init="consulta=consultasSelect[0]" ng-change="listar()">
       </select>
+      <select class="selectpicker col-1" ng-model="seccion" ng-options="rm.name for rm in secciones" ng-init="seccion=secciones[0]" ng-change="listar()">
+      </select>
       <input class="col-2" ng-model="searchText" type="text" class="form-control" placeholder="Busqueda"/>
     </div>
   </div>
