@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html ng-app="Milo" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Expositores 2017 / Zona Gastrónomos A</title>
+<link rel="stylesheet" type="text/css" href="../css/GastronomoA.css">
+<link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../script/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="../script/ng-tags-input/ng-tags-input.css">
+<link rel="stylesheet" type="text/css" href="../script/ng-tags-input/ng-tags-input.bootstrap.css">
+
+</head>
+
+<body ng-controller="formulario">
+<div ng-mousemove = "user.seccion='GA'" id="todo" class="container">
+<div id="grupo">
+  <div id="fondofb">
+  <div id="cabeza"></div>
+  	<div id="contene01">
+    	<a href="../expo2017.html"><div id="paso01"></div></a>
+      	<div id="paso02"></div>
+      	<div id="paso03"></div>
+    </div>
+    
+    <div id="contene03" onload="MM_preloadImages('../imagenes/paso01B.jpg','../imagenes/bot01B.jpg','../imagenes/bot15B.jpg','../imagenes/bot29B.jpg','../imagenes/bot43B.jpg','../imagenes/bot02B.jpg','../imagenes/bot16B.jpg','../imagenes/bot30B.jpg','../imagenes/bot45B.jpg','../imagenes/bot03B.jpg','../imagenes/bot17B.jpg','../imagenes/bot31B.jpg','../imagenes/bot04B.jpg','../imagenes/bot18B.jpg','../imagenes/bot32B.jpg','../imagenes/bot46B.jpg','../imagenes/bot05B.jpg','../imagenes/bot19B.jpg','../imagenes/bot33B.jpg','../imagenes/bot47B.jpg','../imagenes/bot06B.jpg','../imagenes/bot20B.jpg','../imagenes/bot34B.jpg','../imagenes/bot48B.jpg','../imagenes/bot07B.jpg','../imagenes/bot21B.jpg','../imagenes/bot35B.jpg','../imagenes/bot49B.jpg','../imagenes/bot08B.jpg','../imagenes/bot22B.jpg','../imagenes/bot36B.jpg','../imagenes/bot50B.jpg','../imagenes/bot09B.jpg','../imagenes/bot23B.jpg','../imagenes/bot37B.jpg','../imagenes/bot51B.jpg','../imagenes/bot10B.jpg','../imagenes/bot24B.jpg','../imagenes/bot38B.jpg','../imagenes/bot52B.jpg','../imagenes/bot11B.jpg','../imagenes/bot25B.jpg','../imagenes/bot53B.jpg','../imagenes/bot12B.jpg','../imagenes/bot40B.jpg','../imagenes/bot54B.jpg','../imagenes/bot13B.jpg','../imagenes/bot26B.jpg','../imagenes/bot41B.jpg','../imagenes/bot55B.jpg','../imagenes/bot14B.jpg','../imagenes/bot27B.jpg','../imagenes/bot42B.jpg','../imagenes/bot56B.jpg')">
+
+<div id="apDiv3" style="position: absolute; left: 26px; top: 131px; width: 800px; height: 51px; z-index: 3"><img src="../imagenes/status.jpg" width="800" height="51" /></div>
+<div id="apDiv4" style="position: absolute; left: 26px; top: 183px; width: 800px; height: 100px; z-index: 5"><img src="../imagenes/cabezlugaresGA.jpg" width="800" height="100" /></div>
+<div id="apDiv5" style="position: absolute; left: 26px; top: 281px; width: 10px; height: 173px; z-index: 6"><img src="../imagenes/azulderch.jpg" width="10" height="173" /></div>
+
+<div id="apDiv6">
+	<button ng-show = "botonesLugar[1]" ng-disabled = "" ng-click="seleccionaaBoton(1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','../imagenes/bot01B.jpg',1)"><img src="../imagenes/bot01AG.jpg" width="27" height="23" id="Image8" /></button>
+	<button ng-show = "!botonesLugar[1]" ng-disabled = "true"><img src="../imagenes/bot01D.jpg" width="27" height="23" id="Image8" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+
+	<button ng-show = "botonesLugar[15]" ng-disabled = "" ng-click="seleccionaaBoton(15)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','../imagenes/bot15B.jpg',1)"><img src="../imagenes/bot15AG.jpg" width="27" height="23" id="Image10" /></button>
+	<button ng-show = "!botonesLugar[15]" ng-disabled = "true"><img src="../imagenes/bot15D.jpg" width="27" height="23" id="Image10" /></button>
+
+	<button ng-show = "botonesLugar[29]" ng-disabled = "" ng-click="seleccionaaBoton(29)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','../imagenes/bot29B.jpg',1)"><img src="../imagenes/bot29AG.jpg" width="27" height="23" id="Image11" /></button>
+	<button ng-show = "!botonesLugar[29]" ng-disabled = "true"><img src="../imagenes/bot29D.jpg" width="27" height="23" id="Image11" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+
+	<button ng-show = "botonesLugar[43]" ng-disabled = "" ng-click="seleccionaaBoton(43)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','../imagenes/bot43B.jpg',1)"><img src="../imagenes/bot43AG.jpg" width="27" height="23" id="Image13" /></button>
+	<button ng-show = "!botonesLugar[43]" ng-disabled = "true"><img src="../imagenes/bot43D.jpg" width="27" height="23" id="Image13" /></button>
+
+ </div>
+ 
+ <div id="apDiv7">
+	<button ng-show = "botonesLugar[2]" ng-disabled = "" ng-click="seleccionaaBoton(2)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','../imagenes/bot02B.jpg',1)"><img src="../imagenes/bot02AG.jpg" width="27" height="23" id="Image14" /></button>
+	<button ng-show = "!botonesLugar[2]" ng-disabled = "true"><img src="../imagenes/bot02D.jpg" width="27" height="23" id="Image14" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[16]" ng-disabled = "" ng-click="seleccionaaBoton(16)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','../imagenes/bot16B.jpg',1)"><img src="../imagenes/bot16AG.jpg" width="27" height="23" id="Image15" /></button>
+	<button ng-show = "!botonesLugar[16]" ng-disabled = "true"><img src="../imagenes/bot16D.jpg" width="27" height="23" id="Image15" /></button>
+
+	<button ng-show = "botonesLugar[30]" ng-disabled = "" ng-click="seleccionaaBoton(30)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','../imagenes/bot30B.jpg',1)"><img src="../imagenes/bot30AG.jpg" width="27" height="23" id="Image16" /></button>
+	<button ng-show = "!botonesLugar[30]" ng-disabled = "true"><img src="../imagenes/bot30D.jpg" width="27" height="23" id="Image16" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[44]" ng-disabled = "" ng-click="seleccionaaBoton(44)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot44AG.jpg" width="27" height="23" id="Image18" /></button>
+	<button ng-show = "!botonesLugar[44]" ng-disabled = "true"><img src="../imagenes/bot44D.jpg" width="27" height="23" id="Image18" /></button>
+
+ </div>
+ 
+ <div id="apDiv8">
+	<button ng-show = "botonesLugar[3]" ng-disabled = "" ng-click="seleccionaaBoton(3)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','../imagenes/bot03B.jpg',1)"><img src="../imagenes/bot03AG.jpg" width="27" height="23" id="Image19" /></button>
+	<button ng-show = "!botonesLugar[3]" ng-disabled = "true"><img src="../imagenes/bot03D.jpg" width="27" height="23" id="Image19" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[17]" ng-disabled = "" ng-click="seleccionaaBoton(17)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','../imagenes/bot17B.jpg',1)"><img src="../imagenes/bot17AG.jpg" width="27" height="23" id="Image21" /></button>
+	<button ng-show = "!botonesLugar[17]" ng-disabled = "true"><img src="../imagenes/bot17D.jpg" width="27" height="23" id="Image21" /></button>
+
+	<button ng-show = "botonesLugar[31]" ng-disabled = "" ng-click="seleccionaaBoton(31)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','../imagenes/bot31B.jpg',1)"><img src="../imagenes/bot31AG.jpg" width="27" height="23" id="Image22" /></button>
+	<button ng-show = "!botonesLugar[31]" ng-disabled = "true"><img src="../imagenes/bot31D.jpg" width="27" height="23" id="Image22" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[45]" ng-disabled = "" ng-click="seleccionaaBoton(45)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','../imagenes/bot45B.jpg',1)"><img src="../imagenes/bot45AG.jpg" width="27" height="23" id="Image24" /></button>
+	<button ng-show = "!botonesLugar[45]" ng-disabled = "true"><img src="../imagenes/bot45D.jpg" width="27" height="23" id="Image24" /></button>
+
+ </div>
+ 
+ <div id="apDiv9">
+	<button ng-show = "botonesLugar[4]" ng-disabled = "" ng-click="seleccionaaBoton(4)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','../imagenes/bot04B.jpg',1)"><img src="../imagenes/bot04AG.jpg" width="27" height="23" id="Image25" /></button>
+	<button ng-show = "!botonesLugar[4]" ng-disabled = "true"><img src="../imagenes/bot04D.jpg" width="27" height="23" id="Image25" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[18]" ng-disabled = "" ng-click="seleccionaaBoton(18)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','../imagenes/bot18B.jpg',1)"><img src="../imagenes/bot18AG.jpg" width="27" height="23" id="Image27" /></button>
+	<button ng-show = "!botonesLugar[18]" ng-disabled = "true"><img src="../imagenes/bot18D.jpg" width="27" height="23" id="Image27" /></button>
+
+	<button ng-show = "botonesLugar[32]" ng-disabled = "" ng-click="seleccionaaBoton(32)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','../imagenes/bot32B.jpg',1)"><img src="../imagenes/bot32AG.jpg" width="27" height="23" id="Image28" /></button>
+	<button ng-show = "!botonesLugar[32]" ng-disabled = "true"><img src="../imagenes/bot32D.jpg" width="27" height="23" id="Image28" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[46]" ng-disabled = "" ng-click="seleccionaaBoton(46)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image30','','../imagenes/bot46B.jpg',1)"><img src="../imagenes/bot46AG.jpg" width="27" height="23" id="Image30" /></button>
+	<button ng-show = "!botonesLugar[46]" ng-disabled = "true"><img src="../imagenes/bot46D.jpg" width="27" height="23" id="Image30" /></button>
+
+ </div>
+ 
+ <div id="apDiv10"><img src="../imagenes/barra02G.jpg" width="25" height="173" /></div>
+ 
+ <div id="apDiv11">
+	<button ng-show = "botonesLugar[5]" ng-disabled = "" ng-click="seleccionaaBoton(5)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image33','','../imagenes/bot05B.jpg',1)"><img src="../imagenes/bot05AG.jpg" width="27" height="23" id="Image33" /></button>
+	<button ng-show = "!botonesLugar[5]" ng-disabled = "true"><img src="../imagenes/bot05D.jpg" width="27" height="23" id="Image33" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[19]" ng-disabled = "" ng-click="seleccionaaBoton(19)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','../imagenes/bot19B.jpg',1)"><img src="../imagenes/bot19AG.jpg" width="27" height="23" id="Image35" /></button>
+	<button ng-show = "!botonesLugar[19]" ng-disabled = "true"><img src="../imagenes/bot19D.jpg" width="27" height="23" id="Image35" /></button>
+
+	<button ng-show = "botonesLugar[33]" ng-disabled = "" ng-click="seleccionaaBoton(33)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image36','','../imagenes/bot33B.jpg',1)"><img src="../imagenes/bot33AG.jpg" width="27" height="23" id="Image36" /></button>
+	<button ng-show = "!botonesLugar[33]" ng-disabled = "true"><img src="../imagenes/bot33D.jpg" width="27" height="23" id="Image36" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[47]" ng-disabled = "" ng-click="seleccionaaBoton(47)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image38','','../imagenes/bot47B.jpg',1)"><img src="../imagenes/bot47AG.jpg" width="27" height="23" id="Image38" /></button>
+	<button ng-show = "!botonesLugar[47]" ng-disabled = "true"><img src="../imagenes/bot47D.jpg" width="27" height="23" id="Image38" /></button>
+
+ </div>
+ 
+ <div id="apDiv12">
+	<button ng-show = "botonesLugar[6]" ng-disabled = "" ng-click="seleccionaaBoton(6)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image39','','../imagenes/bot06B.jpg',1)"><img src="../imagenes/bot06AG.jpg" width="27" height="23" id="Image39" /></button>
+	<button ng-show = "!botonesLugar[6]" ng-disabled = "true"><img src="../imagenes/bot06D.jpg" width="27" height="23" id="Image39" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[20]" ng-disabled = "" ng-click="seleccionaaBoton(20)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image41','','../imagenes/bot20B.jpg',1)"><img src="../imagenes/bot20AG.jpg" width="27" height="23" id="Image41" /></button>
+	<button ng-show = "!botonesLugar[20]" ng-disabled = "true"><img src="../imagenes/bot20D.jpg" width="27" height="23" id="Image41" /></button>
+
+	<button ng-show = "botonesLugar[34]" ng-disabled = "" ng-click="seleccionaaBoton(34)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image42','','../imagenes/bot34B.jpg',1)"><img src="../imagenes/bot34AG.jpg" width="27" height="23" id="Image42" /></button>
+	<button ng-show = "!botonesLugar[34]" ng-disabled = "true"><img src="../imagenes/bot34D.jpg" width="27" height="23" id="Image42" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[48]" ng-disabled = "" ng-click="seleccionaaBoton(48)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image44','','../imagenes/bot48B.jpg',1)"><img src="../imagenes/bot48AG.jpg" width="27" height="23" id="Image44" /></button>
+	<button ng-show = "!botonesLugar[48]" ng-disabled = "true"><img src="../imagenes/bot48D.jpg" width="27" height="23" id="Image44" /></button>
+
+ </div>
+ 
+ <div id="apDiv13">
+	<button ng-show = "botonesLugar[7]" ng-disabled = "" ng-click="seleccionaaBoton(7)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image45','','../imagenes/bot07B.jpg',1)"><img src="../imagenes/bot07AG.jpg" width="27" height="23" id="Image45" /></button>
+	<button ng-show = "!botonesLugar[7]" ng-disabled = "true"><img src="../imagenes/bot07D.jpg" width="27" height="23" id="Image45" /></button>
+
+ 	<img src="../imagenes/barra01bis.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[21]" ng-disabled = "" ng-click="seleccionaaBoton(21)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image47','','../imagenes/bot21B.jpg',1)"><img src="../imagenes/bot21AG.jpg" width="27" height="23" id="Image47" /></button>
+	<button ng-show = "!botonesLugar[21]" ng-disabled = "true"><img src="../imagenes/bot21D.jpg" width="27" height="23" id="Image47" /></button>
+
+	<button ng-show = "botonesLugar[35]" ng-disabled = "" ng-click="seleccionaaBoton(35)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image48','','../imagenes/bot35B.jpg',1)"><img src="../imagenes/bot35AG.jpg" width="27" height="23" id="Image48" /></button>
+	<button ng-show = "!botonesLugar[35]" ng-disabled = "true"><img src="../imagenes/bot35D.jpg" width="27" height="23" id="Image48" /></button>
+
+ 	<img src="../imagenes/barra01bis.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[49]" ng-disabled = "" ng-click="seleccionaaBoton(49)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image50','','../imagenes/bot49B.jpg',1)"><img src="../imagenes/bot49AG.jpg" width="27" height="23" id="Image50" /></button>
+	<button ng-show = "!botonesLugar[49]" ng-disabled = "true"><img src="../imagenes/bot49D.jpg" width="27" height="23" id="Image50" /></button>
+
+ </div>
+ 
+ <div id="apDiv14">
+	<button ng-show = "botonesLugar[8]" ng-disabled = "" ng-click="seleccionaaBoton(8)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image51','','../imagenes/bot08B.jpg',1)"><img src="../imagenes/bot08AG.jpg" width="27" height="23" id="Image51" /></button>
+	<button ng-show = "!botonesLugar[8]" ng-disabled = "true"><img src="../imagenes/bot08D.jpg" width="27" height="23" id="Image51" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[22]" ng-disabled = "" ng-click="seleccionaaBoton(22)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image53','','../imagenes/bot22B.jpg',1)"><img src="../imagenes/bot22AG.jpg" width="27" height="23" id="Image53" /></button>
+	<button ng-show = "!botonesLugar[22]" ng-disabled = "true"><img src="../imagenes/bot22D.jpg" width="27" height="23" id="Image53" /></button>
+
+	<button ng-show = "botonesLugar[36]" ng-disabled = "" ng-click="seleccionaaBoton(36)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image54','','../imagenes/bot36B.jpg',1)"><img src="../imagenes/bot36AG.jpg" width="27" height="23" id="Image54" /></button>
+	<button ng-show = "!botonesLugar[36]" ng-disabled = "true"><img src="../imagenes/bot36D.jpg" width="27" height="23" id="Image54" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[50]" ng-disabled = "" ng-click="seleccionaaBoton(50)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image56','','../imagenes/bot50B.jpg',1)"><img src="../imagenes/bot50AG.jpg" width="27" height="23" id="Image56" /></button>
+	<button ng-show = "!botonesLugar[50]" ng-disabled = "true"><img src="../imagenes/bot50D.jpg" width="27" height="23" id="Image56" /></button>
+
+ </div>
+ 
+ <div id="apDiv15">
+	<button ng-show = "botonesLugar[9]" ng-disabled = "" ng-click="seleccionaaBoton(9)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image58','','../imagenes/bot09B.jpg',1)"><img src="../imagenes/bot09AG.jpg" width="27" height="23" id="Image58" /></button>
+	<button ng-show = "!botonesLugar[9]" ng-disabled = "true"><img src="../imagenes/bot09D.jpg" width="27" height="23" id="Image58" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[23]" ng-disabled = "" ng-click="seleccionaaBoton(23)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image59','','../imagenes/bot23B.jpg',1)"><img src="../imagenes/bot23AG.jpg" width="27" height="23" id="Image59" /></button>
+	<button ng-show = "!botonesLugar[23]" ng-disabled = "true"><img src="../imagenes/bot23D.jpg" width="27" height="23" id="Image59" /></button>
+
+	<button ng-show = "botonesLugar[37]" ng-disabled = "" ng-click="seleccionaaBoton(37)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image60','','../imagenes/bot37B.jpg',1)"><img src="../imagenes/bot37AG.jpg" width="27" height="23" id="Image60" /></button>
+	<button ng-show = "!botonesLugar[37]" ng-disabled = "true"><img src="../imagenes/bot37D.jpg" width="27" height="23" id="Image60" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[51]" ng-disabled = "" ng-click="seleccionaaBoton(51)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image62','','../imagenes/bot51B.jpg',1)"><img src="../imagenes/bot51AG.jpg" width="27" height="23" id="Image62" /></button>
+	<button ng-show = "!botonesLugar[51]" ng-disabled = "true"><img src="../imagenes/bot51D.jpg" width="27" height="23" id="Image62" /></button>
+
+ </div>
+ 
+ <div id="apDiv16"><img src="../imagenes/barra02G.jpg" width="25" height="173" /></div>
+ 
+ <div id="apDiv17">
+	<button ng-show = "botonesLugar[10]" ng-disabled = "" ng-click="seleccionaaBoton(10)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image63','','../imagenes/bot10B.jpg',1)"><img src="../imagenes/bot10AG.jpg" width="27" height="23" id="Image63" /></button>
+	<button ng-show = "!botonesLugar[10]" ng-disabled = "true"><img src="../imagenes/bot10D.jpg" width="27" height="23" id="Image63" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[24]" ng-disabled = "" ng-click="seleccionaaBoton(24)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image65','','../imagenes/bot24B.jpg',1)"><img src="../imagenes/bot24AG.jpg" width="27" height="23" id="Image65" /></button>
+	<button ng-show = "!botonesLugar[24]" ng-disabled = "true"><img src="../imagenes/bot24D.jpg" width="27" height="23" id="Image65" /></button>
+
+	<button ng-show = "botonesLugar[38]" ng-disabled = "" ng-click="seleccionaaBoton(38)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image66','','../imagenes/bot38B.jpg',1)"><img src="../imagenes/bot38AG.jpg" width="27" height="23" id="Image66" /></button>
+	<button ng-show = "!botonesLugar[38]" ng-disabled = "true"><img src="../imagenes/bot38D.jpg" width="27" height="23" id="Image66" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[52]" ng-disabled = "" ng-click="seleccionaaBoton(52)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image68','','../imagenes/bot52B.jpg',1)"><img src="../imagenes/bot52AG.jpg" width="27" height="23" id="Image68" /></button>
+	<button ng-show = "!botonesLugar[52]" ng-disabled = "true"><img src="../imagenes/bot52D.jpg" width="27" height="23" id="Image68" /></button>
+
+ </div>
+ 
+ <div id="apDiv18">
+	<button ng-show = "botonesLugar[11]" ng-disabled = "" ng-click="seleccionaaBoton(11)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image69','','../imagenes/bot11B.jpg',1)"><img src="../imagenes/bot11AG.jpg" width="27" height="23" id="Image69" /></button>
+	<button ng-show = "!botonesLugar[11]" ng-disabled = "true"><img src="../imagenes/bot11D.jpg" width="27" height="23" id="Image69" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[25]" ng-disabled = "" ng-click="seleccionaaBoton(25)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image71','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot25AG.jpg" width="27" height="23" id="Image71" /></button>
+	<button ng-show = "!botonesLugar[25]" ng-disabled = "true"><img src="../imagenes/bot25D.jpg" width="27" height="23" id="Image71" /></button>
+
+	<button ng-show = "botonesLugar[39]" ng-disabled = "" ng-click="seleccionaaBoton(39)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image72','','../imagenes/bot39B.jpg',0)"><img src="../imagenes/bot39AG.jpg" width="27" height="23" id="Image72" /></button>
+	<button ng-show = "!botonesLugar[39]" ng-disabled = "true"><img src="../imagenes/bot39D.jpg" width="27" height="23" id="Image72" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[53]" ng-disabled = "" ng-click="seleccionaaBoton(53)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image74','','../imagenes/bot53B.jpg',1)"><img src="../imagenes/bot53AG.jpg" width="27" height="23" id="Image74" /></button>
+	<button ng-show = "!botonesLugar[53]" ng-disabled = "true"><img src="../imagenes/bot53D.jpg" width="27" height="23" id="Image74" /></button>
+
+ </div>
+ 
+ <div id="apDiv19">
+	<button ng-show = "botonesLugar[12]" ng-disabled = "" ng-click="seleccionaaBoton(12)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image75','','../imagenes/bot12B.jpg',1)"><img src="../imagenes/bot12AG.jpg" width="27" height="23" id="Image75" /></button>
+	<button ng-show = "!botonesLugar[12]" ng-disabled = "true"><img src="../imagenes/bot12D.jpg" width="27" height="23" id="Image75" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[26]" ng-disabled = "" ng-click="seleccionaaBoton(26)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image77','','../imagenes/bot25B.jpg',1)"><img src="../imagenes/bot26AG.jpg" width="27" height="23" id="Image77" /></button>
+	<button ng-show = "!botonesLugar[26]" ng-disabled = "true"><img src="../imagenes/bot26D.jpg" width="27" height="23" id="Image77" /></button>
+
+	<button ng-show = "botonesLugar[40]" ng-disabled = "" ng-click="seleccionaaBoton(40)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image78','','../imagenes/bot40B.jpg',1)"><img src="../imagenes/bot40AG.jpg" width="27" height="23" id="Image78" /></button>
+	<button ng-show = "!botonesLugar[40]" ng-disabled = "true"><img src="../imagenes/bot40D.jpg" width="27" height="23" id="Image78" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[54]" ng-disabled = "" ng-click="seleccionaaBoton(54)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image80','','../imagenes/bot54B.jpg',1)"><img src="../imagenes/bot54AG.jpg" width="27" height="23" id="Image80" /></button>
+	<button ng-show = "!botonesLugar[54]" ng-disabled = "true"><img src="../imagenes/bot54D.jpg" width="27" height="23" id="Image80" /></button>
+
+ </div>
+ 
+ <div id="apDiv20">
+	<button ng-show = "botonesLugar[13]" ng-disabled = "" ng-click="seleccionaaBoton(13)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image81','','../imagenes/bot13B.jpg',1)"><img src="../imagenes/bot13AG.jpg" width="27" height="23" id="Image81" /></button>
+	<button ng-show = "!botonesLugar[13]" ng-disabled = "true"><img src="../imagenes/bot13D.jpg" width="27" height="23" id="Image81" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[27]" ng-disabled = "" ng-click="seleccionaaBoton(27)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image83','','../imagenes/bot26B.jpg',1)"><img src="../imagenes/bot27AG.jpg" width="27" height="23" id="Image83" /></button>
+	<button ng-show = "!botonesLugar[27]" ng-disabled = "true"><img src="../imagenes/bot27D.jpg" width="27" height="23" id="Image83" /></button>
+
+	<button ng-show = "botonesLugar[41]" ng-disabled = "" ng-click="seleccionaaBoton(41)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image84','','../imagenes/bot41B.jpg',1)"><img src="../imagenes/bot41AG.jpg" width="27" height="23" id="Image84" /></button>
+	<button ng-show = "!botonesLugar[41]" ng-disabled = "true"><img src="../imagenes/bot41D.jpg" width="27" height="23" id="Image84" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[55]" ng-disabled = "" ng-click="seleccionaaBoton(55)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image86','','../imagenes/bot55B.jpg',1)"><img src="../imagenes/bot55AG.jpg" width="27" height="23" id="Image86" /></button>
+	<button ng-show = "!botonesLugar[55]" ng-disabled = "true"><img src="../imagenes/bot55D.jpg" width="27" height="23" id="Image86" /></button>
+
+ </div>
+ 
+ <div id="apDiv21">
+	<button ng-show = "botonesLugar[14]" ng-disabled = "" ng-click="seleccionaaBoton(14)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image87','','../imagenes/bot14B.jpg',1)"><img src="../imagenes/bot14AG.jpg" width="27" height="23" id="Image87" /></button>
+	<button ng-show = "!botonesLugar[14]" ng-disabled = "true"><img src="../imagenes/bot14D.jpg" width="27" height="23" id="Image87" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[28]" ng-disabled = "" ng-click="seleccionaaBoton(28)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image89','','../imagenes/bot27B.jpg',1)"><img src="../imagenes/bot27AG.jpg" width="27" height="23" id="Image89" /></button>
+	<button ng-show = "!botonesLugar[28]" ng-disabled = "true"><img src="../imagenes/bot28D.jpg" width="27" height="23" id="Image89" /></button>
+
+	<button ng-show = "botonesLugar[42]" ng-disabled = "" ng-click="seleccionaaBoton(42)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image90','','../imagenes/bot42B.jpg',1)"><img src="../imagenes/bot42AG.jpg" width="27" height="23" id="Image90" /></button>
+	<button ng-show = "!botonesLugar[42]" ng-disabled = "true"><img src="../imagenes/bot42D.jpg" width="27" height="23" id="Image90" /></button>
+
+ 	<img src="../imagenes/barra01G.jpg" width="50" height="25" />
+	<button ng-show = "botonesLugar[56]" ng-disabled = "" ng-click="seleccionaaBoton(56)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image92','','../imagenes/bot56B.jpg',1)"><img src="../imagenes/bot56AG.jpg" width="27" height="23" id="Image92" /></button>
+	<button ng-show = "!botonesLugar[56]" ng-disabled = "true"><img src="../imagenes/bot56D.jpg" width="27" height="23" id="Image92" /></button>
+
+ </div>
+ 
+
+<div id="apDiv22"><img src="../imagenes/barra03G.jpg" width="43" height="174" /></div>
+<div id="apDiv23"><img src="../imagenes/cabezlugaresabajoG.jpg" width="800" height="31" /></div>
+</div>
+    <div id="lista" class="container">
+		<div class="col-md-12">
+			<span id="lugarCont"></span>
+			  <div class="container">
+			    <div class="row">
+			      
+			      <input class="col-2" ng-model="searchText" type="text" class="form-control" placeholder="Busqueda de lugares"/>
+			    </div>
+			  </div>
+			  <hr>
+			  <div class="panel panel-default">
+			    <div class="panel-body">
+			      <table ng-init='configPages()' class='table'>
+			        <thead>
+			          <tr>
+			            <th>Lugar</th>
+			            <th>Producto</th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr ng-repeat='lugar in listaLugare | filter:searchText | startFromGrid: currentPage * pageSize | limitTo: pageSize'>
+			            <td>{{lugar.lugar}}</td>
+			            <td>{{lugar.producto}}</td>
+			            
+			          </tr>
+			        </tbody>
+			      </table>
+			      <div class='btn-group'>
+			        <button type='button' class='btn btn-default' ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'>&laquo;</button>
+			        <button type='button' class='btn btn-default' ng-disabled='currentPage == page.no - 1' ng-click='setPage(page.no)' ng-repeat='page in pages'>{{page.no}}</button>
+			        <button type='button' class='btn btn-default' ng-disabled='currentPage >= usuarios.length/pageSize - 1' , ng-click='currentPage = currentPage + 1'>&raquo;</button>
+			      </div>
+			    </div>
+			  </div>
+			
+		</div>
+		
+	</div>
+
+	<div id="pago">
+		<label for="precio">
+			Monto:
+		</label>
+		<br>
+		<input ng-model="precio" ng-disabled="true" type="text" name="precio">
+	</div>
+	<div id="lugar">
+		<label for="lugar">
+			Lugar:
+		</label>
+		<br>
+		<input ng-model="user.lugar" ng-disabled="true" type="text" name="lugar"> <button class="btn btn-success" ng-click="limpiarSel()">Limpiar</button>
+	</div>
+
+    <div id="formulario" class="container">
+    <form id="userForm" name="userForm" novalidate method="post" action="">
+      <div id="form1" class="col-md-6">
+        
+          <h3 colspan="2" class="naranja">Favor de llenar el formulario</h3>
+          <br>
+        <label for="name">
+            <div align="right"><strong>Nombre</strong></div>
+          	</label>
+          	<br>
+          	<input class="formu" name="name" type="text" id="name" ng-model="user.name"  required />
+          		<span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
+			    	<span class="text-danger" ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
+				</span>
+        	<br>
+        
+        
+          <label for="appaterno">
+            <div align="right"><strong>Apellido Paterno</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="appaterno" type="text" ng-model="user.appaterno"  required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
+			    <span class="text-danger" ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+        <br>
+        
+          <label>
+            <div align="right"><strong>Apellido Materno</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno"  required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
+			    	<span class="text-danger" ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+        <br>
+        
+          <label>
+            <div align="right"><strong>Estado</strong></div>
+          </label>
+          <br>
+          
+	        <select class="formu" ng-model="user.estado" id="estados" name="estados">
+
+				<option value="">Todo México</option>
+
+				<option value="Aguascalientes">Aguascalientes</option>
+
+				<option value="Baja California">Baja California</option>
+
+				<option value="Baja California Sur">Baja California Sur</option>
+
+				<option value="Campeche">Campeche</option>
+
+				<option value="Ciudad de México">Ciudad de México</option>
+
+				<option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+
+				<option value="Colima">Colima</option>
+
+				<option value="Chiapas">Chiapas</option>
+
+				<option value="Chihuahua">Chihuahua</option>
+
+				<option value="Durango">Durango</option>
+
+				<option value="Estado de México">Estado de México</option>
+
+				<option value="Guanajuato">Guanajuato</option>
+
+				<option value="Guerrero">Guerrero</option>
+
+				<option value="Hidalgo">Hidalgo</option>
+
+				<option value="Jalisco">Jalisco</option>
+
+				<option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+
+				<option value="Morelos">Morelos</option>
+
+				<option value="Nayarit">Nayarit</option>
+
+				<option value="Nuevo León">Nuevo León</option>
+
+				<option value="Oaxaca">Oaxaca</option>
+
+				<option value="Puebla">Puebla</option>
+
+				<option value="Querétaro">Querétaro</option>
+
+				<option value="Quintana Roo">Quintana Roo</option>
+
+				<option value="San Luis Potosí">San Luis Potosí</option>
+
+				<option value="Sinaloa">Sinaloa</option>
+
+				<option value="Sonora">Sonora</option>
+
+				<option value="Tabasco">Tabasco</option>
+
+				<option value="Tamaulipas">Tamaulipas</option>
+
+				<option value="Tlaxcala">Tlaxcala</option>
+
+				<option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+
+				<option value="Yucatán">Yucatán</option>
+
+				<option value="Zacatecas">Zacatecas</option>
+
+			</select>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Número de celular a 10 digitos</strong></div>
+          </label>
+          <br>
+          <!-- input class="formu" name="telefonoCel" type="number" ng-model="cel"  required min="1111111111" max="99999999999999" / -->
+
+          <is-number my-ng-model="number.three" enable-negative="true"></is-number>
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
+			    	<span class="text-danger" ng-show="tc">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+			    	<span class="text-danger" ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Telefono local (incluyendo clave LADA)</strong></div>
+          </label>
+          <br>
+          <!-- input class="formu" name="telefono" type="number" ng-model="cel"  required min="1111111111" max="99999999999999"  /-->
+          <is-numbers my-ng-model="number.two"  enable-negative="true"></is-numbers>
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
+			    	<span class="text-danger" ng-show="tt">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+			    	<span class="text-danger" ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Correo electrónico</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="email" type="email" ng-model="user.email"  required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
+			    	<span class="text-danger" ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
+			    	<span class="text-danger" ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
+			    </span>
+        
+        <br>
+     </div>
+     <div id="form2" class="col-md-6">
+          
+        <br>
+          <label>
+            <div align="left"><strong>Producto</strong></div>
+          </label>
+          <br>
+          <tags-input name="tag" id="tag" class="formu" ng-model="user.tags" max-tags="3" enforce-max-tags required>
+		    <auto-complete source="loadTags($query)"></auto-complete>
+		  </tags-input>
+        	<span class="messages" ng-show="userForm.$submitted || userForm.tag.$touched">
+			    	<span class="text-danger" ng-show="userForm.tag.$error.required">El campo es obligatorio.</span>
+			    	
+			    </span>
+
+        
+        <br>
+          <label>
+            <div align="right">
+              <p><strong>Descripcion del producto</strong></p>
+            </div>
+          </label>
+          <br>
+          <textarea class="formu" ng-model="user.productoDescip" name="producto" cols="40" rows="4" id="producto" required></textarea>
+
+          	<span class="messages" ng-show="userForm.$submitted || userForm.producto.$touched">
+			    	<span class="text-danger" ng-show="userForm.producto.$error.required">El campo es obligatorio.</span>
+			    	
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right">
+              <p><strong>Requerimientos</strong></p>
+            </div>
+          </label>
+          <br>
+          <textarea class="formu" ng-model="user.comentario" name="comentario" cols="40" rows="4" id="comentario" required=""></textarea>
+        	<span class="messages" ng-show="userForm.$submitted || userForm.comentario.$touched">
+			    	<span class="text-danger" ng-show="userForm.comentario.$error.required">El campo es obligatorio.</span>
+        <br>
+        <br>
+          &nbsp;
+          
+        
+      </div>
+    </form>
+    </div>
+    <div id="boton">
+    	<button class="btn btn-primary btn-lg" ng-click="update()"  ng-disabled="userForm.$invalid">Enviar</button>
+    </div>
+    <div id="contene04">
+    <a href="../../index.html"><div id="salir"></div></a>
+    </div>
+  </div>
+</div>
+</div>
+	
+	<script type="text/javascript" src="../script/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../script/angular-1.6.2/angular.min.js"></script>
+	<script type="text/javascript" src="../script/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../script/bootbox.min.js"></script>
+	<script type="text/javascript" src="../script/ng-tags-input/ng-tags-input.js"></script>
+	<script type="text/javascript" src="../js/app.js"></script>
+	<script type="text/javascript" src="../js/controler/form.js"></script>
+	<script type="text/javascript" src="../js/controler/numeroCel.js"></script>
+	<script type="text/javascript" src="../js/controler/numeroTel.js"></script>
+	<script type="text/javascript">
+			function MM_openBrWindow(theURL,winName,features) { //v2.0
+  			window.open(theURL,winName,features);
+		}
+	</script>
+	<script type="text/javascript">
+		function MM_preloadImages() { //v3.0
+		  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+		    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+		    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+		}
+		function MM_swapImgRestore() { //v3.0
+		  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+		}
+		function MM_findObj(n, d) { //v4.01
+		  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+		    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+		  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+		  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+		  if(!x && d.getElementById) x=d.getElementById(n); return x;
+		}
+
+		function MM_swapImage() { //v3.0
+		  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+		   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+		}
+	</script>
+</body>
+</html>
