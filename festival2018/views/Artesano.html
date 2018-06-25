@@ -1,0 +1,198 @@
+<div>
+	<form id="userForm" name="userForm" >
+      <div id="form1" class="col-md-6">
+        
+        <h3 >Favor de llenar el formulario</h3>
+        <br>
+        <label for="name">
+            <div align="right"><strong>Nombre</strong></div>
+          	</label>
+          	<br>
+          	<input class="formu" name="name" type="text" id="name" ng-model="user.name"  required />
+          		<span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
+			    	<span class="text-danger" ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
+				</span>
+        	<br>
+        
+        
+          <label for="appaterno">
+            <div align="right"><strong>Apellido Paterno</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="appaterno" type="text" ng-model="user.appaterno"  required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
+			    <span class="text-danger" ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+        <br>
+        
+          <label>
+            <div align="right"><strong>Apellido Materno</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno"  required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
+			    	<span class="text-danger" ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
+			    </span>
+        <br>
+        
+          <label>
+            <div align="right"><strong>Estado</strong></div>
+          </label>
+          <br>
+          
+	        <select class="formu" ng-model="user.estado" id="estados" name="estados">
+
+				<option value="">Todo México</option>
+
+				<option value="Aguascalientes">Aguascalientes</option>
+
+				<option value="Baja California">Baja California</option>
+
+				<option value="Baja California Sur">Baja California Sur</option>
+
+				<option value="Campeche">Campeche</option>
+
+				<option value="Ciudad de México">Ciudad de México</option>
+
+				<option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+
+				<option value="Colima">Colima</option>
+
+				<option value="Chiapas">Chiapas</option>
+
+				<option value="Chihuahua">Chihuahua</option>
+
+				<option value="Durango">Durango</option>
+
+				<option value="Estado de México">Estado de México</option>
+
+				<option value="Guanajuato">Guanajuato</option>
+
+				<option value="Guerrero">Guerrero</option>
+
+				<option value="Hidalgo">Hidalgo</option>
+
+				<option value="Jalisco">Jalisco</option>
+
+				<option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
+
+				<option value="Morelos">Morelos</option>
+
+				<option value="Nayarit">Nayarit</option>
+
+				<option value="Nuevo León">Nuevo León</option>
+
+				<option value="Oaxaca">Oaxaca</option>
+
+				<option value="Puebla">Puebla</option>
+
+				<option value="Querétaro">Querétaro</option>
+
+				<option value="Quintana Roo">Quintana Roo</option>
+
+				<option value="San Luis Potosí">San Luis Potosí</option>
+
+				<option value="Sinaloa">Sinaloa</option>
+
+				<option value="Sonora">Sonora</option>
+
+				<option value="Tabasco">Tabasco</option>
+
+				<option value="Tamaulipas">Tamaulipas</option>
+
+				<option value="Tlaxcala">Tlaxcala</option>
+
+				<option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
+
+				<option value="Yucatán">Yucatán</option>
+
+				<option value="Zacatecas">Zacatecas</option>
+
+			</select>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Número de celular a 10 digitos</strong></div>
+          </label>
+          <br>
+          <!-- input class="formu" name="telefonoCel" type="number" ng-model="cel"  required min="1111111111" max="99999999999999" / -->
+
+          <is-number my-ng-model="number.three" enable-negative="true"></is-number>
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
+			    	<span class="text-danger" ng-show="tc">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+			    	<span class="text-danger" ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Telefono local (incluyendo clave LADA)</strong></div>
+          </label>
+          <br>
+          <!-- input class="formu" name="telefono" type="number" ng-model="cel"  required min="1111111111" max="99999999999999"  /-->
+          <is-numbers my-ng-model="number.two"  enable-negative="true"></is-numbers>
+			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
+			    	<span class="text-danger" ng-show="tt">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
+			    	<span class="text-danger" ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right"><strong>Correo electrónico</strong></div>
+          </label>
+          <br>
+          <input class="formu" name="email" type="email" ng-model="user.email"  required />
+			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
+			    	<span class="text-danger" ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
+			    	<span class="text-danger" ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
+			    </span>
+        
+        <br>
+     </div>
+     <div id="form2" class="col-md-6">
+          
+        <br>
+          <label>
+            <div align="left"><strong>Producto</strong></div>
+          </label>
+          <br>
+          <tags-input name="tag" id="tag" class="formu" ng-model="user.tags" max-tags="3" enforce-max-tags required>
+		    <auto-complete source="loadTags($query)"></auto-complete>
+		  </tags-input>
+        	<span class="messages" ng-show="userForm.$submitted || userForm.tag.$touched">
+			    	<span class="text-danger" ng-show="userForm.tag.$error.required">El campo es obligatorio.</span>
+			    	
+			    </span>
+
+        
+        <br>
+          <label>
+            <div align="right">
+              <p><strong>Descripcion del producto</strong></p>
+            </div>
+          </label>
+          <br>
+          <textarea class="formu" ng-model="user.productoDescip" name="producto" cols="40" rows="4" id="producto" required></textarea>
+
+          	<span class="messages" ng-show="userForm.$submitted || userForm.producto.$touched">
+			    	<span class="text-danger" ng-show="userForm.producto.$error.required">El campo es obligatorio.</span>
+			    	
+			    </span>
+        
+        <br>
+          <label>
+            <div align="right">
+              <p><strong>Requerimientos</strong></p>
+            </div>
+          </label>
+          <br>
+          <textarea class="formu" ng-model="user.comentario" name="comentario" cols="40" rows="4" id="comentario" required=""></textarea>
+        	<span class="messages" ng-show="userForm.$submitted || userForm.comentario.$touched">
+			    	<span class="text-danger" ng-show="userForm.comentario.$error.required">El campo es obligatorio.</span>
+        <br>
+        <br>
+         
+          
+        
+      </div>
+    </form>
+</div>
