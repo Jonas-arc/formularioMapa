@@ -1,198 +1,93 @@
-<div>
-	<form id="userForm" name="userForm" >
-      <div id="form1" class="col-md-6">
-        
-        <h3 >Favor de llenar el formulario</h3>
-        <br>
-        <label for="name">
-            <div align="right"><strong>Nombre</strong></div>
-          	</label>
-          	<br>
-          	<input class="formu" name="name" type="text" id="name" ng-model="user.name"  required />
-          		<span class="messages" ng-show="userForm.$submitted || userForm.name.$touched">
-			    	<span class="text-danger" ng-show="userForm.name.$error.required">El campo es obligatorio.</span>
-				</span>
-        	<br>
-        
-        
-          <label for="appaterno">
-            <div align="right"><strong>Apellido Paterno</strong></div>
-          </label>
-          <br>
-          <input class="formu" name="appaterno" type="text" ng-model="user.appaterno"  required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.appaterno.$touched">
-			    <span class="text-danger" ng-show="userForm.appaterno.$error.required">El campo es obligatorio.</span>
-			    </span>
-        <br>
-        
-          <label>
-            <div align="right"><strong>Apellido Materno</strong></div>
-          </label>
-          <br>
-          <input class="formu" name="apmaterno" type="text" ng-model="user.apmaterno"  required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.apmaterno.$touched">
-			    	<span class="text-danger" ng-show="userForm.apmaterno.$error.required">El campo es obligatorio.</span>
-			    </span>
-        <br>
-        
-          <label>
-            <div align="right"><strong>Estado</strong></div>
-          </label>
-          <br>
-          
-	        <select class="formu" ng-model="user.estado" id="estados" name="estados">
 
-				<option value="">Todo México</option>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
 
-				<option value="Aguascalientes">Aguascalientes</option>
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
 
-				<option value="Baja California">Baja California</option>
 
-				<option value="Baja California Sur">Baja California Sur</option>
+<div onload="MM_preloadImages('./img/bot01B.jpg','./img/bot09B.jpg','./img/bot17B.jpg','./img/bot02B.jpg','./img/bot10B.jpg','./img/bot18B.jpg','./img/bot03B.jpg','./img/bot11B.jpg','./img/bot19B.jpg','./img/bot04B.jpg','./img/bot12B.jpg','./img/bot20B.jpg','./img/bot05B.jpg','./img/bot13B.jpg','./img/bot21B.jpg','./img/bot06B.jpg','./img/bot14B.jpg','./img/bot22B.jpg','./img/bot07B.jpg','./img/bot15B.jpg','./img/bot08B.jpg','./img/bot16B.jpg','./img/bot23B.jpg','./img/bot24B.jpg','./img/bot33B.jpg','./img/bot41B.jpg','./img/bot26B.jpg','./img/bot34B.jpg','./img/bot42B.jpg','./img/bot27B.jpg','./img/bot35B.jpg','./img/bot43B.jpg','./img/bot28B.jpg','./img/bot36B.jpg','./img/bot45B.jpg','./img/bot29B.jpg','./img/bot37B.jpg','./img/bot30B.jpg','./img/bot38B.jpg','./img/bot46B.jpg','./img/bot31B.jpg','./img/bot39B.jpg','./img/bot47B.jpg','./img/bot49B.jpg','./img/bot57B.jpg','./img/bot65B.jpg','./img/bot73B.jpg','./img/bot51B.jpg','./img/bot59B.jpg','./img/bot67B.jpg','./img/bot75B.jpg','./img/bot53B.jpg','./img/bot61B.jpg','./img/bot69B.jpg','./img/bot77B.jpg','./img/bot55B.jpg','./img/bot63B.jpg','./img/bot71B.jpg','./img/bot79B.jpg','./img/paso01B.jpg')">
+<div id="apDiv1" ><img src="./img/cabezaInscrip.jpg" class="img-responsive center-block" alt="Responsive image"></div>
+<div id="apDiv2" style="position: absolute; left: -90px; top: 180px; width: 1134px; height: 70px; z-index: 2"><a href="./" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','./img/paso01B.jpg',1)"><img src="./img/paso01A.jpg" width="75" height="70" id="Image10" /></a><img src="./img/paso02.jpg" width="982" height="70" /><img src="./img/paso03A.jpg" width="75" height="70" /></div>
 
-				<option value="Campeche">Campeche</option>
+<div id="apDiv3" style="position: absolute; left: -90px; top: 250px; width: 1134px; height: 51px; z-index: 3"><img src="./img/status.jpg" width="1135" height="51" /></div>
 
-				<option value="Ciudad de México">Ciudad de México</option>
+<div id="apDiv4" style="position: absolute; left: -90px; top: 295px; width: 1134px; height: 48px; z-index: 5"><img src="./img/cabezlugares.jpg" width="1134" height="41" /></div>
+<div id="apDiv5" style="position: absolute; left: -90px; top: 350px; width: 34; height: 415px; z-index: 6"><img src="./img/azulderch.jpg" width="34" height="416" /></div>
 
-				<option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-
-				<option value="Colima">Colima</option>
-
-				<option value="Chiapas">Chiapas</option>
-
-				<option value="Chihuahua">Chihuahua</option>
-
-				<option value="Durango">Durango</option>
-
-				<option value="Estado de México">Estado de México</option>
-
-				<option value="Guanajuato">Guanajuato</option>
-
-				<option value="Guerrero">Guerrero</option>
-
-				<option value="Hidalgo">Hidalgo</option>
-
-				<option value="Jalisco">Jalisco</option>
-
-				<option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
-
-				<option value="Morelos">Morelos</option>
-
-				<option value="Nayarit">Nayarit</option>
-
-				<option value="Nuevo León">Nuevo León</option>
-
-				<option value="Oaxaca">Oaxaca</option>
-
-				<option value="Puebla">Puebla</option>
-
-				<option value="Querétaro">Querétaro</option>
-
-				<option value="Quintana Roo">Quintana Roo</option>
-
-				<option value="San Luis Potosí">San Luis Potosí</option>
-
-				<option value="Sinaloa">Sinaloa</option>
-
-				<option value="Sonora">Sonora</option>
-
-				<option value="Tabasco">Tabasco</option>
-
-				<option value="Tamaulipas">Tamaulipas</option>
-
-				<option value="Tlaxcala">Tlaxcala</option>
-
-				<option value="Veracruz de Ignacio de la Llave">Veracruz de Ignacio de la Llave</option>
-
-				<option value="Yucatán">Yucatán</option>
-
-				<option value="Zacatecas">Zacatecas</option>
-
-			</select>
-        
-        <br>
-          <label>
-            <div align="right"><strong>Número de celular a 10 digitos</strong></div>
-          </label>
-          <br>
-          <!-- input class="formu" name="telefonoCel" type="number" ng-model="cel"  required min="1111111111" max="99999999999999" / -->
-
-          <is-number my-ng-model="number.three" enable-negative="true"></is-number>
-			    <span class="messages" ng-show="userForm.$submitted || userForm.telefonoCel.$touched">
-			    	<span class="text-danger" ng-show="tc">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
-			    	<span class="text-danger" ng-show="userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
-			    </span>
-        
-        <br>
-          <label>
-            <div align="right"><strong>Telefono local (incluyendo clave LADA)</strong></div>
-          </label>
-          <br>
-          <!-- input class="formu" name="telefono" type="number" ng-model="cel"  required min="1111111111" max="99999999999999"  /-->
-          <is-numbers my-ng-model="number.two"  enable-negative="true"></is-numbers>
-			    <span class="messages" ng-show="userForm.$submitted || userForm.telefono.$touched">
-			    	<span class="text-danger" ng-show="tt">El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
-			    	<span class="text-danger" ng-show="userForm.telefono.$error.required">El campo es obligatorio.</span>
-			    </span>
-        
-        <br>
-          <label>
-            <div align="right"><strong>Correo electrónico</strong></div>
-          </label>
-          <br>
-          <input class="formu" name="email" type="email" ng-model="user.email"  required />
-			    <span class="messages" ng-show="userForm.$submitted || userForm.email.$touched">
-			    	<span class="text-danger" ng-show="userForm.email.$error.required">El campo es obligatorio.</span>
-			    	<span class="text-danger" ng-show="userForm.email.$error.email">Formato de email incorrecto.</span>
-			    </span>
-        
-        <br>
-     </div>
-     <div id="form2" class="col-md-6">
-          
-        <br>
-          <label>
-            <div align="left"><strong>Producto</strong></div>
-          </label>
-          <br>
-          <tags-input name="tag" id="tag" class="formu" ng-model="user.tags" max-tags="3" enforce-max-tags required>
-		    <auto-complete source="loadTags($query)"></auto-complete>
-		  </tags-input>
-        	<span class="messages" ng-show="userForm.$submitted || userForm.tag.$touched">
-			    	<span class="text-danger" ng-show="userForm.tag.$error.required">El campo es obligatorio.</span>
-			    	
-			    </span>
-
-        
-        <br>
-          <label>
-            <div align="right">
-              <p><strong>Descripcion del producto</strong></p>
-            </div>
-          </label>
-          <br>
-          <textarea class="formu" ng-model="user.productoDescip" name="producto" cols="40" rows="4" id="producto" required></textarea>
-
-          	<span class="messages" ng-show="userForm.$submitted || userForm.producto.$touched">
-			    	<span class="text-danger" ng-show="userForm.producto.$error.required">El campo es obligatorio.</span>
-			    	
-			    </span>
-        
-        <br>
-          <label>
-            <div align="right">
-              <p><strong>Requerimientos</strong></p>
-            </div>
-          </label>
-          <br>
-          <textarea class="formu" ng-model="user.comentario" name="comentario" cols="40" rows="4" id="comentario" required=""></textarea>
-        	<span class="messages" ng-show="userForm.$submitted || userForm.comentario.$touched">
-			    	<span class="text-danger" ng-show="userForm.comentario.$error.required">El campo es obligatorio.</span>
-        <br>
-        <br>
-         
-          
-        
-      </div>
-    </form>
+<div id="apDiv6" style="position: absolute; left: -56px; top: 350px; width: 47px; height: 70px; z-index: 7">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','./img/bot01B.jpg',1)"><img src="./img/bot01A.jpg" width="25" height="29" id="Image8" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','./img/bot19B.jpg',1)"><img src="./img/bot19A.jpg" width="25" height="30" id="Image17" /></button>
 </div>
+<div id="apDiv7" style="position: absolute; left: -9px; top: 350px; width: 45px; height: 70px; z-index: 8">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','./img/bot02B.jpg',1)"><img src="./img/bot02A.jpg" width="25" height="29" id="Image11" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','./img/bot20B.jpg',1)"><img src="./img/bot20A.jpg" width="25" height="30" id="Image20" /></button>
+</div>
+<div id="apDiv8" style="position: absolute; left: 39px; top: 350px; width: 25px; height: 76px; z-index: 9; background-color: #99CCCD; layer-background-color: #99CCCD; border: 1px none #000000;"></div>
+
+<div id="apDiv9" style="position: absolute; left: 65px; top: 350px; width: 45px; height: 70px; z-index: 10">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','./img/bot03B.jpg',1)"><img src="./img/bot03A.jpg" width="25" height="30" id="Image15" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image24','','./img/bot21B.jpg',1)"><img src="./img/bot21A.jpg" width="25" height="30" id="Image24" /></button>
+</div>
+<div id="apDiv10" style="position: absolute; left: 112px; top: 350px; width: 45px; height: 70px; z-index: 11">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','./img/bot04B.jpg',1)"><img src="./img/bot04A.jpg" width="25" height="29" id="Image18" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image27','','./img/bot22B.jpg',1)"><img src="./img/bot22A.jpg" width="25" height="30" id="Image27" /></button>
+</div>
+<div id="apDiv11" style="position: absolute; left: 160px; top: 350px; width: 25px; height: 76px; z-index: 12; background-color: #99CCCD; layer-background-color: #99CCCD; border: 1px none #000000;"></div>
+
+<div id="apDiv12" style="position: absolute; left: 186px; top: 350px; width: 45px; height: 70px; z-index: 13">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','./img/bot05B.jpg',1)"><img src="./img/bot05A.jpg" width="25" height="29" id="Image22" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image31','','./img/bot23B.jpg',1)"><img src="./img/bot23A.jpg" width="25" height="30" id="Image31" /></button>
+</div>
+<div id="apDiv12b" style="position: absolute; left: 233px; top: 350px; width: 45px; height: 70px; z-index: 14">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image25','','./img/bot06B.jpg',1)"><img src="./img/bot06A.jpg" width="25" height="29" id="Image25" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image34','','./img/bot24B.jpg',1)"><img src="./img/bot24A.jpg" width="25" height="30" id="Image34" /></button>
+</div>
+<div id="apDiv13" style="position: absolute; left: 281px; top: 350px; width: 25px; height: 76px; z-index: 15"></div>
+
+<div id="apDiv14" style="position: absolute; left: 307px; top: 350px; width: 45px; height: 70px; z-index: 16">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image29','','./img/bot07B.jpg',1)"><img src="./img/bot07A.jpg" width="25" height="29" id="Image29" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','./img/bot25B.jpg',1)"><img src="./img/bot25A.jpg" width="25" height="30" id="Image35" /></button>
+</div>
+<div id="apDiv15" style="position: absolute; left: 354px; top: 350px; width: 45px; height: 70px; z-index: 17">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image32','','./img/bot08B.jpg',1)"><img src="./img/bot08A.jpg" width="25" height="29" id="Image32" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image36','','./img/bot26B.jpg',1)"><img src="./img/bot26A.jpg" width="25" height="30" id="Image36" /></button>
+</div>
+<div id="apDiv16"></div>
+
+<div id="apDiv17" style="position: absolute; left: 430px; top: 350px; width: 45px; height: 70px; z-index: 19">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','./img/bot09B.jpg',1)"><img src="./img/bot09A.jpg" width="25" height="30" id="Image9" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image37','','./img/bot27B.jpg',1)"><img src="./img/bot27A.jpg" width="25" height="30" id="Image37" /></button>
+</div>
+<div id="apDiv18" style="position: absolute; left: 474px; top: 350px; width: 45px; height: 70px; z-index: 17">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image12','','./img/bot10B.jpg',1)"><img src="./img/bot10A.jpg" width="25" height="30" id="Image12" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image38','','./img/bot28B.jpg',1)"><img src="./img/bot28A.jpg" width="25" height="30" id="Image38" /></button>
+</div>
+<div id="apDiv19"></div>
+
+<div id="apDiv20">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','./img/bot11B.jpg',1)"><img src="./img/bot11A.jpg" width="25" height="30" id="Image16" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image39','','./img/bot29B.jpg',1)"><img src="./img/bot29A.jpg" width="25" height="30" id="Image39" /></button>
+</div>
+<div id="apDiv21">
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','./img/bot12B.jpg',1)"><img src="./img/bot12A.jpg" width="25" height="30" id="Image19" /></button>
+	<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image40','','./img/bot30B.jpg',1)"><img src="./img/bot30A.jpg" width="25" height="30" id="Image40" /></button>
+</div>
+<div id="apDiv22"></div>
