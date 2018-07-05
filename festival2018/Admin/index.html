@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="MiloAdmin">
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		
+		<title>Son Para Milo 2018</title>
+	</head>
+	<body ng-controller = "primero" >
+
+	
+	    <div class="container-fluid">
+		    
+		    <div class=col-md-12>
+			    <header>
+		            <nav class="navbar navbar-default">
+			            
+			            <img src="./img/logomilo.jpg" class="img-responsive center-block" alt="Responsive image">
+			                
+		            </nav>
+		        </header>
+
+		        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+		        <div id="main">
+		        	<div ng-view></div>
+		            
+		            {{nombre}}
+		            
+
+		        </div>
+
+		        <!-- FOOTER -->
+		        <footer class="text-center">
+		            <hr>
+		            <strong>- Son para Milo 2018 / <a href="mailto:festivalsonparamilo@gmail.com">festivalsonparamilo@gmail.com</a> / Informes: 55 21 79 03 83 -</strong>
+		        </footer>
+		    </div>
+		    <div class=col-md-1></div>
+	    </div>
+
+	
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+	</body>
+</html>

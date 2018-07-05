@@ -1,0 +1,29 @@
+#apDivGA1 {
+	position: absolute;
+	width: 800px;
+	height: 50px;
+	z-index: 1;
+}
+#apDivGA2 {
+	position: absolute;
+	width: 800px;
+	height: 70px;
+	z-index: 2;
+	left: 8px;
+	top: 173px;
+}
+#apDivGA3 {
+	position: absolute;
+	width: 800px;
+	height: 51px;
+	z-index: 3;
+	top: 243px;
+}
+#apDivGA4 {
+	position: absolute;
+	width: 341px;
+	height: 146px;
+	z-index: 4;
+	left: 9px;
+	top: 295px;
+}
