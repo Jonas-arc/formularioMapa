@@ -11,6 +11,8 @@ app.config(function($routeProvider) {
    .when('/Fin' ,{templateUrl: './views/fin.html', controller: ''})
    .otherwise({redirectTo: '/'});
 });
-app.controller("primero", function($scope){
+app.controller("primero", ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
 	$scope.nombre = "Allan";
-});
+   //$scope.categoria = $rootScope.categoria;
+}]);
+

@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="./css/GastronomoE.css">
 		<title>Son Para Milo 2018</title>
 	</head>
-	<body ng-controller = "primero">
+	<body>
 
 	<!--	<div class="jumbotron">
 			<h1>Hello, world!</h1>
@@ -39,9 +39,11 @@
 		        <!-- MAIN CONTENT AND INJECTED VIEWS -->
 		        <div id="main">
 		        	<div ng-view></div>
-		            
-		            {{nombre}}
-		            
+		            <div ng-controller = "primero">
+
+		            	{{nombre}}
+		            	
+		            </div>
 
 		        </div>
 
@@ -62,5 +64,10 @@
     <script src="//code.angularjs.org/1.2.20/angular-route.js"></script>
     <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
 	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="./js/controllers/form.js"></script>
+	<script type="text/javascript" src="./js/controllers/numeroCel.js"></script>
+	<script type="text/javascript" src="./js/controllers/numeroTel.js"></script>
+	<script type="text/javascript" src="./js/controllers/categoriaController.js"></script>
+	
 	</body>
 </html>
