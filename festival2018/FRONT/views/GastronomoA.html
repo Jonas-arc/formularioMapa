@@ -22,14 +22,14 @@ function MM_swapImage() { //v3.0
 }
 </script>
 
-<div ng-controlles="formulario" ng-mousemove = "user.seccion='GA'">
-  <div class="row" ng-show="1">
-    <div onload="MM_preloadImages('./img/paso01B.jpg','./img/bot01B.jpg','./img/bot15B.jpg','./img/bot29B.jpg','./img/bot43B.jpg')">
+<div ng-controller="formulario" class="row" ng-show="1">
+  <h1>{{seccion}}</h1>
+  <div onload="MM_preloadImages('./img/paso01B.jpg','./img/bot01B.jpg','./img/bot15B.jpg','./img/bot29B.jpg','./img/bot43B.jpg')">
 
   <div id="apDivGA1" style="position: absolute; left: 75px; top: 120px; width: 800px; height: 51px; z-index: 1"><img src="./img/CabezaG.jpg" width="800" height="51" /></div>
 
   <div id="apDivGA2" style="position: absolute; left: 75px; top: 173px; width: 800px; height: 70px; z-index: 2">
-  	<a href="../expo2017.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image100','','./img/paso01B.jpg',1)"><img src="./img/paso01A.jpg" width="75" height="70" id="Image100" /></a><img src="./img/paso02.jpg" width="650" height="71" /><img src="./img/paso03A.jpg" width="75" height="70" />
+  	<a href="./" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image100','','./img/paso01B.jpg',1)"><img src="./img/paso01A.jpg" width="75" height="70" id="Image100" /></a><img src="./img/paso02.jpg" width="650" height="71" /><img src="./img/paso03A.jpg" width="75" height="70" />
   </div>
 
   <div id="apDivGA3" style="position: absolute; left: 75px; top: 243px; width: 800px; height: 51px; z-index: 3"><img src="./img/status.jpg" width="800" height="51" /></div>
@@ -41,7 +41,7 @@ function MM_swapImage() { //v3.0
 
   	<button ng-show = "botonesLugar[1]" ng-disabled = "" ng-click="seleccionaaBoton(1)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','./img/bot01B.jpg',1)"><img src="./img/bot01AGA.jpg" width="27" height="23" id="Image8" />
   	</button>
-    <button ng-show = "!botonesLugar[?]" ng-disabled = "true"><img src="./img/bot01D.jpg" width="27" height="23" id="Image8" /></button>
+    <button ng-show = "!botonesLugar[1]" ng-disabled = "true"><img src="./img/bot01D.jpg" width="27" height="23" id="Image8" /></button>
   	<button ng-show = "botonesLugar[2]" ng-disabled = "" ng-click="seleccionaaBoton(2)" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','./img/bot02B.jpg',1)"><img src="./img/bot02AGA.jpg" width="27" height="23" id="Image9" />
   	</button>
     <button ng-show = "!botonesLugar[2]" ng-disabled = "true"><img src="./img/bot02D.jpg" width="27" height="23" id="Image9" /></button>
@@ -205,7 +205,7 @@ function MM_swapImage() { //v3.0
     <button ng-show = "!botonesLugar[44]" ng-disabled = "true"><img src="./img/bot44D.jpg" width="27" height="23" id="Image51" /></button></div>
   <div id="apDivGA31"><img src="./img/cabezlugaresabajoGA.jpg" width="800" height="20" /></div>
     </div>
-  </div>
+
 
   <div class="row">
     

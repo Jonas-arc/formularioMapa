@@ -22,7 +22,8 @@ function MM_swapImage() { //v3.0
 }
 </script>
 
-<div class="row" ng-show="1">
+<div ng-controller="formulario" class="row" ng-show="1">
+  <h1>{{seccion}}</h1>
   <div onload="MM_preloadImages('./img/paso01B.jpg','./img/bot01B.jpg','./img/bot15B.jpg','./img/bot02B.jpg','./img/bot16B.jpg','./img/bot03B.jpg','./img/bot17B.jpg','./img/bot04B.jpg','./img/bot18B.jpg','./img/bot05B.jpg','./img/bot19B.jpg','./img/bot06B.jpg','./img/bot20B.jpg','./img/bot07B.jpg','./img/bot21B.jpg','./img/bot10B.jpg','./img/bot24B.jpg')">
 
 <div id="apDivGA1" style="position: absolute; left: 75px; top: 120px; width: 800px; height: 51px; z-index: 1"><img src="./img/CabezaG.jpg" width="800" height="51" /></div>
@@ -132,7 +133,7 @@ function MM_swapImage() { //v3.0
 <div id="apDivGE20"><img src="./img/cabezlugaresabajoGD.jpg" width="800" height="31" /></div>
 
   </div>
-</div>
+
 
 <div class="row">
   
@@ -346,6 +347,7 @@ function MM_swapImage() { //v3.0
           <textarea class="formu" ng-model="user.comentario" name="comentario" cols="40" rows="4" id="comentario" required=""></textarea>
           <span class="messages" ng-show="userForm.$submitted || userForm.comentario.$touched">
             <span class="text-danger" ng-show="userForm.comentario.$error.required">El campo es obligatorio.</span>
+          </span>
         <br>
         <br>
          
@@ -353,4 +355,5 @@ function MM_swapImage() { //v3.0
         
       </div>
     </form>
+  </div>
 </div>
