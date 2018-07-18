@@ -3,15 +3,19 @@ from flaskext.mysql import MySQL
 import json
 import hashlib
 import traceback
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 app = Flask(__name__)
 mysql = MySQL()
 
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'holahola'
+app.config['MYSQL_DATABASE_USER'] = 'sonparamilo'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'sonparamilo'
 app.config['MYSQL_DATABASE_DB'] = 'sonparam_pasticipantes'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+app.config['MYSQL_DATABASE_HOST'] = '10.142.0.2'
 
 mysql.init_app(app)
 
@@ -47,18 +51,15 @@ def participantes():
             cur.execute(query)
             aux = cur.fetchone()
             if (aux[0] <= 0):
-                content['lugares'] = "','".join(content['lugar'])
+                content['lugares'] = content['lugar'] if len(content['lugar']) > 1 else "','".join(content['lugar'])
                 query = "select count(*) from lugares where id in ('{lugares}') and participante is not null".format(**content)
                 cur.execute(query)
                 aux = cur.fetchone()
+                #print verif
                 if (aux[0] <= 0):
-                    query = "LOCK TABLES lugares WRITE, participantes WRITE, producto WRITE, producto_participante WRITE;\n"
-                    query += "Insert into participantes (id,nombre,appaterno,apmaterno,telefono,correo,categoria,estado,comentario,productoDescrip) value('{id}','{nombre}','{appaterno}','{apmaterno}','{telefono}','{correo}','{categoria}','{estado}','{comentario}','{productoDescrip}');\n".format(**content)
-                    query += "Update lugares set participante = '{id}' where id in ('{lugares}');\n".format(**content)
-                    for x in content['producto']:
-                        query += "INSERT INTO `producto` (`nombre`) SELECT * FROM (SELECT '%s') AS tmp WHERE NOT EXISTS (SELECT `nombre` FROM `producto` WHERE nombre = '%s') LIMIT 1;\n" % (x,x)
-                        query += "insert into producto_participante (idProducto,idParticipante)value('%s','%s');\n" % (x, content['id'])
-                    query += "UNLOCK TABLES;"
+                    query = "Insert into participantes (id,nombre,appaterno,apmaterno,telefono,correo,categoria,estado,comentario,productoDescrip,categoriaProd,productoPrin,otrosProd) value('{id}','{nombre}','{appaterno}','{apmaterno}','{telefono}','{correo}','{categoria}','{estado}','{comentario}','{productoDescrip}','{categoriaProd}','{productoPrin}','{otrosProd}');".format(**content)
+                    cur.execute(query)
+                    query = "Update lugares set participante = '{id}' where id in ('{lugares}');".format(**content)
                     cur.execute(query)
                     response = jsonify("{folio:'%s'}" % content['id'])
                     response.status_code = 200
@@ -73,28 +74,36 @@ def participantes():
         raise InvalidUsage('Error format JSON', status_code=400)
     return response
 
-@app.route('/busqueda/productos', methods=['GET'])
-def produtos():
-    try:
+@app.route('/eliminarPart', methods=['POST'])
+def eliminarPart():
+    if (request.is_json):
+        content = request.get_json()
+        query = "update lugares SET participante=NULL where participante like '{id}';".format(**content)
         cur = mysql.connect().cursor()
-        cur.execute('''select * from producto''')
-        r = [''.join(value for value in row) for row in cur.fetchall()]
-        return jsonify(r)
-    except Exception, err:
-        traceback.print_exc()
-        raise InvalidUsage('Error en el servicio', status_code=403)
+        cur.execute(query)
+        query = "delete from participantes where id like '{id}';".format(**content)
+        cur.execute(query)
+        cur.close()
+        response = jsonify("{'status':true}")
+        response.status_code = 200
+    else:
+        raise InvalidUsage('Error format JSON', status_code=400)
+    return response
 
 @app.route('/busqueda/lugaresArea', methods=['POST'])
 def lugaresArea():
     if (request.is_json):
         try:
             content = request.get_json()
-	    query = "select l.id as id, l.precio as precio, group_concat(pro.nombre SEPARATOR ',') as productos from participantes as p right join lugares as l on l.participante=p.id left join producto_participante as pp on p.id=pp.idParticipante left join producto as pro on pro.nombre=pp.idProducto where l.id like '{area}%' group by l.id".format(**content)
+	    query = "select l.id as id, l.precio as precio, p.productoPrin as producto, p.categoriaProd as categoria from participantes as p right join lugares as l on l.participante=p.id where l.id like '{area}%' group by l.id".format(**content)
             cur = mysql.connect().cursor()
             cur.execute(query)
-            r = [dict((cur.description[i][0], value)
+            aux = [dict((cur.description[i][0], value)
                       for i, value in enumerate(row)) for row in cur.fetchall()]
             cur.close()
+            r = []
+            for x in aux:
+                r.append({x['id']:x['producto'],"categoria":x['categoria'],"precio":x['precio']})
             return jsonify(r)
         except Exception, err:
             traceback.print_exc()
@@ -183,28 +192,22 @@ def validarLugar():
         raise InvalidUsage('Error format JSON', status_code=400)
     return response
 
-@app.route('/')
-def get():
-    cur = mysql.connect().cursor()
-    cur.execute('''select * from lugares''')
-    r = [dict((cur.description[i][0], value)
-              for i, value in enumerate(row)) for row in cur.fetchall()]
-    return jsonify({'myCollection' : r})
-
-@app.route('/search/products', methods=['GET']) #GET requests will be blocked
-def products():
-    cur = mysql.connect().cursor()
-    cur.execute('''select * from producto''')
-    r = [dict((cur.description[i][0], value)
-              for i, value in enumerate(row)) for row in cur.fetchall()]
-    return jsonify(r)
-
-@app.route('/json', methods = ['POST'])
-def postJsonHandler():
-    print (request.is_json)
-    content = request.get_json()
-    print (content)
-    return 'JSON posted'
+@app.route('/busqueda/participantes', methods=['POST'])
+def busquedaPart():
+    try:
+        query = "select p.id, p.nombre, p.appaterno, p.apmaterno, p.telefono, p.correo, group_concat(l.id SEPARATOR ',') as lugares, sum(l.precio) as precio,p.fechaReg as fecha, p.categoria, p.estado, p.comentario, p.productoDescrip, p.categoriaProd, p.productoPrin, p.otrosProd from participantes as p inner join lugares as l on l.participante=p.id group by p.id ORDER BY p.fechaReg ASC;"
+        cur = mysql.connect().cursor()
+        cur.execute(query)
+        r = [dict((cur.description[i][0], value)
+                  for i, value in enumerate(row)) for row in cur.fetchall()]
+        cur.close()
+        print r
+        response = jsonify(r)
+        response.status_code = 200
+    except Exception, err:
+        traceback.print_exc()
+        raise InvalidUsage('Error format JSON', status_code=400)
+    return response 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=80)
