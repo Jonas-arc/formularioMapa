@@ -1,13 +1,13 @@
 var app = angular.module("Milo",['ngRoute']);
 app.config(function($routeProvider) {
    $routeProvider
-   .when('/' ,{templateUrl: './views/expo2018.html', controller: ''})
-   .when('/GastronomoA' ,{templateUrl: './views/GastronomoA.html', controller: ''})
-   .when('/GastronomoB' ,{templateUrl: './views/GastronomoB.html', controller: ''})
-   .when('/GastronomoC' ,{templateUrl: './views/GastronomoC.html', controller: ''})
-   .when('/GastronomoD' ,{templateUrl: './views/GastronomoD.html', controller: ''})
-   .when('/GastronomoE' ,{templateUrl: './views/GastronomoE.html', controller: ''})
-   .when('/Artesano' ,{templateUrl: './views/Artesano.html', controller: ''})
+   .when('/' ,{templateUrl: './views/expo2018.html', controller: 'cat'})
+   .when('/GastronomoA' ,{templateUrl: './views/GastronomoA.html', controller: 'formulario'})
+   .when('/GastronomoB' ,{templateUrl: './views/GastronomoB.html', controller: 'formulario'})
+   .when('/GastronomoC' ,{templateUrl: './views/GastronomoC.html', controller: 'formulario'})
+   .when('/GastronomoD' ,{templateUrl: './views/GastronomoD.html', controller: 'formulario'})
+   .when('/GastronomoE' ,{templateUrl: './views/GastronomoE.html', controller: 'formulario'})
+   .when('/Artesano' ,{templateUrl: './views/Artesano.html', controller: 'formulario'})
    .when('/Fin' ,{templateUrl: './views/fin.html', controller: ''})
    .otherwise({redirectTo: '/'});
 });

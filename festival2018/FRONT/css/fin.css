@@ -1,0 +1,82 @@
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(../imagenes/fondo01.jpg);
+	background-repeat: repeat-x;
+}
+#Ffondofb {
+	height: 600px;
+	width: 800px;
+}
+#Ftodo {
+	width: 100%;
+}
+#Fgrupo {
+	position: relative;
+	height: 600px;
+	width: 800px;
+	margin: auto;
+}
+#Fcabeza {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	left: 0px;
+	top: 0px;
+	background-color: #FF00;
+	background-image: url(ImagSeccA/Cabeza2.jpg);
+}
+#Fcontene01 {
+	position: absolute;
+	height: 70px;
+	width: 800px;
+	left: 0px;
+	top: 50px;
+}
+#Fpaso01 {
+	position: absolute;
+	height: 70px;
+	width: 75px;
+	left: 0px;
+	background-image: url(ImagSeccA/paso01A.jpg);
+}
+#Fpaso02 {
+	position: absolute;
+	height: 70px;
+	width: 75px;
+	left: 75px;
+	background-image: url(ImagSeccA/paso02A.jpg);
+}
+#Fpaso03 {
+	position: absolute;
+	height: 70px;
+	width: 650px;
+	left: 150px;
+	background-image: url(ImagSeccA/paso03.jpg);
+}
+#Fcontene02 {
+	position: absolute;
+	height: 337px;
+	width: 800px;
+	top: 120px;
+	background-image: url(ImagSeccA/gracias.jpg);
+}
+#Fcontene03 {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	top: 530px;
+}
+#Fsalir {
+	position: absolute;
+	height: 49px;
+	width: 247px;
+	top: 1px;
+	left: 300px;
+	background-image: url(../imagenes/salir01.jpg);
+}
+#Fsalir:hover { 
+	background-image: url(../imagenes/salir02.jpg);
+}
