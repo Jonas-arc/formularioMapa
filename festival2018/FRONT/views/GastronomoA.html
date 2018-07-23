@@ -261,9 +261,9 @@ function MM_swapImage() { //v3.0
     <br><br><br><br>
     <br><br>
     <form id="userForm" name="userForm" >
-  <div id="categoria">
+    <div id="categoria">
       <label>
-        Categoria:
+        *Categoria:
       </label>
       <select class="" ng-change="categoriaF()" ng-model="user.categoriaProd">
         <option>Gastronomia Oaxaqueña</option>
@@ -272,7 +272,7 @@ function MM_swapImage() { //v3.0
         <option>Gastronomia Bebidas Artesanales</option>
       </select>
       <label>
-        Producto Principal:
+        *Producto Principal:
       </label>
       <input type="text" class="formu" id="productoPrin" name="productoPrin" ng-model="user.productoPrin" placeholder="Producto Principal" required>
       <span class="text-danger" ng-show="!userForm.productoPrin.$pristine && userForm.productoPrin.$error.required">El campo es obligatorio.</span>
@@ -293,7 +293,7 @@ function MM_swapImage() { //v3.0
       Lugar:
     </label>
     <br>
-    <input ng-model="user.lugar" ng-disabled="true" type="text" name="lugar"> <button class="btn btn-success" ng-click="limpiarSel()">Limpiar</button>
+    <input ng-model="lugars" ng-disabled="true" type="text" name="lugar"> <button class="btn btn-success" ng-click="limpiarSel()">Limpiar</button>
   </div>
   
       <div id="form1" class="col-md-6">
@@ -301,7 +301,7 @@ function MM_swapImage() { //v3.0
         <h3 >Favor de llenar el formulario</h3>
         <br>
         <label for="name">
-            <div align="right"><strong>Nombre</strong></div>
+            <div align="right"><strong>*Nombre</strong></div>
             </label>
             <br>
             <input class="formu" placeholder="Nombre" name="name" type="text" id="name" ng-model="user.nombre"  required />
@@ -312,7 +312,7 @@ function MM_swapImage() { //v3.0
         
         
           <label for="appaterno">
-            <div align="right"><strong>Apellido Paterno</strong></div>
+            <div align="right"><strong>*Apellido Paterno</strong></div>
           </label>
           <br>
           <input class="formu" placeholder="Apellido Paterno" name="appaterno" type="text" ng-model="user.appaterno"  required />
@@ -322,7 +322,7 @@ function MM_swapImage() { //v3.0
         <br>
         
           <label>
-            <div align="right"><strong>Apellido Materno</strong></div>
+            <div align="right"><strong>*Apellido Materno</strong></div>
           </label>
           <br>
           <input class="formu" placeholder="Apellido Materno" name="apmaterno" type="text" ng-model="user.apmaterno"  required />
@@ -332,7 +332,7 @@ function MM_swapImage() { //v3.0
         <br>
         
           <label>
-            <div align="right"><strong>Estado</strong></div>
+            <div align="right"><strong>*Estado</strong></div>
           </label>
           <br>
           
@@ -411,16 +411,16 @@ function MM_swapImage() { //v3.0
             <div align="right"><strong>Número de celular a 10 digitos</strong></div>
           </label>
           <br>
-          <input class="formu"  placeholder="Telefono Celular" name="telefonoCel" id="telefonoCel" type="number" ng-model="cel"  required min="1111111111" max="99999999999999" />
+          <input class="formu"  placeholder="Telefono Celular" name="telefonoCel" id="telefonoCel" type="number" ng-model="cel"  min="1111111111" max="99999999999999" />
 
           
           <span class="text-danger" >El numero telefonico debe tener al menos 10 digito y como maximo 14</span>
-          <span class="text-danger" ng-show="!userForm.telefonoCel.$pristine && userForm.telefonoCel.$error.required">El campo es obligatorio.</span>
+          
           
         
         <br>
           <label>
-            <div align="right"><strong>Telefono local (incluyendo clave LADA)</strong></div>
+            <div align="right"><strong>*Telefono local (incluyendo clave LADA)</strong></div>
           </label>
           <br>
           <input class="formu" placeholder="Telefono Local" name="telefono" id="telefono" type="number" ng-model="tel"  required min="1111111111" max="99999999999999"  />
@@ -434,9 +434,9 @@ function MM_swapImage() { //v3.0
             <div align="right"><strong>Correo electrónico</strong></div>
           </label>
           <br>
-          <input class="formu" placeholder="Correo Electronico" name="email" type="email" ng-model="user.correo"  required />
+          <input class="formu" placeholder="Correo Electronico" name="email" type="email" ng-model="user.correo" />
           
-          <span class="text-danger" ng-show="!userForm.email.$pristine && userForm.email.$error.required">El campo es obligatorio.</span>
+          
           <span class="text-danger" ng-show="!userForm.email.$pristine && userForm.email.$error.email">Formato de email incorrecto.</span>
           
         
@@ -456,7 +456,7 @@ function MM_swapImage() { //v3.0
         <br>
           <label>
             <div align="right">
-              <p><strong>Descripcion del producto</strong></p>
+              <p><strong>*Descripcion del producto</strong></p>
             </div>
           </label>
           <br>
@@ -479,7 +479,7 @@ function MM_swapImage() { //v3.0
             
           <div class="checkbox">
             <label>
-              <input ng-model="tanque" type="checkbox" ng-true-value="'Si uso tanque de gas'" ng-false-value=""> Uso Tanque de Gas.
+              <input ng-model="tanque" type="checkbox" ng-true-value="Si uso tanque de gas" ng-false-value="No uso tanque de gas"> Uso Tanque de Gas.
             </label>
           </div>
         <br>

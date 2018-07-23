@@ -1,12 +1,23 @@
 
 <div>
 <center>
-<form method="POST" action="./php/validar.php">
-<input type="text" name="nnombre" placeholder="Usuario" />
-<br />
-<input type="password" name="npassword" placeholder="Contraseña" />
-<br />
-<button type="submit">Inicar Sesion</button>
+<form name="loginUserForm">
+    <fieldset>
+        <legend>Formulario de login con AngularJS utilizando cookies</legend>
+ 
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Username</label>
+                <input type="text" required placeholder="Introduce tu usuario" ng-model="username">
+            </div>
+            <div class="large-12 columns">
+                <label>Password</label>
+                <input type="password" required placeholder="Introduce tu password" ng-model="password">
+            </div>
+ 
+            <button type="submit" ng-disabled="!loginUserForm.$valid" ng-click="login(username)" class="button expand round">Login</button>
+        </div>
+    </fieldset>
 </form>
 </center>
 </div>

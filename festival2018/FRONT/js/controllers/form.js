@@ -15,7 +15,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
         $scope.lugar = [];
         $scope.tl = false;
         $scope.tc = false;
-        $scope.tanque;
+        $scope.tanque = "";
         /*
         
         
@@ -35,20 +35,21 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           angular.forEach($scope.mapa,function(lugar) {
             //console.log(lugar);
             if (lugar.categoria == null) {
-              $scope.botonesLugar.push(true);
+              $scope.botonesLugar[lugar.id.replace($scope.user.seccion, "")]=true;
             }
             else
             {
-              $scope.botonesLugar.push(false);
+              $scope.botonesLugar[lugar.id.replace($scope.user.seccion, "")]=false;
             }
-            $scope.lugaresPrecio.push(lugar.precio);
-            $scope.categoria.push(false);
-            $scope.categoriaNom.push(lugar.categoria)
-            /*console.log($scope.botonesLugar);
+            $scope.lugaresPrecio[lugar.id.replace($scope.user.seccion, "")]=lugar.precio;
+            $scope.categoria[lugar.id.replace($scope.user.seccion, "")]=false;
+            $scope.categoriaNom[lugar.id.replace($scope.user.seccion, "")]=lugar.categoria;
+            /*console.log(lugar.id.replace($scope.user.seccion, ""));
+            console.log($scope.botonesLugar);
             console.log($scope.lugaresPrecio);
             console.log($scope.categoria);*/
           });
-          $scope.categoriaNom[1] = "Gastronomia Huasteca";
+          //$scope.categoriaNom[1] = "Gastronomia Huasteca";
         };
 
         var init = function() {
@@ -103,7 +104,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
 
         $scope.update = function() {
           
-          $scope.user.comentario = $scope.tanque + "\n" + $scope.user.comentario;
+          $scope.user.comentario = $scope.tanque + " " + $scope.user.comentario;
           if ($scope.user.seccion == "AA") {
             $scope.user.categoria = "Artesano";
           }
@@ -117,13 +118,28 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
             method : "POST" ,
             url :  "http://35.231.193.133/altaParticipante" , 
             data: {
-              area: $scope.user.seccion
+              apmaterno : $scope.user.apmaterno,
+              appaterno : $scope.user.appaterno,
+              categoria : $scope.user.categoria,
+              categoriaProd : $scope.user.categoriaProd,
+              comentario : $scope.user.comentario,
+              correo : $scope.user.correo,
+              estado : $scope.user.estado,
+              lugar : $scope.user.lugar,
+              nombre : $scope.user.nombre,
+              otrosProd : $scope.user.otrosProd,
+              producDesc : $scope.user.productoDescip,
+              productoPrin : $scope.user.productoPrin,
+              seccion : $scope.user.seccion,
+              telefono : $scope.user.telefono
             }
           };
           console.log(req);
 
           $http(req).success(function (response) {//'response' es el objeto que devuelve el servicio web
             console.log(response);
+            $rootScope.folio = response.folio;
+            console.log($scope.folio);
             alert("Inscripcion Completa!");
             $window.location.href = '#/Fin';
 
@@ -169,6 +185,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           $scope.lugar = [];
           $scope.user.lugar = "";
           $scope.precio = "$";
+          $scope.lugars = "";
           //console.log($rootScope.tel);
           //console.log($rootScope.cel);
         }
@@ -194,7 +211,8 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
               console.log($scope.user.seccion+lug);
               console.log($scope.lugar);
               console.log($scope.lugar.join());
-              $scope.user.lugar = $scope.lugar.join();
+              $scope.user.lugar = $scope.lugar;
+              $scope.lugars = $scope.lugar.join();
               console.log($scope.user.lugar);
               $scope.botonesLugar[lug]=false;
               $scope.precio = "$"+$scope.lugaresPrecio[lug];
@@ -219,7 +237,8 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
                       auxTotal += parseInt($scope.lugaresPrecio[($scope.lugar[i].replace($scope.user.seccion, ""))]);
                   }
                   console.log(auxTotal);
-                  $scope.user.lugar = $scope.lugar.join();
+                  $scope.user.lugar = $scope.lugar;
+                  $scope.lugars = $scope.lugar.join();
                   $scope.precio = "$"+auxTotal;
                   $scope.botonesLugar[lug]=false;
                 }

@@ -12,7 +12,9 @@ app.config(function($routeProvider) {
    .otherwise({redirectTo: '/'});
 });
 app.controller("primero", ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
-	$scope.nombre = "Allan";
+	//$scope.nombre = "Oto";
    //$scope.categoria = $rootScope.categoria;
+   console.log($rootScope.folio);
+   $scope.folio = $rootScope.folio;
 }]);
 

@@ -9,46 +9,93 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Salir</a>
+        <button class="navbar-brand" ng-click="logout()">Salir</button>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          
-          <li><a href="#">Comfirmados</a></li>
-          <li><a href="#">Aceptados</a></li>
-          <li><a href="#">Rechazados</a></li>
+          <li><a href="" ng-click="reservado()">Reservados</a></li>
+          <li><a href="" ng-click="confirmados()">Comfirmados</a></li>
+          <li><a href="" ng-click="pagados()">Pagados</a></li>
+          <li><a href="" ng-click="rechazados()">Rechazados</a></li>
           
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <div>
-    <h1>{{comprobar}}</h1>
+  <div id="hoy" ng-show="status == 0">
+    
   	<h2>Inscritos Hoy</h2>
   	<table class="table table-striped">
-    		<tr>
-    			<th>Nombre del Productor</th>
-    			<th>Producto Principal</th>
-    			<th>Descripcion del producto</th>
-    			<th>Telefono Local</th>
-    			<th>Celular</th>
-    			<th>Correo Electronico</th>
-    			<th>Actividades</th>
-    		</tr>
-    		<tr>
-    			<td>Ami la Negrera</td>
-    			<td>Musicos Negrados</td>
-    			<td>Musicos de calidad mal nutridos</td>
-    			<td>5555555555</td>
-    			<td>5544444444</td>
-    			<td>ami_negrera@negreando.com</td>
-    			<td>
-    				<button type="button" class="btn btn-success">Confirmar</button>
-    				<button type="button" class="btn btn-primary">Aceptar</button>
-    				<button type="button" class="btn btn-danger">Rechazar</button>
-    			</td>
-    		</tr>
-  	</table>
+        <tr>
+          <th>Folio</th>
+          <th>Nombre del Productor</th>
+          <th>Producto Principal</th>
+          <th>Descripcion del producto</th>
+          <th>Telefonos</th>
+          <th>Correo Electronico</th>
+          <th>Total a pagar</th>
+          <th>Actividades</th>
+        </tr>
+        
+          
+        <tbody ng-repeat = "(key, item) in data | filter: {incrip: 'hoy'}" >
+          <tr>
+            <td class="text-center">{{item.id}}</td>
+            <td class="text-center">{{item.nombre+" "+item.appaterno+" "+item.apmaterno}}</td>
+            <td class="text-center">{{item.}}</td>
+            <td class="text-center">{{item.}}</td>
+            <td class="text-center">{{item.telefono}}</td>
+            <td class="text-center">{{item.correo}}</td>
+            <td class="text-center">{{item.precio}}</td>
+            <td>
+              <button ng-show="status==0" type="button" class="btn btn-success">Confirmar</button>
+              <button ng-show="status==1" type="button" class="btn btn-primary">Pagado</button>
+              <button ng-show="status==0 || status==1" type="button" class="btn btn-danger">Rechazar</button>
+            </td>
+          </tr> 
+        </tbody>  
+    </table>
+  </div>
+  <div id="inscritos">
+    
+    <h2 ng-show="status == 0">Expositores sin Confirmar</h2>
+    <h2 ng-show="status == 1">Expositores Confirmados</h2>
+    <h2 ng-show="status == 2">Expositores Con Pago Confirmado</h2>
+    <h2 ng-show="status == 3">Expositores Rechazados</h2>
+    <table class="table table-striped">
+        <tr>
+          <th>Folio</th>
+          <th>Nombre del Productor</th>
+          <th>Categoria Producto</th>
+          <th>Producto Principal</th>
+          <th>Descripcion del producto</th>
+          <th>Telefonos</th>
+          <th>Correo Electronico</th>
+          <th>Lugares</th>
+          <th>Total a pagar</th>
+          <th>Actividades</th>
+        </tr>
+  
+        <tbody ng-if="status==0" ng-repeat = "(key, item) in data | filter: {incrip: 'no'}" >
+        <tbody ng-else ng-repeat = "(key, item) in data" >
+          <tr>
+            <td class="text-center">{{item.id}}</td>
+            <td class="text-center">{{item.nombre+" "+item.appaterno+" "+item.apmaterno}}</td>
+            <td class="text-center">{{item.categoriaProd}}</td>
+            <td class="text-center">{{item.productoPrin}}</td>
+            <td class="text-center">{{item.productoDescrip}}</td>
+            <td class="text-center">{{item.telefono}}</td>
+            <td class="text-center">{{item.correo}}</td>
+            <td class="text-center">{{item.lugares}}</td>
+            <td class="text-center">{{item.precio}}</td>
+            <td>
+              <button ng-show="status==0" type="button" class="btn btn-success">Confirmar</button>
+              <button ng-show="status==1" type="button" class="btn btn-primary">Pagado</button>
+              <button ng-show="status==0 || status==1" type="button" class="btn btn-danger">Rechazar</button>
+            </td>
+          </tr> 
+        </tbody>
+    </table>
   </div>
 </div>
