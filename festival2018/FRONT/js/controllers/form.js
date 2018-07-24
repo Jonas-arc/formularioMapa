@@ -1,5 +1,5 @@
 app.controller("formulario",['$scope','$rootScope','$http','$window',function($scope,$rootScope,$http,$window){
-        
+        $rootScope.folio = "";
         $scope.botonesLugar = [null];
         $scope.lugaresPrecio = [0];
         $scope.categoria = [null];
@@ -8,27 +8,15 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
         $scope.seccion = $rootScope.categoria;
         $scope.user = {};
         $scope.user.seccion = $scope.seccion;
-        $scope.user.comentario = "";
-        $scope.user.otrosProd = "";
+        $scope.user.comentario = " ";
+        $scope.user.otrosProd = " ";
         $scope.cel = 0;
         $scope.tel = 0;
         $scope.lugar = [];
         $scope.tl = false;
         $scope.tc = false;
         $scope.tanque = "";
-        /*
         
-        
-        var auxL = {"accion":"consulta","search":"lugaresArea","area":$scope.user.seccion};
-        
-        $scope.botonesOcupados = function(lug) {
-          if ($.grep(lugares, function(e){ return e.index == lug; })['0'][$scope.user.seccion + lug] == null ) {
-            return 0;
-          }else{
-            return 1;
-          }
-        };
-        */
 
         var mapa = function(){
           console.log($scope.mapa);
@@ -103,7 +91,10 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
         };
 
         $scope.update = function() {
-          
+          if (!$scope.tanque)
+          {
+            $scope.tanque = " "
+          }
           $scope.user.comentario = $scope.tanque + " " + $scope.user.comentario;
           if ($scope.user.seccion == "AA") {
             $scope.user.categoria = "Artesano";
@@ -113,7 +104,16 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           }
           $scope.user.telefono = $scope.cel + " / " + $scope.tel;
           console.log($scope.user);
-
+          if (!$scope.user.otrosProd) 
+          {
+            console.log("no definido");
+            $scope.user.otrosProd = " ";
+          }
+          if (!$scope.user.correo) 
+          {
+            console.log("correo no");
+            $scope.user.correo = " ";
+          }
           var req = {
             method : "POST" ,
             url :  "http://35.231.193.133/altaParticipante" , 
@@ -138,8 +138,11 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
 
           $http(req).success(function (response) {//'response' es el objeto que devuelve el servicio web
             console.log(response);
-            $rootScope.folio = response.folio;
+            console.log(response.folio);
+            $scope.folio = response;
             console.log($scope.folio);
+            $rootScope.folio = $scope.folio;
+            console.log($rootScope.folio);
             alert("Inscripcion Completa!");
             $window.location.href = '#/Fin';
 
@@ -148,18 +151,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
             alert("Ha fallado la petici\u00F3n, No se ha podido realizar su inscripcion, intentelo mas tarde. Estado HTTP:"+status);
             $window.location.href = '#/';
           });
-          /*
-          $http.post('../php/alta.php',$scope.user)
-               .then(function(respuesta){
-            console.log(respuesta);
-            if(respuesta.data.error){
-              bootbox.alert(respuesta.data.error);
-            }
-            else{
-              bootbox.alert("Inscripcion Completa!");
-              $window.location.href = '../finA.html?fo=' + respuesta.data.folio;
-            }
-          });*/
+          
         };
         
         $scope.reset = function(form) {
