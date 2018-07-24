@@ -148,7 +148,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
 
           }).error(function (response){
             console.log(response);
-            alert("Ha fallado la petici\u00F3n, No se ha podido realizar su inscripcion, intentelo mas tarde. Estado HTTP:"+status);
+            alert("Ha fallado la petici\u00F3n, No se ha podido realizar su inscripcion, intentelo mas tarde. "+response);
             $window.location.href = '#/';
           });
           

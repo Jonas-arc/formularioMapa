@@ -221,7 +221,7 @@ function MM_swapImage() { //v3.0
           </label>
           <br>
           
-          <select class="formu" ng-model="user.estado" id="estados" name="estados">
+          <select class="formu" ng-model="user.estado" id="estados" name="estados" required>
 
           <option value="">Todo México</option>
 
@@ -290,8 +290,7 @@ function MM_swapImage() { //v3.0
           <option value="Zacatecas">Zacatecas</option>
 
       </select>
-        
-        <br>
+        <span class="text-danger" ng-show="userForm.estados.$error.required">El campo es obligatorio.</span><br>
           <label>
             <div align="right"><strong>Número de celular a 10 digitos</strong></div>
           </label>
@@ -316,10 +315,11 @@ function MM_swapImage() { //v3.0
         
         <br>
           <label>
-            <div align="right"><strong>Correo electrónico</strong></div>
+            <div align="right"><strong>*Correo electrónico</strong></div>
           </label>
           <br>
-          <input class="formu" placeholder="Correo Electronico" name="email" type="email" ng-model="user.correo" />
+          <input class="formu" placeholder="Correo Electronico" name="email" type="email" ng-model="user.correo" required />
+          <span class="text-danger" ng-show="!userForm.email.$pristine && userForm.email.$error.required">El campo es obligatorio.</span>
           
           
           <span class="text-danger" ng-show="!userForm.email.$pristine && userForm.email.$error.email">Formato de email incorrecto.</span>
