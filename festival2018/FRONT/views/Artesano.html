@@ -1240,12 +1240,26 @@ function MM_swapImage() { //v3.0
         <option>Palma</option>
         <option>Joyeria</option>
         <option>Artes Decorativas</option>
+        <option>Productos Artesanales Perecederos Embasados y Bebidas no Alcoholicas</option>
+        <option>Calzado</option>
+        <option>Artesania Huichol</option>
+        <option>Otros</option>
       </select>
       <label>
         *Producto Principal:
       </label>
       <input type="text" class="formu" id="productoPrin" name="productoPrin" ng-model="user.productoPrin" placeholder="Producto Principal" required>
       <span class="text-danger" ng-show="!userForm.productoPrin.$pristine && userForm.productoPrin.$error.required">El campo es obligatorio.</span>
+      <br>
+      <span ng-show="user.categoriaProd=='Textiles'">Bordados, resbozos, blusas, huipiles, fajas, vestidos, guayaberas, etc</span>
+      <span ng-show="user.categoriaProd=='Palma'">Sombreros, sopladores, soyates, petates, floreros, etc</span>
+      <span ng-show="user.categoriaProd=='Joyeria'">Chaquira, ámbar, plata, piedras, cobre, etc</span>
+      <span ng-show="user.categoriaProd=='Artes Decorativas'">Barro, Talavera, cobre, tallas de madera, calderia  (cacharrería metálica), cantería (labrado en piedra), cartonería, etc</span>
+      <span ng-show="user.categoriaProd=='Productos Artesanales Perecederos Embasados y Bebidas no Alcoholicas'">Jugos de frutas, Queso, Dulces, Chocolate, Mermelada, etc</span>
+      <span ng-show="user.categoriaProd=='Calzado'">Guaraches, Zapatos, Pantuflas, etc</span>
+      
+      <span ng-show="user.categoriaProd=='Artesania Huichol'">Collares, Pulseras, Aretes, Ornatos, Cabezas de Jaguar, Gatos, etc</span>
+      <span ng-show="user.categoriaProd=='Otros'">Cualquie otro producto que no encuentres en estas categorias</span>
     </div>
     
     <br>

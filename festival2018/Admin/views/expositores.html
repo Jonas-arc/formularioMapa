@@ -15,11 +15,17 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="" ng-click="reservado()">Reservados</a></li>
-          <li><a href="" ng-click="confirmados()">Comfirmados</a></li>
-          <li><a href="" ng-click="pagados()">Pagados</a></li>
-          <li><a href="" ng-click="rechazados()">Rechazados</a></li>
-          
+          <li><a href="" ng-click="reservado('',0)">Reservados</a></li>
+          <li><a href="" ng-click="reservado('',1)">Comfirmados</a></li>
+          <li><a href="" ng-click="reservado('',2)">Pagados</a></li>
+          <li><a href="" ng-click="reservado('',3)">Rechazados</a></li>
+          <li style="height: 50px;margin: 0 9px;border-left: 1px solid #F2F2F2;border-right: 1px solid #FFF;"></li>
+          <li><a href="" ng-click="reservado('AA',status)">Aretesanos</a></li>
+          <li><a href="" ng-click="reservado('GA',status)">Gastronomos A</a></li>
+          <li><a href="" ng-click="reservado('GB',status)">Gastronomos B</a></li>
+          <li><a href="" ng-click="reservado('GC',status)">Gastronomos C</a></li>
+          <li><a href="" ng-click="reservado('GD',status)">Gastronomos D</a></li>
+          <li><a href="" ng-click="reservado('GE',status)">Gastronomos E</a></li>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -30,10 +36,12 @@
         <tr>
           <th>Folio</th>
           <th>Nombre del Productor</th>
+          <th>Categoria Producto</th>
           <th>Producto Principal</th>
           <th>Descripcion del producto</th>
           <th>Telefonos</th>
           <th>Correo Electronico</th>
+          <th>Lugares</th>
           <th>Total a pagar</th>
           <th>Actividades</th>
         </tr>
@@ -43,15 +51,17 @@
           <tr>
             <td class="text-center">{{item.id}}</td>
             <td class="text-center">{{item.nombre+" "+item.appaterno+" "+item.apmaterno}}</td>
-            <td class="text-center">{{item.}}</td>
-            <td class="text-center">{{item.}}</td>
+            <td class="text-center">{{item.categoriaProd}}</td>
+            <td class="text-center">{{item.productoPrin}}</td>
+            <td class="text-center">{{item.productoDescrip}}</td>
             <td class="text-center">{{item.telefono}}</td>
             <td class="text-center">{{item.correo}}</td>
+            <td class="text-center">{{item.lugares}}</td>
             <td class="text-center">{{item.precio}}</td>
             <td>
-              <button ng-show="status==0" type="button" class="btn btn-success">Confirmar</button>
-              <button ng-show="status==1" type="button" class="btn btn-primary">Pagado</button>
-              <button ng-show="status==0 || status==1" type="button" class="btn btn-danger">Rechazar</button>
+              <button ng-click="cambioEstado(1,item.id)" ng-show="status==0" type="button" class="btn btn-success">Confirmar</button>
+              <button ng-click="cambioEstado(2,item.id)" ng-show="status==1" type="button" class="btn btn-primary">Pagado</button>
+              <button ng-click="cambioEstado(3,item.id)" ng-show="status==0 || status==1" type="button" class="btn btn-danger">Rechazar</button>
             </td>
           </tr> 
         </tbody>  
@@ -90,9 +100,9 @@
             <td class="text-center">{{item.lugares}}</td>
             <td class="text-center">{{item.precio}}</td>
             <td>
-              <button ng-show="status==0" type="button" class="btn btn-success">Confirmar</button>
-              <button ng-show="status==1" type="button" class="btn btn-primary">Pagado</button>
-              <button ng-show="status==0 || status==1" type="button" class="btn btn-danger">Rechazar</button>
+              <button ng-click="cambioEstado(1,item.id)" ng-show="status==0" type="button" class="btn btn-success">Confirmar</button>
+              <button ng-click="cambioEstado(2,item.id)" ng-show="status==1" type="button" class="btn btn-primary">Pagado</button>
+              <button ng-click="cambioEstado(3,item.id)" ng-show="status==0 || status==1" type="button" class="btn btn-danger">Rechazar</button>
             </td>
           </tr> 
         </tbody>

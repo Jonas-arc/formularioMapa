@@ -173,16 +173,27 @@ function MM_swapImage() { //v3.0
         *Categoria:
       </label>
       <select class="" ng-change="categoriaF()" ng-model="user.categoriaProd">
-        <option>Gastronomia Oaxaqueña</option>
-        <option>Gastronomia Huasteca</option>
         <option>Gastronomia Chilanga</option>
-        <option>Gastronomia Bebidas Artesanales</option>
+        <option>Gastronomia Huasteca</option>
+        <option>Gastronomia de Morelos</option>
+        <option>Gastronomia Guerrerence</option>
+        <option>Gastronomia Poblana</option>
+        <option>Gastronomia Oaxaqueña</option>
+        <option>Gastronomia Yucateca</option>
       </select>
       <label>
         *Producto Principal:
       </label>
       <input type="text" class="formu" id="productoPrin" name="productoPrin" ng-model="user.productoPrin" placeholder="Producto Principal" required>
       <span class="text-danger" ng-show="!userForm.productoPrin.$pristine && userForm.productoPrin.$error.required">El campo es obligatorio.</span>
+      <br>
+      <span ng-show="user.categoriaProd=='Gastronomia Chilanga'">Pancita, Chorizo, Tamales, Truchas, Atoles, Antojitos mexicanos, Carnitas, Nieves y Paletas, etc</span>
+      <span ng-show="user.categoriaProd=='Gastronomia Huasteca'">Tamales, Plato huasteco, Zacahuil, Chinicuil, Bocoles, Adobo, Mixiotes, Pastes, Barbacoa, etc</span>
+      <span ng-show="user.categoriaProd=='Gastronomia de Morelos'">Tamales de cinturita, Cecina, Guaxmole de res o de cerdo, Pollo en pipian verde, Tacos de chapulines al ajillo, Caldo verde de hongos, Caldo de res con hongo de cazahuate, Caldo de mojarras, Sopa de picadillo y flor de calabaza, etc</span>
+      <span ng-show="user.categoriaProd=='Gastronomia Guerrerence'">Pozole Guerrerence, Pescado, Tamales, Chilate, Mole Guerrerence, Barbacoa de res, chivo, carnero, pollo, etc</span>
+      <span ng-show="user.categoriaProd=='Gastronomia Poblana'">Mole poblano, Chiles en nogada, Chalupas, Cemitas poblanas, Enchiladas, Molotes, Enfrijoladas, etc</span>
+      <span ng-show="user.categoriaProd=='Gastronomia Oaxaqueña'">Mole, Quesillo, Tlayudas, Tamales, Chocolate, Pan de yema, etc</span>
+      <span ng-show="user.categoriaProd=='Gastronomia Yucateca'">Cochinita Pibil, Papadzules, Panuchos yucatecos, Sopa de Lima, Ceviche, Huevos Motuleños, Queso Relleno, Pescado a la Tikinxic, etc</span>
     </div>
     
     <br>
