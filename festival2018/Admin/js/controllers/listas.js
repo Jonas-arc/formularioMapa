@@ -9,7 +9,7 @@ app.controller("listados",['$scope','$rootScope','$http','auth',function($scope,
     	
     	var req = {
             method : "POST" ,
-            url :  "http://35.231.193.133/busqueda/participantes/estado" , 
+            url :  "http://apirestsonpm.jonathanarc.net/busqueda/participantes/estado" , 
             data: {
             	secction:seccion,
             	estado:estos
@@ -66,7 +66,7 @@ app.controller("listados",['$scope','$rootScope','$http','auth',function($scope,
     {
     	var req = {
             method : "POST" ,
-            url :  "http://35.231.193.133/actualizar/participante" , 
+            url :  "http://apirestsonpm.jonathanarc.net/actualizar/participante" , 
             data: {
             	estado:est,
             	id:ids

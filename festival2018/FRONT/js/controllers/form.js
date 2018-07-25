@@ -48,7 +48,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           $scope.mapa = [];
           var req = {
             method : "POST" ,
-            url :  "http://35.231.193.133/busqueda/lugaresArea" , 
+            url :  "http://apirestsonpm.jonathanarc.net/busqueda/lugaresArea" , 
             data: {
               area: $scope.user.seccion
             }
@@ -116,7 +116,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           }
           var req = {
             method : "POST" ,
-            url :  "http://35.231.193.133/altaParticipante" , 
+            url :  "http://apirestsonpm.jonathanarc.net/altaParticipante" , 
             data: {
               apmaterno : $scope.user.apmaterno,
               appaterno : $scope.user.appaterno,
@@ -213,7 +213,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
               console.log($scope.lugar);
               var req = {
                 method : "POST" ,
-                url :  "http://35.231.193.133/busqueda/validarLugar" , 
+                url :  "http://apirestsonpm.jonathanarc.net/busqueda/validarLugar" , 
                 data: {
                   buscado: $scope.user.seccion+lug,
                   asignados: $scope.lugar
