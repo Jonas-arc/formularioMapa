@@ -134,6 +134,9 @@ function MM_swapImage() { //v3.0
   <br><br><br><br>
   <br><br><br><br>
   <br><br>
+  <img src="./img/statusR.jpg" /><br>
+  Campos Obligatorios del Formulario *
+  <br><br>
   <form id="userForm" name="userForm" >
   <div id="categoria">
       <label>
@@ -147,6 +150,7 @@ function MM_swapImage() { //v3.0
         <option>Gastronomia Poblana</option>
         <option>Gastronomia Oaxaqueña</option>
         <option>Gastronomia Yucateca</option>
+        <option>Otra Gastronomia</option>
       </select>
       <label>
         *Producto Principal:
@@ -161,6 +165,7 @@ function MM_swapImage() { //v3.0
       <span ng-show="user.categoriaProd=='Gastronomia Poblana'">Mole poblano, Chiles en nogada, Chalupas, Cemitas poblanas, Enchiladas, Molotes, Enfrijoladas, etc</span>
       <span ng-show="user.categoriaProd=='Gastronomia Oaxaqueña'">Mole, Quesillo, Tlayudas, Tamales, Chocolate, Pan de yema, etc</span>
       <span ng-show="user.categoriaProd=='Gastronomia Yucateca'">Cochinita Pibil, Papadzules, Panuchos yucatecos, Sopa de Lima, Ceviche, Huevos Motuleños, Queso Relleno, Pescado a la Tikinxic, etc</span>
+      <span ng-show="user.categoriaProd=='Otra Gastronomia'">Cualquier Otro Alimento Que No Aparesca en el Listado</span>
     </div>
     
     <br>

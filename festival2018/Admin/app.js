@@ -64,7 +64,7 @@ app.controller('loginController',['$scope','auth','$http',function($scope,auth,$
     {
     	var req = {
             method : "POST" ,
-            url :  "http://35.231.193.133/admin/login" , 
+            url :  "http://sonparamilo.jonathanarc.net/apirest/admin/login" , 
             data: {
               user : $scope.username,
               pass : $scope.password
@@ -114,5 +114,5 @@ app.run(function($rootScope, auth)
     })
 })
 app.controller("primero", function($scope){
-	$scope.nombre = "Allan";
+	//$scope.nombre = "Allan";
 });
