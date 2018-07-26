@@ -14,7 +14,7 @@ app.config(function($routeProvider) {
 app.controller("primero", ['$scope','$rootScope','$http',function($scope,$rootScope,$http){
 	//$scope.nombre = "Oto";
    //$scope.categoria = $rootScope.categoria;
-   console.log($rootScope.folio);
+   //console.log($rootScope.folio);
    $scope.folio = $rootScope.folio;
 }]);
 

@@ -1,6 +1,6 @@
 app.controller("listados",['$scope','$rootScope','$http','auth',function($scope,$rootScope,$http,auth){
         
-    console.log("lista general ");
+    //console.log("lista general ");
     $scope.status = 0;
     
     $scope.reservado = function(seccion,estos)
@@ -15,9 +15,9 @@ app.controller("listados",['$scope','$rootScope','$http','auth',function($scope,
             	estado:estos
             }
         };
-        console.log(req);
+        //console.log(req);
         $http(req).success(function (response) {//'response' es el objeto que devuelve el servicio web
-          console.log(response);
+          //console.log(response);
           $scope.data = response;
           angular.forEach($scope.data,function(expositor) {
           	if ($scope.status == 0)
@@ -39,10 +39,10 @@ app.controller("listados",['$scope','$rootScope','$http','auth',function($scope,
 		        }
 		    }
           });
-          console.log($scope.data);
+          //console.log($scope.data);
 
         }).error(function (response){
-          console.log(response);
+          //console.log(response);
           alert("Ha fallado la petici\u00F3n. Estado HTTP:"+status);
         });
         
@@ -72,13 +72,13 @@ app.controller("listados",['$scope','$rootScope','$http','auth',function($scope,
             	id:ids
             }
         };
-        console.log(req);
+        //console.log(req);
         $http(req).success(function (response) {//'response' es el objeto que devuelve el servicio web
-          console.log(response);
+          //console.log(response);
           alert("El Expositor Cambio de Status exitosamente");
 
         }).error(function (response){
-          console.log(response);
+          //console.log(response);
           alert("Ha fallado la petici\u00F3n. Estado HTTP:"+status);
         });
     };
