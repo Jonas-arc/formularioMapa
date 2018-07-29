@@ -86,6 +86,14 @@
 	left: 211px;
 	top: 0px;
 }
+#mapa02b {
+	position: absolute;
+	height: 130px;
+	width: 188px;
+	background-image: url(../img/botseccAarte01.jpg);
+	left: 211px;
+	top: 0px;
+}
 #mapa02:hover { 
 	background-image: url(../img/botseccAarte02.jpg);
 }
@@ -124,10 +132,26 @@
 	left: 43px;
 	top: 84px;
 }
+#mapa06b {
+	position: absolute;
+	height: 54px;
+	width: 168px;
+	background-image: url(../img/botseccAgast01.jpg);
+	left: 43px;
+	top: 84px;
+}
 #mapa06:hover { 
 	background-image: url(../img/botseccAgast02.jpg);
 }
 #mapa07 {
+	position: absolute;
+	height: 57px;
+	width: 113px;
+	background-image: url(../img/botseccDgast01.jpg);
+	left: 410px;
+	top: 72px;
+}
+#mapa07b {
 	position: absolute;
 	height: 57px;
 	width: 113px;
@@ -170,6 +194,14 @@
 	left: 353px;
 	top: 130px;
 }
+#mapa11b {
+	position: absolute;
+	height: 98px;
+	width: 65px;
+	background-image: url(../img/botseccCgast01.jpg);
+	left: 353px;
+	top: 130px;
+}
 #mapa11:hover { 
 	background-image: url(../img/botseccCgast02.jpg);
 }
@@ -189,10 +221,26 @@
 	left: 417px;
 	top: 181px;
 }
+#mapa13b {
+	position: absolute;
+	height: 57px;
+	width: 106px;
+	background-image: url(../img/botseccEgast01.jpg);
+	left: 417px;
+	top: 181px;
+}
 #mapa13:hover { 
 	background-image: url(../img/botseccEgast02.jpg);
 }
 #mapa14 {
+	position: absolute;
+	height: 64px;
+	width: 96px;
+	background-image: url(../img/botseccBgast01.jpg);
+	left: 222px;
+	top: 228px;
+}
+#mapa14b {
 	position: absolute;
 	height: 64px;
 	width: 96px;
