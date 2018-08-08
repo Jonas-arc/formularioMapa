@@ -29,16 +29,19 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
+  
   <div id="hoy" ng-show="status == 0">
     
-  	<h2>Inscritos Hoy</h2>
+    <h2>Inscritos Hoy</h2>
   	<table class="table table-striped">
         <tr>
           <th>Folio</th>
           <th>Nombre del Productor</th>
+          <th>Procedencia</th>
           <th>Categoria Producto</th>
           <th>Producto Principal</th>
           <th>Descripcion del producto</th>
+          <th>Requerimientos</th>
           <th>Telefonos</th>
           <th>Correo Electronico</th>
           <th>Lugares</th>
@@ -51,9 +54,11 @@
           <tr>
             <td class="text-center">{{item.id}}</td>
             <td class="text-center">{{item.nombre+" "+item.appaterno+" "+item.apmaterno}}</td>
+            <td class="text-center">{{item.estado}}</td>
             <td class="text-center">{{item.categoriaProd}}</td>
             <td class="text-center">{{item.productoPrin}}</td>
             <td class="text-center">{{item.productoDescrip}}</td>
+            <td class="text-center">{{item.comentario}}</td>
             <td class="text-center">{{item.telefono}}</td>
             <td class="text-center">{{item.correo}}</td>
             <td class="text-center">{{item.lugares}}</td>
@@ -77,9 +82,11 @@
         <tr>
           <th>Folio</th>
           <th>Nombre del Productor</th>
+          <th>Procedencia</th>
           <th>Categoria Producto</th>
           <th>Producto Principal</th>
           <th>Descripcion del producto</th>
+          <th>Requerimientos</th>
           <th>Telefonos</th>
           <th>Correo Electronico</th>
           <th>Lugares</th>
@@ -92,9 +99,11 @@
           <tr>
             <td class="text-center">{{item.id}}</td>
             <td class="text-center">{{item.nombre+" "+item.appaterno+" "+item.apmaterno}}</td>
+            <td class="text-center">{{item.estado}}</td>
             <td class="text-center">{{item.categoriaProd}}</td>
             <td class="text-center">{{item.productoPrin}}</td>
             <td class="text-center">{{item.productoDescrip}}</td>
+            <td class="text-center">{{item.comentario}}</td>
             <td class="text-center">{{item.telefono}}</td>
             <td class="text-center">{{item.correo}}</td>
             <td class="text-center">{{item.lugares}}</td>
