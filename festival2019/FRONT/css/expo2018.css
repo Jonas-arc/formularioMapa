@@ -1,0 +1,303 @@
+
+#fondofb {
+	height: 700px;
+	width: 800px;
+}
+#todo {
+	width: 100%;
+}
+#grupo {
+	position: relative;
+	height: 700px;
+	width: 800px;
+	margin: auto;
+}
+#cabeza {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	left: 0px;
+	top: 0px;
+	background-color: #F00;
+	background-image: url(../img/cabezaInscrip.jpg);
+}
+#contene01 {
+	position: absolute;
+	height: 70px;
+	width: 800px;
+	left: 0px;
+	top: 50px;
+}
+#paso01 {
+	position: absolute;
+	height: 70px;
+	width: 650px;
+	left: 0px;
+	background-image: url(../img/paso01.jpg);
+}
+#paso02 {
+	position: absolute;
+	height: 70px;
+	width: 75px;
+	left: 650px;
+	background-image: url(../img/paso02A.jpg);
+}
+#paso03 {
+	position: absolute;
+	height: 70px;
+	width: 75px;
+	left: 725px;
+	background-image: url(../img/paso03A.jpg);
+}
+#contene02 {
+	position: absolute;
+	height: 70px;
+	width: 714px;
+	top: 120px;
+	background-image: url(../img/bisbis.gif);
+	left: 43px;
+}
+#contene02bis {
+	position: absolute;
+	height: 34px;
+	width: 715px;
+	top: 200px;
+	background-image: url(../img/izta02.jpg);
+	left: 44px;
+}
+#contene03 {
+	position: absolute;
+	height: 380px;
+	width: 715px;
+	top: 240px;
+	left: 43px;
+}
+#mapa01 {
+	position: absolute;
+	height: 84px;
+	width: 211px;
+	background-image: url(../img/izta03.jpg);
+}
+#mapa02 {
+	position: absolute;
+	height: 130px;
+	width: 188px;
+	background-image: url(../img/botseccAarte01.jpg);
+	left: 211px;
+	top: 0px;
+}
+#mapa02b {
+	position: absolute;
+	height: 130px;
+	width: 188px;
+	background-image: url(../img/botseccAarte01.jpg);
+	left: 211px;
+	top: 0px;
+}
+#mapa02:hover { 
+	background-image: url(../img/botseccAarte02.jpg);
+}
+#mapa03 {
+	position: absolute;
+	height: 130px;
+	width: 95px;
+	background-image: url(../img/botseccBarte01.jpg);
+	left: 304px;
+	top: 0px;
+}
+#mapa03:hover { 
+	background-image: url(../img/botseccBarte02.jpg);
+}
+#mapa04 {
+	position: absolute;
+	height: 73px;
+	width: 313px;
+	background-image: url(../img/izta04.jpg);
+	left: 399px;
+	top: 0px;
+}
+#mapa05 {
+	position: absolute;
+	height: 54px;
+	width: 43px;
+	background-image: url(../img/izta05.jpg);
+	left: 0px;
+	top: 84px;
+}
+#mapa06 {
+	position: absolute;
+	height: 54px;
+	width: 168px;
+	background-image: url(../img/botseccAgast01.jpg);
+	left: 43px;
+	top: 84px;
+}
+#mapa06b {
+	position: absolute;
+	height: 54px;
+	width: 168px;
+	background-image: url(../img/botseccAgast01.jpg);
+	left: 43px;
+	top: 84px;
+}
+#mapa06:hover { 
+	background-image: url(../img/botseccAgast02.jpg);
+}
+#mapa07 {
+	position: absolute;
+	height: 57px;
+	width: 113px;
+	background-image: url(../img/botseccDgast01.jpg);
+	left: 410px;
+	top: 72px;
+}
+#mapa07b {
+	position: absolute;
+	height: 57px;
+	width: 113px;
+	background-image: url(../img/botseccDgast01.jpg);
+	left: 410px;
+	top: 72px;
+}
+#mapa07:hover { 
+	background-image: url(../img/botseccDgast02.jpg);
+}
+#mapa08 {
+	position: absolute;
+	height: 219px;
+	width: 191px;
+	background-image: url(../img/izta12.jpg);
+	left: 522px;
+	top: 72px;
+}
+#mapa09 {
+	position: absolute;
+	height: 234px;
+	width: 224px;
+	background-image: url(../img/izta06.jpg);
+	left: 0px;
+	top: 138px;
+}
+#mapa10 {
+	position: absolute;
+	height: 98px;
+	width: 131px;
+	background-image: url(../img/izta07.jpg);
+	left: 222px;
+	top: 130px;
+}
+#mapa11 {
+	position: absolute;
+	height: 98px;
+	width: 65px;
+	background-image: url(../img/botseccCgast01.jpg);
+	left: 353px;
+	top: 130px;
+}
+#mapa11b {
+	position: absolute;
+	height: 98px;
+	width: 65px;
+	background-image: url(../img/botseccCgast01.jpg);
+	left: 353px;
+	top: 130px;
+}
+#mapa11:hover { 
+	background-image: url(../img/botseccCgast02.jpg);
+}
+#mapa12 {
+	position: absolute;
+	height: 52px;
+	width: 105px;
+	background-image: url(../img/izta10.jpg);
+	left: 417px;
+	top: 129px;
+}
+#mapa13 {
+	position: absolute;
+	height: 57px;
+	width: 106px;
+	background-image: url(../img/botseccEgast01.jpg);
+	left: 417px;
+	top: 181px;
+}
+#mapa13b {
+	position: absolute;
+	height: 57px;
+	width: 106px;
+	background-image: url(../img/botseccEgast01.jpg);
+	left: 417px;
+	top: 181px;
+}
+#mapa13:hover { 
+	background-image: url(../img/botseccEgast02.jpg);
+}
+#mapa14 {
+	position: absolute;
+	height: 64px;
+	width: 96px;
+	background-image: url(../img/botseccBgast01.jpg);
+	left: 222px;
+	top: 228px;
+}
+#mapa14b {
+	position: absolute;
+	height: 64px;
+	width: 96px;
+	background-image: url(../img/botseccBgast01.jpg);
+	left: 222px;
+	top: 228px;
+}
+#mapa14:hover { 
+	background-image: url(../img/botseccBgast02.jpg);
+}
+#mapa15 {
+	position: absolute;
+	height: 79px;
+	width: 96px;
+	background-image: url(../img/izta08.jpg);
+	left: 222px;
+	top: 292px;
+}
+#mapa16 {
+	position: absolute;
+	height: 143px;
+	width: 100px;
+	background-image: url(../img/izta09.jpg);
+	left: 318px;
+	top: 228px;
+}
+#mapa17 {
+	position: absolute;
+	height: 53px;
+	width: 105px;
+	background-image: url(../img/izta11.jpg);
+	left: 418px;
+	top: 238px;
+}
+#mapa18 {
+	position: absolute;
+	height: 80px;
+	width: 296px;
+	background-image: url(../img/izta13.jpg);
+	left: 417px;
+	top: 291px;
+}
+#contene04 {
+	position: absolute;
+	height: 50px;
+	width: 800px;
+	top: 620px;
+	visibility: visible;
+}
+#salir {
+	position: absolute;
+	height: 49px;
+	width: 247px;
+	top: 1px;
+	left: 300px;
+	background-image: url(../img/salir01.jpg);
+}
+#salir:hover { 
+	background-image: url(../img/salir02.jpg);
+}

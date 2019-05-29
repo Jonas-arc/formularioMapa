@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html ng-app="Milo">
+	<head>
+		<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="./css/expo2018.css">
+		<link rel="stylesheet" type="text/css" href="./css/Artesano.css">
+		<link rel="stylesheet" type="text/css" href="./css/Gastronomo.css">
+		<link rel="stylesheet" type="text/css" href="./css/GastronomoA.css">
+		<link rel="stylesheet" type="text/css" href="./css/GastronomoB.css">
+		<link rel="stylesheet" type="text/css" href="./css/GastronomoC.css">
+		<link rel="stylesheet" type="text/css" href="./css/GastronomoD.css">
+		<link rel="stylesheet" type="text/css" href="./css/GastronomoE.css">
+		<link rel="icon" type="image/gif" href="./img/Lagartija.gif" />
+		<title>Son Para Milo 2018</title>
+	</head>
+	<body>
+
+	<!--	<div class="jumbotron">
+			<h1>Hello, world!</h1>
+			<h2>{{"Hola "+"mundo"}}</h2>
+	      	<div class="container">
+	        	<div class="col-xs-offset-2 col-xs-8">
+	          		<div ng-view>
+	          			<h3>{{nombre}}</h3>
+	          		</div>
+	        	</div>
+	      	</div>
+	    </div> -->
+	    <div class="container">
+		    <div class=col-md-1></div>
+		    <div class=col-md-10>
+			    <header>
+		            <nav class="navbar navbar-default">
+			            
+			            <img src="./img/logomilo.jpg" class="img-responsive center-block" alt="Responsive image">
+			                
+		            </nav>
+		        </header>
+
+		        <!-- MAIN CONTENT AND INJECTED VIEWS -->
+		        <div id="main">
+		        	<div ng-view></div>
+		            <div ng-controller = "primero">
+
+		            	
+		            	
+		            </div>
+
+		        </div>
+
+		        <!-- FOOTER -->
+		        <footer class="text-center">
+		            <hr>
+		            <strong>- Son para Milo 2018 / <a href="mailto:festivalsonparamilo@gmail.com">festivalsonparamilo@gmail.com</a> / Informes: 55 21 79 03 83 -</strong>
+		        </footer>
+		    </div>
+		    <div class=col-md-1></div>
+	    </div>
+
+	
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.js"></script>
+	<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.2.13/angular-cookies.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="./js/controllers/form.js"></script>
+	<script type="text/javascript" src="./js/controllers/numeroCel.js"></script>
+	<script type="text/javascript" src="./js/controllers/numeroTel.js"></script>
+	<script type="text/javascript" src="./js/controllers/categoriaController.js"></script>
+	
+	</body>
+</html>
