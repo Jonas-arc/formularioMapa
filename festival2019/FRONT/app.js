@@ -1,7 +1,7 @@
 var app = angular.module("Milo",['ngRoute']);
 app.config(function($routeProvider) {
    $routeProvider
-   .when('/' ,{templateUrl: './views/expo2018.html', controller: 'cat'})
+   .when('/' ,{templateUrl: './views/expo2019.html', controller: 'cat'})
    .when('/GastronomoA' ,{templateUrl: './views/GastronomoA.html', controller: 'formulario'})
    .when('/GastronomoB' ,{templateUrl: './views/GastronomoB.html', controller: 'formulario'})
    .when('/GastronomoC' ,{templateUrl: './views/GastronomoC.html', controller: 'formulario'})

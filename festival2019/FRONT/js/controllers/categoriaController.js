@@ -113,6 +113,6 @@ app.controller("cat",['$scope','$rootScope','$http',function($scope,$rootScope,$
 
         
     };
-    init();
+    //init();
 }]);
 
