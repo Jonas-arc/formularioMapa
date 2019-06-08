@@ -1,41 +1,17 @@
-
-#apDiv1 {
-	position: absolute;
-	width: 800px;
-	height: 50px;
-	z-index: 1;
-}
-#apDiv2 {
-	position: absolute;
-	width: 801px;
-	height: 71px;
-	z-index: 2;
-	top: 59px;
-}
-#apDiv3 {
-	position: absolute;
-	width: 800px;
-	height: 76px;
-	z-index: 3;
-	top: 131px;
-}
-#apDiv4 {
+#apDiv4C {
 	position: absolute;
 	width: 550px;
 	height: 54px;
-	z-index: 4;
 	top: 208px;
 	background-color: #6600CD;
 }
-#apDiv5 {
+#apDiv5C {
 	position: absolute;
 	width: 98px;
 	height: 113px;
-	z-index: 5;
-	left: 8px;
 	top: 261px;
 }
-#apDiv6 {
+#apDiv6C {
 	position: absolute;
 	width: 47px;
 	height: 105px;
@@ -43,7 +19,7 @@
 	left: 107px;
 	top: 263px;
 }
-#apDiv7 {
+#apDiv7C {
 	position: absolute;
 	width: 47px;
 	height: 105px;
@@ -51,7 +27,7 @@
 	left: 154px;
 	top: 263px;
 }
-#apDiv8 {
+#apDiv8C {
 	position: absolute;
 	width: 32px;
 	height: 111px;
@@ -59,7 +35,7 @@
 	left: 201px;
 	top: 263px;
 }
-#apDiv9 {
+#apDiv9C {
 	position: absolute;
 	width: 47px;
 	height: 105px;
@@ -67,7 +43,7 @@
 	left: 234px;
 	top: 263px;
 }
-#apDiv10 {
+#apDiv10C {
 	position: absolute;
 	width: 47px;
 	height: 105px;
@@ -75,7 +51,7 @@
 	left: 282px;
 	top: 263px;
 }
-#apDiv11 {
+#apDiv11C {
 	position: absolute;
 	width: 32px;
 	height: 111px;
@@ -83,7 +59,7 @@
 	left: 330px;
 	top: 263px;
 }
-#apDiv12 {
+#apDiv12C {
 	position: absolute;
 	width: 47px;
 	height: 105px;
@@ -91,7 +67,7 @@
 	left: 362px;
 	top: 264px;
 }
-#apDiv13 {
+#apDiv13C {
 	position: absolute;
 	width: 47px;
 	height: 105px;
@@ -99,31 +75,31 @@
 	left: 410px;
 	top: 264px;
 }
-#apDiv14 {
+#apDiv14C {
 	position: absolute;
 	width: 101px;
 	height: 113px;
 	z-index: 14;
-	left: 457px;
-	top: 262px;
+	margin-left: 449px;
+	margin-top: 262px;
 	background-color: #6600CD;
 }
-#apDiv15 {
+#apDiv15C {
 	position: absolute;
 	width: 550px;
 	height: 81px;
 	z-index: 15;
-	left: 8px;
-	top: 373px;
+	margin-left: 0px;
+	margin-top: 373px;
 	background-color: #6600CD;
 }
-#apDiv16 {
+#apDiv16C {
 	position: absolute;
 	width: 550px;
 	height: 185px;
 	z-index: 16;
-	left: 8px;
-	top: 453px;
+	margin-left: 0px;
+	margin-top: 453px;
 	background-color: #990100;
 }
 #apDiv17 {
@@ -131,41 +107,10 @@
 	width: 248px;
 	height: 573px;
 	z-index: 17;
-	left: 563px;
-	top: 207px;
+	margin-left: 122px;
+	margin-top: -140px;
 }
 #apDiv17 #form1 table {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;
-}
-#apDiv18 {
-	position: absolute;
-	width: 550px;
-	height: 73px;
-	z-index: 18;
-	left: 9px;
-	top: 702px;
-}
-#apDiv18 {
-	font-family: Verdana, Geneva, sans-serif;
-}
-#apDiv18 {
-	font-size: 10px;
-}
-#apDiv18 {
-	font-size: 12px;
-}
-#apDiv18 {
-	text-align: center;
-}
-#apDiv19 {
-	position: absolute;
-	width: 815px;
-	height: 50px;
-	z-index: 19;
-	left: 9px;
-	top: 804px;
-	font-family: Verdana, Geneva, sans-serif;
-	text-align: center;
-	font-size: 14px;
 }
