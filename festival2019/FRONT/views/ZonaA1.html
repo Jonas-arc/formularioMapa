@@ -1,0 +1,155 @@
+
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div ng-controller="formulario" class="row" ng-show="1">
+
+			<div onload="MM_preloadImages('./img/paso01B.jpg')">
+				<div id="apDiv1"><img src="./img/CabezaInscripciones.jpg" width="800" height="51" /></div>
+
+				<div id="apDiv2">
+					<a href="#/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','./img/paso01B.jpg',1)">
+						<img src="./img/paso01A.jpg" width="75" height="70" id="Image2" />
+					</a>
+					<img style="margin-left: -0.5%" src="./img/paso02.jpg" width="650" height="70" />
+					<img style="margin-left: 90.4%; margin-top:-11.4%;" src="./img/paso03A.jpg" width="75" height="70" />
+				</div>
+				<div id="apDiv3"><img src="./img/CabezaGastronomosA1.jpg" width="800" height="76" /></div>
+				<div id="apDiv4A1"><img src="./img/BarrarribaA1.jpg" width="541" height="55" /></div>
+				<div id="apDiv5A1"><img src="./img/BarraIsqA1.jpg" width="98" height="113" /></div>
+				<div id="apDiv6A1">
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','./img/bot01B.jpg',1)"><img src="./img/bot01A.jpg" width="25" height="29" id="Image1" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image02','','./img/bot07B.jpg',1)"><img src="./img/bot07A.jpg" width="25" height="29" id="Image02" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','./img/bot13B.jpg',1)"><img src="./img/bot13A.jpg" width="25" height="29" id="Image3" /></button>
+					</div>
+				<div id="apDiv7A1">
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','./img/bot02B.jpg',1)"><img src="./img/bot02A.jpg" width="25" height="29" id="Image4" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','./img/bot08B.jpg',1)"><img src="./img/bot08A.jpg" width="25" height="29" id="Image5" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','./img/bot14B.jpg',1)"><img src="./img/bot14A.jpg" width="25" height="29" id="Image6" /></button>
+				</div>
+				<div id="apDiv8A1"><img src="./img/pasillo.jpg" width="32" height="111" /></div>
+				<div id="apDiv9A1">
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','./img/bot03B.jpg',1)"><img src="./img/bot03A.jpg" width="25" height="29" id="Image7" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','./img/bot09B.jpg',1)"><img src="./img/bot09A.jpg" width="25" height="29" id="Image8" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','./img/bot15B.jpg',1)"><img src="./img/bot15A.jpg" width="25" height="29" id="Image6" /></button>
+				</div>
+				<div id="apDiv10A1">
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image10','','./img/bot04B.jpg',1)"><img src="./img/bot04A.jpg" width="25" height="29" id="Image10" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','./img/bot10B.jpg',1)"><img src="./img/bot10A.jpg" width="25" height="29" id="Image11" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image12','','./img/bot16B.jpg',1)"><img src="./img/bot16A.jpg" width="25" height="29" id="Image12" /></button>
+				</div>
+				<div id="apDiv11A1"><img src="./img/pasillo.jpg" width="32" height="111" /></div>
+				<div id="apDiv12A1">
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image13','','./img/bot05B.jpg',1)"><img src="./img/bot05A.jpg" width="25" height="29" id="Image13" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','./img/bot11B.jpg',1)"><img src="./img/bot11A.jpg" width="25" height="29" id="Image14" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','./img/bot17B.jpg',1)"><img src="./img/bot17A.jpg" width="25" height="29" id="Image15" /></button>
+				</div>
+				<div id="apDiv13A1">
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','./img/bot06B.jpg',1)"><img src="./img/bot06A.jpg" width="25" height="29" id="Image16" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','./img/bot12B.jpg',1)"><img src="./img/bot12A.jpg" width="25" height="29" id="Image17" /></button>
+					<button href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','./img/bot18B.jpg',1)"><img src="./img/bot18A.jpg" width="25" height="29" id="Image18" /></button>
+				</div>
+				<div id="apDiv14A1"><img src="./img/BarraDer.jpg" width="78" height="113" /></div>
+				<div id="apDiv15A1"><img src="./img/Barracentro1.jpg" width="541" height="81" /></div>
+				<div id="apDiv16A1"><img src="./img/Barrbajo2.jpg" width="550" height="188" /></div>
+				<div id="apDiv17A1">
+					<form id="form1" name="form1" method="post" action="">
+					    <table width="260" border="0">
+					      <tr>
+					        <td class="naranja">Si el lugar que escojiste está libre, favor de llanar el formulario</td>
+					      </tr>
+					      <tr>
+					        <td><strong>Nombre</strong></td>
+					      </tr>
+					      <tr>
+					        <td>          <input name="textfield" type="text" id="textfield" maxlength="10" />        </td>
+					      </tr>
+					      <tr>
+					        <td><strong>Apellido Paterno</strong></td>
+					      </tr>
+					      <tr>
+					        <td>          <input name="textfield2" type="text" id="textfield2" maxlength="10" />        </td>
+					      </tr>
+					      <tr>
+					        <td><strong>Apellido Materno</strong></td>
+					      </tr>
+					      <tr>
+					        <td>          <input name="textfield3" type="text" id="textfield3" maxlength="10" />        </td>
+					      </tr>
+					      <tr>
+					        <td><strong>Ciudad y Estado</strong></td>
+					      </tr>
+					      <tr>
+					        <td>          <input name="textfield4" type="text" id="textfield4" maxlength="10" />        </td>
+					      </tr>
+					      <tr>
+					        <td><strong>No. de celular</strong></td>
+					      </tr>
+					      <tr>
+					        <td>          <input name="textfield5" type="text" id="textfield5" maxlength="10" />        </td>
+					      </tr>
+					      <tr>
+					        <td><strong>Correo electrónico</strong></td>
+					      </tr>
+					      <tr>
+					        <td><input name="textfield6" type="text" id="textfield6" maxlength="30" /></td>
+					      </tr>
+					      <tr>
+					        <td><strong>No. del lugar que escojiste</strong></td>
+					      </tr>
+					      <tr>
+					        <td>si está en tu presupuesto puedes solicitar 2 lugares</td>
+					      </tr>
+					      <tr>
+					        <td><strong>Puesto No.1</strong></td>
+					      </tr>
+					      <tr>
+					        <td><input name="textfield7" type="text" id="textfield7" maxlength="2" /></td>
+					      </tr>
+					      <tr>
+					        <td><strong>Puesto No.2</strong></td>
+					      </tr>
+					      <tr>
+					        <td><input name="textfield8" type="text" id="textfield8" maxlength="2" /></td>
+					      </tr>
+					      <tr>
+					        <td><strong>Comentarios:</strong></td>
+					      </tr>
+					      <tr>
+					        <td><label for="textarea"></label>
+					        <textarea name="textarea" id="textarea" cols="30" rows="5"></textarea></td>
+					      </tr>
+					      <tr>
+					        <td><input type="submit" name="button" id="button" value="Enviar" /></td>
+					      </tr>
+					    </table>
+				  	</form>
+				</div>
+			</div>
+			
+	</div>
+</div>
+<div class="col-md-1"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
