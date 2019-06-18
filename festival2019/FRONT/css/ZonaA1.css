@@ -113,6 +113,14 @@
 	left: 563px;
 	top: 207px;
 }
+#apDiv18A1 {
+	position: absolute;
+	width: 900px;
+	height: 664px;
+	z-index: 17;
+	left: 0px;
+	top: 650px;
+}
 #apDiv17A1 #form1 table {
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 12px;

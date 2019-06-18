@@ -48,7 +48,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           $scope.mapa = [];
           var req = {
             method : "POST" ,
-            url :  "http://sonparamilo.jonathanarc.net/apirest/busqueda/lugaresArea" , 
+            url :  "http://api.jonathanarc.net/apirest/busqueda/lugaresArea" , 
             data: {
               area: $scope.user.seccion
             }
@@ -71,7 +71,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
         };
         
 
-        init();
+        //init();
    
         $scope.categoriaF = function() {
           //console.log($scope.user.categoriaProd);
