@@ -19,23 +19,24 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
         
 
         var mapa = function(){
-          //console.log($scope.mapa);
+          console.log($scope.mapa);
           angular.forEach($scope.mapa,function(lugar) {
-            ////console.log(lugar);
+            console.log(lugar);
+            console.log(lugar.categoria);
             if (lugar.categoria == null) {
-              $scope.botonesLugar[lugar.id.replace($scope.user.seccion, "")]=true;
+              $scope.botonesLugar[lugar.id.replace($scope.user.seccion+"-", "")]=true;
             }
             else
             {
-              $scope.botonesLugar[lugar.id.replace($scope.user.seccion, "")]=false;
+              $scope.botonesLugar[lugar.id.replace($scope.user.seccion+"-", "")]=false;
             }
-            $scope.lugaresPrecio[lugar.id.replace($scope.user.seccion, "")]=lugar.precio;
-            $scope.categoria[lugar.id.replace($scope.user.seccion, "")]=false;
-            $scope.categoriaNom[lugar.id.replace($scope.user.seccion, "")]=lugar.categoria;
-            /*//console.log(lugar.id.replace($scope.user.seccion, ""));
-            //console.log($scope.botonesLugar);
-            //console.log($scope.lugaresPrecio);
-            //console.log($scope.categoria);*/
+            $scope.lugaresPrecio[lugar.id.replace($scope.user.seccion+"-", "")]=lugar.precio;
+            $scope.categoria[lugar.id.replace($scope.user.seccion+"-", "")]=false;
+            $scope.categoriaNom[lugar.id.replace($scope.user.seccion+"-", "")]=lugar.categoria;
+            console.log(lugar.id.replace($scope.user.seccion+"-", ""));
+            console.log($scope.botonesLugar);
+            console.log($scope.lugaresPrecio);
+            console.log($scope.categoria);
           });
           //$scope.categoriaNom[1] = "Gastronomia Huasteca";
         };
@@ -45,6 +46,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
             //console.log("no existe");
             $scope.user.seccion = document.getElementById("seccion").value;
           }
+
           $scope.mapa = [];
           var req = {
             method : "POST" ,
@@ -53,17 +55,17 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
               area: $scope.user.seccion
             }
           };
-          //console.log(req);
+          console.log(req);
           $http(req).success(function (response) {//'response' es el objeto que devuelve el servicio web
-            ////console.log(response);
+            console.log(response);
             $scope.mapa = response;
-            ////console.log($scope.mapa);
+            console.log($scope.mapa);
             $scope.user.seccion = document.getElementById("seccion").value;
-            //console.log($scope.user.seccion);
+            console.log($scope.user.seccion);
             mapa();
 
           }).error(function (response){
-            //console.log(response);
+            console.log(response);
             alert("Ha fallado la petici\u00F3n. Estado HTTP:"+status);
           });
           
@@ -71,7 +73,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
         };
         
 
-        //init();
+        init();
    
         $scope.categoriaF = function() {
           //console.log($scope.user.categoriaProd);
@@ -96,10 +98,10 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
             $scope.tanque = " "
           }
           $scope.user.comentario = $scope.tanque + " " + $scope.user.comentario;
-          if ($scope.user.seccion == "AA") {
+          if (($scope.user.seccion == "B")||$scope.user.seccion == "D") {
             $scope.user.categoria = "Artesano";
           }
-          else if ($scope.user.seccion[0] == "G") {
+          else {
             $scope.user.categoria = "Gastronomo";
           }
           $scope.user.telefono = $scope.cel + " / " + $scope.tel;
@@ -116,7 +118,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           }
           var req = {
             method : "POST" ,
-            url :  "http://sonparamilo.jonathanarc.net/altaParticipante" , 
+            url :  "http://api.jonathanarc.net/altaParticipante" , 
             data: {
               apmaterno : $scope.user.apmaterno,
               appaterno : $scope.user.appaterno,
@@ -171,7 +173,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
               
               
             
-            $scope.botonesLugar[$scope.lugar[j].replace($scope.user.seccion, "")] = true;
+            $scope.botonesLugar[$scope.lugar[j].replace($scope.user.seccion+"-", "")] = true;
             
           }
           $scope.lugar = [];
@@ -190,7 +192,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
           //console.log($scope.botonesLugar[lug]);
           if ($scope.botonesLugar[lug]) {
             //console.log("Lugar vacio");
-            if (/^A.*$/.test($scope.user.seccion)) {
+            if ((/^B.*$/.test($scope.user.seccion))||(/^D.*$/.test($scope.user.seccion))) {
               var limite = 2;
             }else{
               var limite = 3;
@@ -199,7 +201,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
             if ($scope.lugar.length == 0 ) {
               //console.log($scope.lugar.length);
               //console.log($scope.lugar);
-              $scope.lugar.push($scope.user.seccion+lug);
+              $scope.lugar.push($scope.user.seccion+"-"+lug);
               //console.log($scope.user.seccion+lug);
               //console.log($scope.lugar);
               //console.log($scope.lugar.join());
@@ -213,7 +215,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
               //console.log($scope.lugar);
               var req = {
                 method : "POST" ,
-                url :  "http://sonparamilo.jonathanarc.net/busqueda/validarLugar" , 
+                url :  "http://api.jonathanarc.net/busqueda/validarLugar" , 
                 data: {
                   buscado: $scope.user.seccion+lug,
                   asignados: $scope.lugar
@@ -224,7 +226,7 @@ app.controller("formulario",['$scope','$rootScope','$http','$window',function($s
                 if (response.asignar) 
                 {
                   var auxTotal =0;
-                  $scope.lugar.push($scope.user.seccion+lug);
+                  $scope.lugar.push($scope.user.seccion+"-"+lug);
                   for (var i = 0; i < $scope.lugar.length; i++) {
                       auxTotal += parseInt($scope.lugaresPrecio[($scope.lugar[i].replace($scope.user.seccion, ""))]);
                   }

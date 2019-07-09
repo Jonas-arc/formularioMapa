@@ -10,28 +10,28 @@ app.controller("cat",['$scope','$rootScope','$http',function($scope,$rootScope,$
             method : "POST" ,
             url :  "http://api.jonathanarc.net/busqueda/seccion" , 
             data: {
-              seccion: "AA"
+              seccion: "A"
             }
         };
         var req2 = {
             method : "POST" ,
             url :  "http://api.jonathanarc.net/busqueda/seccion" , 
             data: {
-              seccion: "GA"
+              seccion: "B"
             }
         };
         var req3 = {
             method : "POST" ,
             url :  "http://api.jonathanarc.net/busqueda/seccion" , 
             data: {
-              seccion: "GB"
+              seccion: "C"
             }
         };
         var req4 = {
             method : "POST" ,
             url :  "http://api.jonathanarc.net/busqueda/seccion" , 
             data: {
-              seccion: "GC"
+              seccion: "D"
             }
         };
         

@@ -27,7 +27,7 @@ function MM_swapImage() { //v3.0
 
 <div class="col-md-1"></div>
 <div class="col-md-10">
-	<div ng-controller="formulario" class="row" ng-show="1">
+	<div ng-controller="catEsp" class="row" ng-show="1">
 		<div onload="MM_preloadImages('./img/paso01B.jpg','./img/BotD1b.jpg','./img/BotD2b.jpg','./img/botsalir02.jpg')">
 			<div id="apDiv1"><img src="./img/CabezaInscripciones.jpg" width="800" height="51" /></div>
 			<div id="apDiv2">
@@ -39,13 +39,13 @@ function MM_swapImage() { //v3.0
 			</div>
 			<div id="apDiv3"><img src="./img/CabezaArtesanosD.jpg" width="800" height="76" /></div>
 			<div id="apDiv4D">
-				<a ng-show = "disponible[0]" ng-click = 'catego("AA")' href="#/ZonaD/1" target="_self" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','./img/BotD1b.jpg',1)"><img src="./img/BotD1a.jpg" width="217" height="345" id="Image6" /></a>
+				<a ng-show = "disponible[0]" ng-click = 'catego("1")' href="#/ZonaD/1" target="_self" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','./img/BotD1b.jpg',1)"><img src="./img/BotD1a.jpg" width="217" height="345" id="Image6" /></a>
 				<a ng-show = "!disponible[0]" target="_self"><img src="./img/BotD1a.jpg" width="217" height="345" id="Image6" /></a>
 			</div>
 
 			<div id="apDiv5D">
-				<a ng-show = "disponible[0]" ng-click = 'catego("AA")' href="#/ZonaD/2" target="_self" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','./img/BotD2b.jpg',1)"><img src="./img/BotD2a.jpg" width="217" height="345" id="Image7" /></a>
-				<a ng-show = "!disponible[0]" target="_self"><img src="./img/BotD2a.jpg" width="217" height="345" id="Image7" /></a>
+				<a ng-show = "disponible[1]" ng-click = 'catego("2")' href="#/ZonaD/2" target="_self" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','./img/BotD2b.jpg',1)"><img src="./img/BotD2a.jpg" width="217" height="345" id="Image7" /></a>
+				<a ng-show = "!disponible[1]" target="_self"><img src="./img/BotD2a.jpg" width="217" height="345" id="Image7" /></a>
 				
 			</div>
 			<div id="apDiv6D"><img src="./img/BotD3.jpg" width="366" height="344" /></div>
@@ -54,6 +54,7 @@ function MM_swapImage() { //v3.0
 					<img src="./img/botsalir01.jpg" width="608" height="67" id="Image12" />
 				</a>
 			</div>
+			<input type="hidden" name="seccion" id="seccion"  value="A">
 		</div>
 	</div>
 </div>
